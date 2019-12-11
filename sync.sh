@@ -1,5 +1,6 @@
 #!/bin/bash
-onedrive --synchronize
+git pull
 git add .
 git commit -m 'update'
 git push
+onedrive --synchronize
