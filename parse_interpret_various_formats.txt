@@ -16,7 +16,6 @@ smart sätt i ditt program.
 
 import re
 import regex
-import re
 
 2. Skriv ett python (> 3.6) program som använder minimalt med externa bibliotek 
 (vissa måste du använda, tex för att läsa in excel filer och vissa andra som tex pandas, pickle, os, json)
