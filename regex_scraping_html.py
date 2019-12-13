@@ -10,8 +10,8 @@ with open(FILEPATH) as htmlfile:
     for line in htmlfile:
         questiontag = re.findall('<h3.*?>.*?</h3>', line)
         if questiontag:
-            question = re.findall('(?<=>).*(?=<span)', questiontag[0])
-            answer = re.findall('(?<=<p>).*?(?=</p>)', line)
+            question = re.findall(r'(?<=>).*(?=<span)', questiontag[0])
+            answer = re.findall(r'(?<=<p>).*?(?=</p>)', line)
             if answer:
                 qalist.append([str(question[0]),str(answer[0])])
             else:
@@ -20,7 +20,7 @@ with open(FILEPATH) as htmlfile:
 qadf = pd.DataFrame(qalist)
 # Make sure that any semicolon is not present in the data
 qadf.replace(';', ':', inplace=True, regex=True)
-qadf.replace('Answer:.*?(?=\S)', '', inplace=True, regex=True)
+qadf.replace(r'Answer:.*?(?=\S)', '', inplace=True, regex=True)
 
 SAVEPATH = os.path.join(DATADIR,'qa.csv')
 np.savetxt(SAVEPATH, np.array(qadf, dtype=object), 
