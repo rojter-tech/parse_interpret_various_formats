@@ -66,7 +66,8 @@ class Word:
                             texts.append(node.text)
                     else:
                         texts.append(node.text)
-            if texts_bold: paragraphs_bold.append(' '.join(texts_bold))
-            if texts: paragraphs.append(''.join(texts))
+            if texts_bold and texts: 
+                paragraphs_bold.append(' '.join(texts_bold))
+                paragraphs.append(''.join(texts))
 
         return paragraphs, paragraphs_bold

@@ -3,7 +3,7 @@ import zipfile
 import re
 import xml.dom.minidom
 print("Word Document Parser")
-docx_file = zipfile.ZipFile('data/QA3.docx')
+docx_file = zipfile.ZipFile('data/QA.docx')
 
 documentname = ""
 for name in docx_file.namelist():
