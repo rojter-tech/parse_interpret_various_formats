@@ -28,5 +28,3 @@ för att programmet ska kunna uppfatta:
 	- lägg in frågor och svar i en pandas DataFrame. Här lär du dig mycket om hur man använder pandas.
 	- Spara DataFrame i en pickle fil, QnA som en dictionary i en json fil,
           samt FAQ dokumentet i en ; separerad csv fil.
-	
-	
