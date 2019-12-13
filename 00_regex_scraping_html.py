@@ -1,5 +1,5 @@
-import sys, os, re
-import numpy as np
+import os, re
+from numpy import array, savetxt
 import pandas as pd
 DATADIR = 'data'
 HTMLFILE = 'trivial.html'
@@ -23,7 +23,7 @@ qadf.replace(';', ':', inplace=True, regex=True)
 qadf.replace(r'Answer:.*?(?=\S)', '', inplace=True, regex=True)
 
 SAVEPATH = os.path.join(DATADIR,'qa.csv')
-np.savetxt(SAVEPATH, np.array(qadf, dtype=object), 
+savetxt(SAVEPATH, array(qadf, dtype=object), 
     header='Q;A', delimiter=';', fmt="%s", comments='')
 
-print(pd.read_csv(SAVEPATH, sep=';').tail())
+print(pd.read_csv(SAVEPATH, sep=';').head())

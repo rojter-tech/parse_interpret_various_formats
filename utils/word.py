@@ -10,11 +10,17 @@ class Word:
     Parse and separate paragraph text from Word docx formated files.
     """
     def __init__(self, datadir, filename):
-        filepath = os.path.join(datadir, filename)
-        docx_file = ZipFile(filepath)
         self.datadir = datadir
         self.filename = filename
-        self.docx_file = docx_file
+        self.docx_file = ZipFile(os.path.join(datadir, filename))
+        
+        self.documentname = []
+        self.xml_content = []
+        self.tree = []
+
+        # Initialize document attribute
+        self.find_docname_string()
+        self.get_xml_content_tree()
     
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
@@ -25,14 +31,12 @@ class Word:
             if re.match(r".*document.*xml.*", str(name)):
                 documentname=name
                 break
-        return documentname
+        self.documentname = documentname
 
     def get_xml_content_tree(self):
-        documentname = self.find_docname_string()
-        xml_content = self.docx_file.read(documentname)
+        self.xml_content = self.docx_file.read(self.documentname)
         self.docx_file.close()
-        tree = XML(xml_content)
-        return tree
+        self.tree = XML(self.xml_content)
 
     def parse_paragraphs_split_bold(self, splitbold=True):
         """Simple word xml parser, capable of collecting bold segments
@@ -50,7 +54,7 @@ class Word:
         BOLD = NAMESPACE + 'b'
         NON_WHITEPACE = '\S'
 
-        tree = self.get_xml_content_tree()
+        tree = self.tree
         paragraphs_bold, paragraphs = [], []
         for paragraph in tree.getiterator(WP):
             texts_bold, texts = [], []
@@ -68,12 +72,9 @@ class Word:
                             texts.append(node.text)
                     else:
                         texts.append(node.text)
-            bold_text = ''.join(texts_bold)
-            nonbold_text = ''.join(texts)
-
-            matchbold = re.search(NON_WHITEPACE, bold_text)
-            match_non_bold = re.search(NON_WHITEPACE, nonbold_text)
-            print(nonbold_text, match_non_bold)
+            bold_text = ''.join(texts_bold); matchbold = re.search(NON_WHITEPACE, bold_text)
+            nonbold_text = ''.join(texts); match_non_bold = re.search(NON_WHITEPACE, nonbold_text)
+            
             if matchbold: 
                 paragraphs_bold.append(bold_text)
             if match_non_bold:
