@@ -34,7 +34,7 @@ class Word:
         tree = XML(xml_content)
         return tree
 
-    def parse_paragraphs_split_bold(self, splitbold=False):
+    def parse_paragraphs_split_bold(self, splitbold=True):
         """Simple word xml parser, capable of collecting bold segments
         and returning two separate lists of paragraphs containg only bold and
         non bold text, or just returning all text in all paragraphs.
@@ -46,15 +46,21 @@ class Word:
         WP = WORD_NAMESPACE + 'p'
         WR = WORD_NAMESPACE + 'r'
         TEXT = WORD_NAMESPACE + 't'
-        BOLD = WORD_NAMESPACE + 'rsidRPr'
+        FORMAT = WORD_NAMESPACE + 'rPr'
+        BOLD = WORD_NAMESPACE + 'b'
+
         tree = self.get_xml_content_tree()
         paragraphs_bold, paragraphs = [], []
         for paragraph in tree.getiterator(WP):
             texts_bold, texts = [], []
-            for formatting in paragraph.getiterator(WR):
-                for node in formatting.getiterator(TEXT):
+            for wr in paragraph.getiterator(WR):
+                for formatting in wr.getiterator(FORMAT):
+                    for bold in formatting.getiterator(BOLD):
+                        isbold = list(bold.attrib.values())[0]
+                        isbold = bool(int(isbold))
+                for node in wr.getiterator(TEXT):
                     if splitbold:
-                        if formatting.attrib.get(BOLD) and node.text:
+                        if isbold and node.text:
                             texts_bold.append(node.text)
                         elif node.text:
                             texts.append(node.text)
