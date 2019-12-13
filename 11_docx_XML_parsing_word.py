@@ -23,8 +23,9 @@ def main():
     worddocument1 = Word(DATADIR, FILENAME1 + EXTENSION)
     worddocument2 = Word(DATADIR, FILENAME2 + EXTENSION)
 
+    # Save XML source to file
     xml_source1 = minidom.parseString(worddocument1.xml_content).toprettyxml(indent='   ')
-    to_file = open(os.path.join(DATADIR,"Word_Questions.xml"), "w")
+    to_file = open(os.path.join(DATADIR,"QA.xml"), "w")
     to_file.write(xml_source1)
 
     qadf1 = get_word_data(worddocument1)
