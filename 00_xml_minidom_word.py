@@ -3,8 +3,9 @@ import xml.dom.minidom as minidom
 def main():
     print("Word Document Parser")
     DATADIR = 'data'
-    DOCX_FILENAME = 'QA.docx'
-    FILEPATH = os.path.join(DATADIR, DOCX_FILENAME)
+    FILENAME = 'Word_Questions2'
+    EXTENSION = '.docx'
+    FILEPATH = os.path.join(DATADIR, FILENAME + EXTENSION)
     docx_file = zipfile.ZipFile(FILEPATH)
 
     documentname = ""

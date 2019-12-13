@@ -40,14 +40,15 @@ class Word:
         non bold text, or just returning all text in all paragraphs.
         
         Returns:
-            ([str],[str]) -- Paragraphs text in a tuple of lists
+            [[str],[str]] -- Paragraphs bold / non bold text in a 2D list
         """
-        WORD_NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
-        WP = WORD_NAMESPACE + 'p'
-        WR = WORD_NAMESPACE + 'r'
-        TEXT = WORD_NAMESPACE + 't'
-        FORMAT = WORD_NAMESPACE + 'rPr'
-        BOLD = WORD_NAMESPACE + 'b'
+        NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+        WP = NAMESPACE + 'p'
+        WR = NAMESPACE + 'r'
+        TEXT = NAMESPACE + 't'
+        FORMAT = NAMESPACE + 'rPr'
+        BOLD = NAMESPACE + 'b'
+        NON_WHITEPACE = '\S'
 
         tree = self.get_xml_content_tree()
         paragraphs_bold, paragraphs = [], []
@@ -55,6 +56,7 @@ class Word:
             texts_bold, texts = [], []
             for wr in paragraph.getiterator(WR):
                 for formatting in wr.getiterator(FORMAT):
+                    isbold = False
                     for bold in formatting.getiterator(BOLD):
                         isbold = list(bold.attrib.values())[0]
                         isbold = bool(int(isbold))
@@ -66,8 +68,15 @@ class Word:
                             texts.append(node.text)
                     else:
                         texts.append(node.text)
-            if texts_bold and texts: 
-                paragraphs_bold.append(' '.join(texts_bold))
-                paragraphs.append(''.join(texts))
+            bold_text = ''.join(texts_bold)
+            nonbold_text = ''.join(texts)
+
+            matchbold = re.search(NON_WHITEPACE, bold_text)
+            match_non_bold = re.search(NON_WHITEPACE, nonbold_text)
+            print(nonbold_text, match_non_bold)
+            if matchbold: 
+                paragraphs_bold.append(bold_text)
+            if match_non_bold:
+                paragraphs.append(nonbold_text)
 
         return paragraphs, paragraphs_bold
