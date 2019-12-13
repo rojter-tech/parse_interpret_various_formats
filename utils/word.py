@@ -38,7 +38,7 @@ class Word:
         self.docx_file.close()
         self.tree = XML(self.xml_content)
 
-    def parse_paragraphs_split_bold(self, splitbold=True):
+    def parse_paragraphs(self, splitbold=False, clean_trailing_whitespace=False):
         """Simple word xml parser, capable of collecting bold segments
         and returning two separate lists of paragraphs containg only bold and
         non bold text, or just returning all text in all paragraphs.
@@ -47,12 +47,13 @@ class Word:
             [[str],[str]] -- Paragraphs bold / non bold text in a 2D list
         """
         NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
-        WP = NAMESPACE + 'p'
-        WR = NAMESPACE + 'r'
-        TEXT = NAMESPACE + 't'
-        FORMAT = NAMESPACE + 'rPr'
-        BOLD = NAMESPACE + 'b'
-        NON_WHITEPACE = '\S'
+        WP = NAMESPACE + r'p'
+        WR = NAMESPACE + r'r'
+        TEXT = NAMESPACE + r't'
+        FORMAT = NAMESPACE + r'rPr'
+        BOLD = NAMESPACE + r'b'
+        NON_WHITEPACE = r'\S'
+        WHITESPACE = r'\s'
 
         tree = self.tree
         paragraphs_bold, paragraphs = [], []
@@ -65,6 +66,7 @@ class Word:
                         isbold = list(bold.attrib.values())[0]
                         isbold = bool(int(isbold))
                 for node in wr.getiterator(TEXT):
+                    # Either split on bold or not
                     if splitbold:
                         if isbold and node.text:
                             texts_bold.append(node.text)
@@ -72,9 +74,25 @@ class Word:
                             texts.append(node.text)
                     else:
                         texts.append(node.text)
+            
+            # Join paragraph text strings and check if they are
+            # containing non whitespace characters
             bold_text = ''.join(texts_bold); matchbold = re.search(NON_WHITEPACE, bold_text)
             nonbold_text = ''.join(texts); match_non_bold = re.search(NON_WHITEPACE, nonbold_text)
-            
+
+            # Take care of beginning and trailing whitespaces
+            if clean_trailing_whitespace:
+                if len(bold_text) > 1:
+                    while re.match(WHITESPACE,bold_text[0]):
+                        bold_text = bold_text[1:]
+                    while re.match(WHITESPACE,bold_text[-1]):
+                        bold_text = bold_text[:-1]
+                if len(nonbold_text) > 1:
+                    while re.match(WHITESPACE,nonbold_text[0]):
+                        nonbold_text = nonbold_text[1:]
+                    while re.match(WHITESPACE,nonbold_text[-1]):
+                        nonbold_text = nonbold_text[:-1]
+
             if matchbold: 
                 paragraphs_bold.append(bold_text)
             if match_non_bold:
