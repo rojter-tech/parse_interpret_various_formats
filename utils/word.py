@@ -24,7 +24,7 @@ class Word:
     
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
-    
+
     def find_docname_string(self):
         documentname = ""
         for name in self.docx_file.namelist():
@@ -37,7 +37,7 @@ class Word:
         self.xml_content = self.docx_file.read(self.documentname)
         self.docx_file.close()
         self.tree = XML(self.xml_content)
-
+    
     def parse_paragraphs(self, splitbold=False, clean_trailing_whitespace=False):
         """Simple word xml parser, capable of collecting bold segments
         and returning two separate lists of paragraphs containg only bold and
