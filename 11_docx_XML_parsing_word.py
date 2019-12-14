@@ -36,6 +36,10 @@ def main():
     qadf1 = get_word_data(worddocument1)
     qadf2 = get_word_data(worddocument2)
 
+    for element in worddocument1.docx_file.namelist():
+        print(element)
+    print('')
+
     print('Number of rows:',len(qadf1))
     print(qadf1.head())
 

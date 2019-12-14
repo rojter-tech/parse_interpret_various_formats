@@ -28,7 +28,7 @@ class Word:
     def find_docname_string(self):
         documentname = ""
         for name in self.docx_file.namelist():
-            if re.match(r".*document.*xml.*", str(name)):
+            if re.match(r".*document.*xml", str(name)):
                 documentname=name
                 break
         self.documentname = documentname
