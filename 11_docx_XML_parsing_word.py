@@ -26,12 +26,12 @@ def main():
 
     # Save XML source to file
     xml_source1 = parseString(worddocument1.xml_content).toprettyxml(indent='   ')
-    to_file1 = open(os.path.join(DATADIR,"qa.xml"), "w")
-    to_file1.write(xml_source1)
+    with open(os.path.join(DATADIR,"qa.xml"), "w") as f:
+        f.write(xml_source1)
 
     xml_source2 = parseString(worddocument2.xml_content).toprettyxml(indent='   ')
-    to_file2 = open(os.path.join(DATADIR,"mixed_word_qa.xml"), "w")
-    to_file2.write(xml_source2)
+    with open(os.path.join(DATADIR,"mixed_word_qa.xml"), "w") as f:
+        f.write(xml_source2)
 
     qadf1 = get_word_data(worddocument1)
     qadf2 = get_word_data(worddocument2)
