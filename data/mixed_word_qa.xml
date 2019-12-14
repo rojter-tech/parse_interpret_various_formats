@@ -269,7 +269,7 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="684EA422" w14:textId="68F94B74" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="684EA422" w14:textId="72D15BF1" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -285,7 +285,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -300,7 +300,7 @@
             </w:rPr>
             <w:t>Name three novels of Shakespeare.</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -313,22 +313,7 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t> </w:t>
-         </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
-            <w:rPr>
-               <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
-               <w:b w:val="0"/>
-               <w:bCs w:val="0"/>
-               <w:i w:val="0"/>
-               <w:iCs w:val="0"/>
-               <w:noProof w:val="0"/>
-               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
-               <w:sz w:val="28"/>
-               <w:szCs w:val="28"/>
-               <w:lang w:val="en-US"/>
-            </w:rPr>
-            <w:t>Hamlet, the Merchant of Venice, and Taming of the Shrew.</w:t>
+            <w:t>                    Hamlet, the Merchant of Venice, and Taming of the Shrew.</w:t>
          </w:r>
       </w:p>
       <w:p w14:paraId="14E5CD19" w14:textId="5BDB1B8B" w:rsidP="58A5D589" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
@@ -349,7 +334,7 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="77FBDA57" w14:textId="25FE3C1F" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="77FBDA57" w14:textId="5204F4DC" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -365,7 +350,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -380,7 +365,7 @@
             </w:rPr>
             <w:t>What was the relation between Sebastian and viola in The Twelfth Night?</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -393,22 +378,7 @@
                <w:szCs w:val="40"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t> </w:t>
-         </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
-            <w:rPr>
-               <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
-               <w:b w:val="0"/>
-               <w:bCs w:val="0"/>
-               <w:i w:val="0"/>
-               <w:iCs w:val="0"/>
-               <w:noProof w:val="0"/>
-               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
-               <w:sz w:val="40"/>
-               <w:szCs w:val="40"/>
-               <w:lang w:val="en-US"/>
-            </w:rPr>
-            <w:t>Sebastian was Viola’s brother and Viola was his sister.</w:t>
+            <w:t>      Sebastian was Viola’s brother and Viola was his sister.</w:t>
          </w:r>
       </w:p>
       <w:p w14:paraId="658A8990" w14:textId="5585BAA7" w:rsidP="58A5D589" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
@@ -429,7 +399,7 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="059448AC" w14:textId="012A2427" w:rsidP="58A5D589" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
+      <w:p w14:paraId="059448AC" w14:textId="194D0D63" w:rsidP="538F8CF3" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -445,7 +415,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -460,7 +430,7 @@
             </w:rPr>
             <w:t>12, 742 Kilometers.</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -473,9 +443,9 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t xml:space="preserve"> What is the diameter of our Earth?</w:t>
+            <w:t xml:space="preserve">                  What is the diameter of our Earth?</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -525,7 +495,7 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="7F878DA9" w14:textId="41C81409" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="7F878DA9" w14:textId="0BD8E250" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -541,7 +511,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -554,9 +524,9 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Who is the wife of Barack Obama?</w:t>
+            <w:t xml:space="preserve">     Who is the wife of Barack Obama?</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -571,7 +541,10 @@
             </w:rPr>
             <w:t> </w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -584,10 +557,10 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Michelle Obama.</w:t>
+            <w:t xml:space="preserve">                                     Michelle Obama.</w:t>
          </w:r>
       </w:p>
-      <w:p w14:paraId="36288E8E" w14:textId="7A9F96A6" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="36288E8E" w14:textId="551878EA" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -603,7 +576,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -616,9 +589,9 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>When did William Wordsworth die?</w:t>
+            <w:t xml:space="preserve">   When did William Wordsworth die?</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -634,7 +607,7 @@
             <w:t> </w:t>
          </w:r>
       </w:p>
-      <w:p w14:paraId="03CC0614" w14:textId="1FB0EBB2" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="03CC0614" w14:textId="511D1A83" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -650,7 +623,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Bodoni MT Black" w:cs="Bodoni MT Black" w:eastAsia="Bodoni MT Black" w:hAnsi="Bodoni MT Black"/>
                <w:b w:val="0"/>
@@ -663,7 +636,61 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>23rd April 1850.</w:t>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Bodoni MT Black" w:cs="Bodoni MT Black" w:eastAsia="Bodoni MT Black" w:hAnsi="Bodoni MT Black"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="28"/>
+               <w:szCs w:val="28"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve">   </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Bodoni MT Black" w:cs="Bodoni MT Black" w:eastAsia="Bodoni MT Black" w:hAnsi="Bodoni MT Black"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="28"/>
+               <w:szCs w:val="28"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Bodoni MT Black" w:cs="Bodoni MT Black" w:eastAsia="Bodoni MT Black" w:hAnsi="Bodoni MT Black"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="28"/>
+               <w:szCs w:val="28"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve">  23rd April 1850.</w:t>
          </w:r>
       </w:p>
       <w:p w14:paraId="24C55394" w14:textId="65781B22" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
@@ -1077,10 +1104,11 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="6B195545" w14:textId="2017A7B6" w:rsidP="58A5D589" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
+      <w:p w14:paraId="6B195545" w14:textId="411DAD21" w:rsidP="538F8CF3" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
          <w:pPr>
             <w:pStyle w:val="Normal"/>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
+            <w:ind w:firstLine="720" w:left="720"/>
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1094,7 +1122,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1107,7 +1135,46 @@
                <w:szCs w:val="16"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Pacific Ocean.</w:t>
+            <w:t xml:space="preserve">     Pacific Ocean.    </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="16"/>
+               <w:szCs w:val="16"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve">   </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="16"/>
+               <w:szCs w:val="16"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
          </w:r>
       </w:p>
       <w:p w14:paraId="4C190000" w14:textId="6990288C" w:rsidP="58A5D589" w:rsidR="58A5D589" w:rsidRDefault="58A5D589">
@@ -1128,9 +1195,10 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="32F30ACE" w14:textId="105F6F77" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="32F30ACE" w14:textId="2389CBA5" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
+            <w:ind w:firstLine="720" w:left="1440"/>
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1144,7 +1212,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="1"/>
@@ -1157,9 +1225,9 @@
                <w:szCs w:val="16"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Name the largest ocean of the world.</w:t>
+            <w:t xml:space="preserve">        Name the largest ocean of the world.</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1175,9 +1243,10 @@
             <w:t> </w:t>
          </w:r>
       </w:p>
-      <w:p w14:paraId="03A24CB8" w14:textId="74F005CD" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="03A24CB8" w14:textId="47493E96" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
+            <w:ind w:firstLine="720"/>
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1191,7 +1260,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="1"/>
@@ -1204,9 +1273,9 @@
                <w:szCs w:val="16"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>When did Princess Diana die?</w:t>
+            <w:t xml:space="preserve">   When did Princess Diana die?</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1219,9 +1288,48 @@
                <w:szCs w:val="16"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t> </w:t>
+            <w:t xml:space="preserve">    </w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="16"/>
+               <w:szCs w:val="16"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve">  </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
+               <w:b w:val="0"/>
+               <w:bCs w:val="0"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="16"/>
+               <w:szCs w:val="16"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1237,7 +1345,7 @@
             <w:t>31st August 1997.</w:t>
          </w:r>
       </w:p>
-      <w:p w14:paraId="418417F8" w14:textId="07522F22" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="418417F8" w14:textId="1BB0AC91" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -1253,7 +1361,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="1"/>
@@ -1266,9 +1374,30 @@
                <w:szCs w:val="16"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Where is Bermuda Triangle situated?</w:t>
+            <w:t xml:space="preserve"> </w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
+            <w:rPr>
+               <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
+               <w:b w:val="1"/>
+               <w:bCs w:val="1"/>
+               <w:i w:val="0"/>
+               <w:iCs w:val="0"/>
+               <w:noProof w:val="0"/>
+               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
+               <w:sz w:val="16"/>
+               <w:szCs w:val="16"/>
+               <w:lang w:val="en-US"/>
+            </w:rPr>
+            <w:t xml:space="preserve">   Where is Bermuda Triangle situated?</w:t>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
                <w:b w:val="0"/>
@@ -1281,22 +1410,10 @@
                <w:szCs w:val="16"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t> </w:t>
+            <w:t xml:space="preserve"> In the western part of the North Atlantic Ocean.     </w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
-            <w:rPr>
-               <w:rFonts w:ascii="Georgia" w:cs="Georgia" w:eastAsia="Georgia" w:hAnsi="Georgia"/>
-               <w:b w:val="0"/>
-               <w:bCs w:val="0"/>
-               <w:i w:val="0"/>
-               <w:iCs w:val="0"/>
-               <w:noProof w:val="0"/>
-               <w:color w:themeColor="text1" w:themeShade="FF" w:themeTint="FF" w:val="000000"/>
-               <w:sz w:val="16"/>
-               <w:szCs w:val="16"/>
-               <w:lang w:val="en-US"/>
-            </w:rPr>
-            <w:t>In the western part of the North Atlantic Ocean.</w:t>
+         <w:r>
+            <w:tab/>
          </w:r>
       </w:p>
       <w:p w14:paraId="64F123DA" w14:textId="7BC159A4" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
@@ -1777,7 +1894,7 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="62BADB09" w14:textId="543178BE" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="62BADB09" w14:textId="27AD1EE8" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -1793,7 +1910,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -1806,9 +1923,9 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Who discovered the Cell?</w:t>
+            <w:t xml:space="preserve">   Who discovered the Cell?</w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -1821,9 +1938,15 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t> </w:t>
+            <w:t xml:space="preserve">       </w:t>
          </w:r>
-         <w:r w:rsidR="58A5D589" w:rsidRPr="58A5D589">
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
@@ -1836,7 +1959,7 @@
                <w:szCs w:val="28"/>
                <w:lang w:val="en-US"/>
             </w:rPr>
-            <w:t>Robert Hooke.</w:t>
+            <w:t xml:space="preserve">Robert Hooke.    </w:t>
          </w:r>
       </w:p>
       <w:p w14:paraId="3E237616" w14:textId="53C19238" w:rsidP="58A5D589" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
@@ -2889,7 +3012,7 @@
             </w:rPr>
          </w:pPr>
       </w:p>
-      <w:p w14:paraId="58670C93" w14:textId="00F2E4A5" w:rsidP="5BAFCD84" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
+      <w:p w14:paraId="58670C93" w14:textId="00F2E4A5" w:rsidP="538F8CF3" w:rsidR="360F71FE" w:rsidRDefault="360F71FE">
          <w:pPr>
             <w:spacing w:after="140" w:before="0" w:line="276" w:lineRule="auto"/>
             <w:rPr>
@@ -2905,7 +3028,7 @@
                <w:lang w:val="en-US"/>
             </w:rPr>
          </w:pPr>
-         <w:r w:rsidR="5BAFCD84" w:rsidRPr="5BAFCD84">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -2920,7 +3043,7 @@
             </w:rPr>
             <w:t>‘</w:t>
          </w:r>
-         <w:r w:rsidR="5BAFCD84" w:rsidRPr="5BAFCD84">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="1"/>
@@ -2935,7 +3058,7 @@
             </w:rPr>
             <w:t>Stars and Stripes’ is the nickname of the flag of which country?</w:t>
          </w:r>
-         <w:r w:rsidR="5BAFCD84" w:rsidRPr="5BAFCD84">
+         <w:r w:rsidR="538F8CF3" w:rsidRPr="538F8CF3">
             <w:rPr>
                <w:rFonts w:ascii="Calibri" w:asciiTheme="minorAscii" w:cs="Calibri" w:cstheme="minorAscii" w:eastAsia="Calibri" w:eastAsiaTheme="minorAscii" w:hAnsi="Calibri" w:hAnsiTheme="minorAscii"/>
                <w:b w:val="0"/>
