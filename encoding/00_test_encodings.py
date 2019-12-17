@@ -9,18 +9,15 @@ def main():
     encodings = ['utf_8','cp1252','iso8859_3','iso8859_15','iso8859_10','latin_1']
 
     for filename in encoded_files:
+        print('-------')
         filepath = os.path.join(ENCODED_DOCUMENTS_PATH, filename)
         for encoding in encodings:
             try:
-                f = open(filepath, 'r', encoding=encoding)
-                f.read()
-                f.close()
-                print(filename,'was okey using',encoding,'encoding')
-                break
+                with open(filepath, 'rt', encoding=encoding) as f:
+                    f.read()
+                print(filename,'was read using',encoding,'encoding')
             except:
-                print('          .')
-                print(filename,'did not work using',encoding,'encoding!')
-                print('          .')
+                print('•',filename,'did not read using',encoding,'encoding!','•')
 
 if __name__ == '__main__':
     main()

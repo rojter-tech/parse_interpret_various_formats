@@ -8,7 +8,7 @@ FILEPATH = os.path.join(DATADIR,HTMLFILE)
 qalist = []
 with open(FILEPATH) as htmlfile:
     for line in htmlfile:
-        questiontag = re.findall('<h3.*?>.*?</h3>', line)
+        questiontag = re.findall(r'<h3.*?>.*?</h3>', line)
         if questiontag:
             question = re.findall(r'(?<=>).*(?=<span)', questiontag[0])
             answer = re.findall(r'(?<=<p>).*?(?=</p>)', line)
