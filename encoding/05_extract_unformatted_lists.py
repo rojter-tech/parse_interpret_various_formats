@@ -5,9 +5,12 @@ import pandas as pd
 DATA_DIR = 'data'
 ENCODED_DOCUMENTS_DIR = 'diffrent_encoded_text_data'
 ENCODED_DOCUMENTS_PATH = os.path.join('..',DATA_DIR, ENCODED_DOCUMENTS_DIR)
-encoded_files = os.listdir(ENCODED_DOCUMENTS_PATH)
+#encoded_files = os.listdir(ENCODED_DOCUMENTS_PATH)
+encoded_files = ['qa_unformatted-iso8859_1-latin_1.txt', \
+                 'qa_unformatted-iso8859_3.txt','qa_unformatted-iso8859_10.txt', \
+                  'qa_unformatted-iso8859_15.txt','qa_unformatted-cp1252.txt','qa_unformatted-mbcs.txt','qa_unformatted-utf_8.txt']
 print(encoded_files)
-encodings = ['iso8859_15','latin_1','cp1252','cp1252','utf_8','iso8859_3','iso8859_10']
+encodings = ['latin_1','iso8859_3','iso8859_10','iso8859_15','cp1252','cp1252','utf_8']
 
 def checklength(object, n):
     if len(object)==n:
