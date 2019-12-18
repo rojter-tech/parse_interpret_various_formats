@@ -6,15 +6,10 @@ DATA_DIR = 'data'
 ENCODED_DOCUMENTS_DIR = 'diffrent_encoded_text_data'
 ENCODED_DOCUMENTS_PATH = os.path.join('..',DATA_DIR, ENCODED_DOCUMENTS_DIR)
 #encoded_files = os.listdir(ENCODED_DOCUMENTS_PATH)
-
-encoded_files = ['qa_unformatted-iso8859_1-latin_1.txt',\
-                 'qa_unformatted-iso8859_3.txt', \
-                 'qa_unformatted-iso8859_10.txt',\
-                 'qa_unformatted-iso8859_15.txt', \
-                 'qa_unformatted-cp1252.txt', \
-                 'qa_unformatted-mbcs.txt',\
-                 'qa_unformatted-utf_8.txt']
-
+encoded_files = ['qa_unformatted-iso8859_1-latin_1.txt', \
+                 'qa_unformatted-iso8859_3.txt','qa_unformatted-iso8859_10.txt', \
+                 'qa_unformatted-iso8859_15.txt','qa_unformatted-cp1252.txt', \
+                 'qa_unformatted-mbcs.txt','qa_unformatted-utf_8.txt']
 print(encoded_files)
 encodings = ['latin_1','iso8859_3','iso8859_10','iso8859_15','cp1252','cp1252','utf_8']
 
@@ -63,8 +58,7 @@ def main():
         dfs.append(qadf)
     
     n_dfs = len(dfs)
-    print(n_dfs)
-    
+    print('\n',"Number of dfs:", n_dfs,'\n')
     for df1, df2 in combinations(range(n_dfs), 2):
         check_equal = (dfs[df1] == dfs[df2])
         check_false = False in check_equal.values
@@ -74,8 +68,6 @@ def main():
         else:
             #print('Dataframe', df1, 'and', df2, 'has at least one element that differ')
             pass
-    
-    print(dfs[3])
 
 if __name__=='__main__':
     main()
