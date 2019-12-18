@@ -14,7 +14,7 @@ encodings = ['latin_1','iso8859_3','iso8859_10','iso8859_15','cp1252','cp1252','
 
 def checklength(object, n):
     if len(object)==n:
-        print('Hurray')
+        print('Hurray! Number of row just as expected.')
     else:
         print('Nope')
 
@@ -41,7 +41,7 @@ def clean_qalistfile(filename, encoding):
                 dump.append(line)
         
         if len(dump) == 0:
-            print('Hurray')
+            print('Hurray No lines in dump list.')
         else:
             print('Nope')
             print(dump)
