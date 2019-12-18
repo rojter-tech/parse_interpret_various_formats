@@ -1,10 +1,12 @@
+"""Reading a standard csv and xlsx"""
+
 import pandas as pd
 import numpy as np
 import os, sys
 
-def main():
-    DATADIR = 'data'
+DATADIR = 'data'
 
+def main():
     sheet_names = pd.ExcelFile(os.path.join(DATADIR,'qa.xlsx')).sheet_names
     print(sheet_names)
 
@@ -13,7 +15,6 @@ def main():
 
     print(qadf_csv.tail())
     print(qadf_xlsx.tail())
-
 
 if __name__=="__main__":
     main()

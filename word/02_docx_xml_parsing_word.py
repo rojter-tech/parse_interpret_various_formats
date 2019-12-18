@@ -1,8 +1,15 @@
-from utils.word import Word
+import os
+
+from word import Word
 import pandas as pd
 import numpy as np
 from xml.dom.minidom import parseString
 import os
+
+DATADIR = os.path.join(os.pardir,'data','word_data')
+EXTENSION = '.docx'
+FILENAME1 = 'QA'
+FILENAME2 = 'Mixed_Word_QA'
 
 def get_word_data(worddocument):
     paragraphs, paragraphs_bold = worddocument.parse_paragraphs(splitbold=True,
@@ -17,10 +24,6 @@ def get_word_data(worddocument):
     return qadf
 
 def main():
-    DATADIR = 'data'
-    EXTENSION = '.docx'
-    FILENAME1 = 'QA'
-    FILENAME2 = 'Mixed_Word_QA'
     worddocument1 = Word(DATADIR, FILENAME1 + EXTENSION)
     worddocument2 = Word(DATADIR, FILENAME2 + EXTENSION)
 
@@ -41,10 +44,10 @@ def main():
     print('')
 
     print('Number of rows:',len(qadf1))
-    print(qadf1.head())
+    print(qadf1.tail())
 
     print('Number of rows:',len(qadf2))
-    print(qadf2.head())
+    print(qadf2.tail())
 
     print('')
     # Check if both file output is equal

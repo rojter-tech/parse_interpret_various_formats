@@ -1,9 +1,12 @@
 import os, re
 from numpy import array, savetxt
 import pandas as pd
+
 DATADIR = 'data'
+HTMLDATADIR = os.path.join(DATADIR,'html_data')
+
 HTMLFILE = 'trivial.html'
-FILEPATH = os.path.join(DATADIR,HTMLFILE)
+FILEPATH = os.path.join(HTMLDATADIR,HTMLFILE)
 
 qalist = []
 with open(FILEPATH) as htmlfile:

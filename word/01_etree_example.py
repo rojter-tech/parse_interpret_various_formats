@@ -18,7 +18,7 @@ body.text = "Hello, World!"
 # Wrap it in an ElementTree instance, and save as html
 tree = ET.ElementTree(root)
 SAVEPATH = os.path.join("etree_html_example","page.html")
-xmlout = ET.tostring(root, method="html", encoding='utf8')
+xmlout = ET.tostring(root, method="html", encoding='utf_8')
 xmlout = parseString(xmlout).toprettyxml(indent='    ')
 with open(SAVEPATH, 'w') as f: f.write(xmlout)
 
