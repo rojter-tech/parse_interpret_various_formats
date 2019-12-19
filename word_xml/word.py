@@ -32,7 +32,7 @@ class Word:
                 documentname=name
                 break
         self.documentname = documentname
-
+    
     def get_xml_content_tree(self):
         self.xml_content = self.docx_file.read(self.documentname)
         self.docx_file.close()
@@ -54,7 +54,7 @@ class Word:
         BOLD = NAMESPACE + r'b'
         NON_WHITEPACE = r'\S'
         WHITESPACE = r'\s'
-
+        
         tree = self.tree
         paragraphs_bold, paragraphs = [], []
         for paragraph in tree.getiterator(WP):

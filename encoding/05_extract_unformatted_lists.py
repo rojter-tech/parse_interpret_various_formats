@@ -3,8 +3,8 @@ from itertools import combinations
 import pandas as pd
 
 DATA_DIR = 'data'
-ENCODED_DOCUMENTS_DIR = 'diffrent_encoded_text_data'
-ENCODED_DOCUMENTS_PATH = os.path.join('..',DATA_DIR, ENCODED_DOCUMENTS_DIR)
+ENCODED_DOCUMENTS_DIR = 'encoded_text_data'
+ENCODED_DOCUMENTS_PATH = os.path.join(os.pardir, DATA_DIR, ENCODED_DOCUMENTS_DIR)
 #encoded_files = os.listdir(ENCODED_DOCUMENTS_PATH)
 
 encoded_files = ['qa_unformatted-iso8859_1-latin_1.txt',\
