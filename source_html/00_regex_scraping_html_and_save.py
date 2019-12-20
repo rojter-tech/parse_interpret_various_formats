@@ -9,7 +9,7 @@ HTMLDATADIR = os.path.join(DATADIR,'html_data')
 # Source file
 HTMLFILE = 'trivial.html'; HTMLFILEPATH = os.path.join(HTMLDATADIR,HTMLFILE)
 
-# Varous file format, representaion files
+# Various file format representation files
 CSVFILE = 'qa.csv';     CSVSAVEPATH = os.path.join(DATADIR,CSVFILE)
 PICKLEFILE = 'qa.gzip'; PICKLESAVEPATH = os.path.join(DATADIR,PICKLEFILE)
 JSONFILE = 'qa.json';   JSONFILESAVEPATH = os.path.join(DATADIR, JSONFILE)

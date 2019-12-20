@@ -38,7 +38,7 @@ class Word:
         self.docx_file.close()
         self.tree = XML(self.xml_content)
     
-    def parse_paragraphs(self, splitbold=False, clean_trailing_whitespace=False):
+    def parse_paragraphs(self, splitbold=False):
         """Simple word xml parser, capable of collecting bold segments
         and returning two separate lists of paragraphs containg only bold and
         non bold text, or just returning all text in all paragraphs.
@@ -53,7 +53,6 @@ class Word:
         FORMAT = NAMESPACE + r'rPr'
         BOLD = NAMESPACE + r'b'
         NON_WHITEPACE = r'\S'
-        WHITESPACE = r'\s'
         
         tree = self.tree
         paragraphs_bold, paragraphs = [], []
@@ -66,7 +65,7 @@ class Word:
                         isbold = list(bold.attrib.values())[0]
                         isbold = bool(int(isbold))
                 for node in wr.getiterator(TEXT):
-                    # Either split on bold or not
+                    # Either split on bold or not by kwarg
                     if splitbold:
                         if isbold and node.text:
                             texts_bold.append(node.text)
@@ -81,21 +80,13 @@ class Word:
             nonbold_text = ''.join(texts); match_non_bold = re.search(NON_WHITEPACE, nonbold_text)
 
             # Take care of beginning and trailing whitespaces
-            if clean_trailing_whitespace:
-                if len(bold_text) > 1:
-                    while re.match(WHITESPACE,bold_text[0]):
-                        bold_text = bold_text[1:]
-                    while re.match(WHITESPACE,bold_text[-1]):
-                        bold_text = bold_text[:-1]
-                if len(nonbold_text) > 1:
-                    while re.match(WHITESPACE,nonbold_text[0]):
-                        nonbold_text = nonbold_text[1:]
-                    while re.match(WHITESPACE,nonbold_text[-1]):
-                        nonbold_text = nonbold_text[:-1]
-
-            if matchbold: 
+            # and append paragraphs if there is informational
+            # letters in string
+            if matchbold:
+                bold_text=bold_text.strip()
                 paragraphs_bold.append(bold_text)
             if match_non_bold:
+                nonbold_text=nonbold_text.strip()
                 paragraphs.append(nonbold_text)
 
         return paragraphs, paragraphs_bold

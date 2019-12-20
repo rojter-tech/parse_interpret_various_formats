@@ -12,8 +12,7 @@ FILENAME1 = 'QA'
 FILENAME2 = 'Mixed_Word_QA'
 
 def get_word_data(worddocument):
-    paragraphs, paragraphs_bold = worddocument.parse_paragraphs(splitbold=True,
-                                                                clean_trailing_whitespace=True)
+    paragraphs, paragraphs_bold = worddocument.parse_paragraphs(splitbold=True)
     n_min = np.min([len(paragraphs),len(paragraphs_bold)])
     questions = np.array(paragraphs_bold, dtype=object)
     answers = np.array(paragraphs, dtype=object)
