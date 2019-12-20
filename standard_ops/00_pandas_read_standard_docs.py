@@ -20,7 +20,7 @@ def load_json_data(jsonfilepath):
 def main():
     sheet_names = pd.ExcelFile(os.path.join(DATADIR,'qa.xlsx')).sheet_names
     print("Excel sheet names", sheet_names)
-
+    
     qadf_csv = pd.read_csv(CSVFILEPATH, sep=';')
     qadf_xlsx = pd.read_excel(EXCELFILEPATH, sheet_name=sheet_names[0])
     qadf_gzip = pd.read_pickle(PICKLEFILEPATH, compression='gzip')

@@ -20,7 +20,7 @@ encodings = ['latin_1','iso8859_3','iso8859_10','iso8859_15','cp1252','cp1252','
 
 def checklength(object, n):
     if len(object)==n:
-        print('Hurray! Number of row just as expected.')
+        print('Hurray! Number of rows just as expected.')
     else:
         print('Nope')
 
