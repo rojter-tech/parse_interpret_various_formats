@@ -3,6 +3,7 @@ try:
 except ImportError:
     from xml.etree.ElementTree import XML
 from zipfile import ZipFile
+from xml.dom.minidom import parseString
 import os, re
 
 class Word:
@@ -38,6 +39,13 @@ class Word:
         self.docx_file.close()
         self.tree = XML(self.xml_content)
     
+    def show_xml(self):
+        print(parseString(self.xml_content).toprettyxml(indent='    '))
+
+    def save_as_xml(self,filepath):
+        with open(filepath, mode='wt', encoding='utf_8') as f:
+            f.write(parseString(self.xml_content).toprettyxml(indent='    '))
+
     def parse_paragraphs_texts(self, splitbold=False):
         """Simple word xml parser, collecting text data.
         
