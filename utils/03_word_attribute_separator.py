@@ -2,8 +2,6 @@ import os, re
 import pandas as pd
 import numpy as np
 from word_api import Word
-WHITESPACE = r'\s'
-NON_WHITEPACE = r'\S'
 
 DATADIR = os.path.join(os.pardir,'data')
 WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
@@ -21,7 +19,8 @@ BOLD = r"{bval:"
 ITALIC = r"{ival:"
 COLOR = r"{defaultcolor:"
 ATTRIBUTES = [BOLD, ITALIC, COLOR]
-
+WHITESPACE = r'\s'
+NON_WHITEPACE = r'\S'
 
 def modified_sequence(sentence_onlist, sentence_offlist, vote, count):
     vote = vote/count
