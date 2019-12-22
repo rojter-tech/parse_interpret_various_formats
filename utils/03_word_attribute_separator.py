@@ -22,47 +22,6 @@ ITALIC = r"{ival:"
 COLOR = r"{defaultcolor:"
 ATTRIBUTES = [BOLD, ITALIC, COLOR]
 
-def attribute_on_off_separation(testattr, WORDCONTENT):
-    paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', WORDCONTENT)
-    sentence_onlist, sentence_offlist = [], []
-    attron =  testattr+"1}"
-    attroff = testattr+"0}"
-    vote, count = 0, 0
-
-    for paragraph in paragraphs:
-        texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
-        attrontext, attrofftext = [], []
-        leftorright = 0
-        for text in texts:
-            # Search text with attribute on
-            if re.search(attron, text):
-                thistext = re.search(r'(?<={text:).*?(?=})', text).group()
-                attrontext.append(thistext)
-                if not leftorright:
-                    leftorright = -1
-            # Search text with attribute off
-            if re.search(attroff, text):
-                thistext = re.search(r'(?<={text:).*?(?=})', text).group()
-                attrofftext.append(thistext)
-                if not leftorright:
-                    leftorright = 1
-        if leftorright:
-            count+=1
-            vote+=leftorright
-        
-        joinattrontext = ''.join(attrontext).strip()
-        joinattrofftext = ''.join(attrofftext).strip()
-        if joinattrontext:
-            sentence_onlist.append(joinattrontext)
-        if joinattrofftext:
-            sentence_offlist.append(joinattrofftext)
-        
-        absdifflen = abs(len(sentence_onlist) - len(sentence_offlist))
-        if absdifflen > 2:
-            print("Sequences dont match up, trying a diffrent attribute ...\n")
-            assert 1 == 0
-    
-    return modified_sequence(sentence_onlist,sentence_offlist, vote, count)
 
 def modified_sequence(sentence_onlist, sentence_offlist, vote, count):
     vote = vote/count
@@ -82,6 +41,55 @@ def modified_sequence(sentence_onlist, sentence_offlist, vote, count):
     else:
         print("Length of sequences dont match.")
         assert 1 == 0
+
+
+def search_paragraph(paragraph,attron,attroff):
+    texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
+    attrontext, attrofftext = [], []
+    leftorright = 0
+    for text in texts:
+        # Search text with attribute on
+        if re.search(attron, text):
+            thistext = re.search(r'(?<={text:).*?(?=})', text).group()
+            attrontext.append(thistext)
+            if not leftorright:
+                leftorright = -1
+        # Search text with attribute off
+        if re.search(attroff, text):
+            thistext = re.search(r'(?<={text:).*?(?=})', text).group()
+            attrofftext.append(thistext)
+            if not leftorright:
+                leftorright = 1
+    return attrontext, attrofftext, leftorright
+
+
+def attribute_on_off_separation(testattr, WORDCONTENT):
+    paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', WORDCONTENT)
+    sentence_onlist, sentence_offlist = [], []
+    attron =  testattr+"1}"
+    attroff = testattr+"0}"
+    vote, count = 0, 0
+
+    for paragraph in paragraphs:
+        attrontext, attrofftext, leftorright = search_paragraph(paragraph,attron,attroff)
+        if leftorright:
+            count+=1
+            vote+=leftorright
+        
+        joinattrontext = ''.join(attrontext).strip()
+        joinattrofftext = ''.join(attrofftext).strip()
+        if joinattrontext:
+            sentence_onlist.append(joinattrontext)
+        if joinattrofftext:
+            sentence_offlist.append(joinattrofftext)
+        
+        absdifflen = abs(len(sentence_onlist) - len(sentence_offlist))
+        if absdifflen > 2:
+            print("Sequences dont match up, trying a diffrent attribute ...\n")
+            assert 1 == 0
+    
+    return modified_sequence(sentence_onlist, sentence_offlist, vote, count)
+
 
 def main():
     check = 0
