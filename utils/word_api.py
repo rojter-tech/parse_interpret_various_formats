@@ -67,7 +67,7 @@ class Word:
         FONTS = NAMESPACE + r'rFonts'
         
         TEXT = NAMESPACE + r't'
-        
+
         tree = self.tree
         paragraphs = []
         for paragraph in tree.iter(PARAGRAPH):
@@ -83,12 +83,16 @@ class Word:
                     ival      = paformat.find(ITALIC).attrib.get(NAMESPACE+"val")
                     noproof   = paformat.find(NOPROF).attrib.get(NAMESPACE+"val")
                     color     = paformat.find(COLOR).attrib.get(NAMESPACE+"val")
+                    if color == "000000":
+                        defaultcolor = '1'
+                    else:
+                        defaultcolor = '0'
                     size      = paformat.find(SIZE).attrib.get(NAMESPACE+"val")
                     lang      = paformat.find(LANG).attrib.get(NAMESPACE+"val")
                     ascifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"ascii")
                     ansifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"hAnsi")
-                    attr = ['bval','ival','noproof','color','size','lang','ascifont','ansifont']
-                    attrval = [bval,ival,noproof,color,size,lang,ascifont,ansifont]
+                    attr = ['bval','ival','noproof','color','defaultcolor','size','lang','ascifont','ansifont']
+                    attrval = [bval,ival,noproof,color,defaultcolor,size,lang,ascifont,ansifont]
                     
                     pastring = '<t>{text:' + pastring + '}'
                     for t,v in zip(attr, attrval):

@@ -8,17 +8,21 @@ NON_WHITEPACE = r'\S'
 DATADIR = os.path.join(os.pardir,'data')
 WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
 
-# Source file
-WORDFILE = 'QbA_m.docx'
-WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
-WORDDOCUMENT = Word(WORDDATADIR, WORDFILE)
-WORDCONTENT = WORDDOCUMENT.parse_paragraphs_texts()
+# Source files
+WORDFILES = os.listdir(WORDDATADIR)
+wordcontents = []
+for WORDFILE in WORDFILES:
+    WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
+    WORDDOCUMENT = Word(WORDDATADIR, WORDFILE)
+    WORDCONTENT = WORDDOCUMENT.parse_paragraphs_texts()
+    wordcontents.append(WORDCONTENT)
 
 BOLD = r"{bval:"
 ITALIC = r"{ival:"
-ATTRIBUTES = [BOLD, ITALIC]
+COLOR = r"{defaultcolor:"
+ATTRIBUTES = [BOLD, ITALIC, COLOR]
 
-def attribute_on_off_separation(testattr):
+def attribute_on_off_separation(testattr, WORDCONTENT):
     paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', WORDCONTENT)
     sentence_onlist, sentence_offlist = [], []
     attron =  testattr+"1}"
@@ -58,6 +62,9 @@ def attribute_on_off_separation(testattr):
             print("Sequences dont match up, trying a diffrent attribute ...\n")
             assert 1 == 0
     
+    return modified_sequence(sentence_onlist,sentence_offlist, vote, count)
+
+def modified_sequence(sentence_onlist, sentence_offlist, vote, count):
     vote = vote/count
     if len(sentence_onlist) == len(sentence_offlist):
         if vote < 0:
@@ -76,10 +83,22 @@ def attribute_on_off_separation(testattr):
         print("Length of sequences dont match.")
         assert 1 == 0
 
-for testattr in ATTRIBUTES:
-    try:
-        qadf = attribute_on_off_separation(testattr)
-        print(qadf)
-        break
-    except AssertionError:
-        pass
+def main():
+    check = 0
+    for wordcontent in wordcontents:
+        for testattr in ATTRIBUTES:
+            try:
+                qadf = attribute_on_off_separation(testattr, wordcontent)
+                print(qadf)
+                check = 1
+                break
+            except AssertionError:
+                pass
+
+        if check:
+            print("\nQA was successfully loaded")
+        else:
+            print("\nQA may not be formatted by attribute, check other options ...")
+
+if __name__ == "__main__":
+    main()
