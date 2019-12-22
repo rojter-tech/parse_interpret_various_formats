@@ -1,6 +1,7 @@
 import os, re
 import pandas as pd
 import numpy as np
+from itertools import combinations
 from word_api import Word
 
 DATADIR = os.path.join(os.pardir,'data')
@@ -12,7 +13,7 @@ wordcontents = []
 for WORDFILE in WORDFILES:
     WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
     WORDDOCUMENT = Word(WORDDATADIR, WORDFILE)
-    WORDCONTENT = WORDDOCUMENT.parse_paragraphs_texts()
+    WORDCONTENT = WORDDOCUMENT.extract_paragraphs_content_with_attributes()
     wordcontents.append(WORDCONTENT)
 
 BOLD = r"{bval:"
@@ -21,6 +22,7 @@ COLOR = r"{defaultcolor:"
 ATTRIBUTES = [BOLD, ITALIC, COLOR]
 WHITESPACE = r'\s'
 NON_WHITEPACE = r'\S'
+
 
 def modified_sequence(sentence_onlist, sentence_offlist, vote, count):
     vote = vote/count
@@ -42,23 +44,42 @@ def modified_sequence(sentence_onlist, sentence_offlist, vote, count):
         assert 1 == 0
 
 
-def search_paragraph(paragraph,attron,attroff):
+def parse_paragraph(paragraph,attron,attroff):
+    """Searching and extracting information from a single paragraph
+    
+    Information:
+    <p><\p>       - Paragraph tag
+    <t><\t>       - Text snippet tag with attributes
+    <text><\text> - Actual text inside the text snippet tag
+
+    Arguments:
+        paragraph {[str]} -- Paragraph content with tagged atributes information
+        attron {str} -- attribute on matching string
+        attroff {str} -- attribute off matching string
+    
+    Returns:
+        {str}, {str}, {int} -- Text with attribute on, off and a int symbolizing 
+        which one is used first (either -1 or 1)
+    """
     texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
     attrontext, attrofftext = [], []
     leftorright = 0
+    def extract_thistext(atr, text, leftorright):
+        if re.search(atr, text):
+            thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
+            if atr == attron:
+                attrontext.append(thistext)
+                if not leftorright:
+                    leftorright = -1
+            else:
+                attrofftext.append(thistext)
+                if not leftorright:
+                    leftorright = 1
+        return leftorright
+
     for text in texts:
-        # Search text with attribute on
-        if re.search(attron, text):
-            thistext = re.search(r'(?<={text:).*?(?=})', text).group()
-            attrontext.append(thistext)
-            if not leftorright:
-                leftorright = -1
-        # Search text with attribute off
-        if re.search(attroff, text):
-            thistext = re.search(r'(?<={text:).*?(?=})', text).group()
-            attrofftext.append(thistext)
-            if not leftorright:
-                leftorright = 1
+        leftorright = extract_thistext(attron, text, leftorright)
+        leftorright = extract_thistext(attroff, text, leftorright)
     return attrontext, attrofftext, leftorright
 
 
@@ -68,9 +89,9 @@ def attribute_on_off_separation(testattr, WORDCONTENT):
     attron =  testattr+"1}"
     attroff = testattr+"0}"
     vote, count = 0, 0
-
+    
     for paragraph in paragraphs:
-        attrontext, attrofftext, leftorright = search_paragraph(paragraph,attron,attroff)
+        attrontext, attrofftext, leftorright = parse_paragraph(paragraph,attron,attroff)
         if leftorright:
             count+=1
             vote+=leftorright
@@ -92,11 +113,12 @@ def attribute_on_off_separation(testattr, WORDCONTENT):
 
 def main():
     check = 0
-    for wordcontent in wordcontents:
+    dfs = []
+    for wordfile, wordcontent in zip(WORDFILES, wordcontents):
         for testattr in ATTRIBUTES:
             try:
                 qadf = attribute_on_off_separation(testattr, wordcontent)
-                print(qadf)
+                dfs.append(qadf)
                 check = 1
                 break
             except AssertionError:
@@ -105,7 +127,15 @@ def main():
         if check:
             print("\nQA was successfully loaded")
         else:
-            print("\nQA may not be formatted by attribute, check other options ...")
+            print("\nQA by " + wordfile + " may not be formatted by attribute, check other options ...")
+    
+    n_dfs = len(dfs)
+    for df1, df2 in combinations(range(n_dfs), 2):
+        check_equal = (dfs[df1] == dfs[df2])
+        has_false = False in check_equal.values
+        if not has_false:
+            print('Dataframe',df1,'and',df2,'has no element that differ')
+
 
 if __name__ == "__main__":
     main()

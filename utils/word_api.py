@@ -6,6 +6,27 @@ from zipfile import ZipFile
 from xml.dom.minidom import parseString
 import os, re
 
+# Word namespace tag
+NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+# Word paragraph tag
+PARAGRAPH = NAMESPACE + r'p'
+# Word content tag within paragraph
+CONTENT = NAMESPACE + r'r' # ----------------
+#           |                            #    |
+#           v                            #    |
+# Word text attributes tags within content    |
+PAFORMAT = NAMESPACE + r'rPr'            #    |
+BOLD = NAMESPACE + r'b'                  #    |
+ITALIC = NAMESPACE + r'i'                #    |
+NOPROF = NAMESPACE + r'noProof'          #    |
+COLOR = NAMESPACE + r'color'             #    |
+SIZE = NAMESPACE + r'sz'                 #    |
+LANG = NAMESPACE + r'lang'               #    |
+FONTS = NAMESPACE + r'rFonts'            #    |
+# Word text tag whithin content          #    |
+TEXT = NAMESPACE + r't' # <--------------------
+
+
 class Word:
     """
     Parsing word file API.
@@ -45,39 +66,24 @@ class Word:
     def save_as_xml(self,filepath):
         with open(filepath, mode='wt', encoding='utf_8') as f:
             f.write(parseString(self.xml_content).toprettyxml(indent='    '))
-
-    def parse_paragraphs_texts(self, splitbold=False):
-        """Simple word xml parser, collecting text data.
+    
+    def extract_paragraphs_content_with_attributes(self):
+        """Simple word xml parser, collecting text data with attributes.
         
         Returns:
-            [str] -- Paragraphs texts
+            [str] -- Paragraphs texts with tagged attributes
         """
-        NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
-
-        PARAGRAPH = NAMESPACE + r'p'
-        
-        PACONTENT = NAMESPACE + r'r'
-        PAFORMAT = NAMESPACE + r'rPr'
-        BOLD = NAMESPACE + r'b'
-        ITALIC = NAMESPACE + r'i'
-        NOPROF = NAMESPACE + r'noProof'
-        COLOR = NAMESPACE + r'color'
-        SIZE = NAMESPACE + r'sz'
-        LANG = NAMESPACE + r'lang'
-        FONTS = NAMESPACE + r'rFonts'
-        
-        TEXT = NAMESPACE + r't'
 
         tree = self.tree
         paragraphs = []
         for paragraph in tree.iter(PARAGRAPH):
             texts = []
-            for pacontent in paragraph.findall(PACONTENT):
-                paformat = pacontent.find(PAFORMAT)
+            for content in paragraph.iter(CONTENT):
+                paformat = content.find(PAFORMAT)
                 if paformat:
                     # Text node
-                    node = pacontent.find(TEXT)
-                    pastring = node.text
+                    node = content.find(TEXT)
+                    contentstring = node.text
                     # Text Attributes
                     bval      = paformat.find(BOLD).attrib.get(NAMESPACE+"val")
                     ival      = paformat.find(ITALIC).attrib.get(NAMESPACE+"val")
@@ -93,14 +99,14 @@ class Word:
                     ansifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"hAnsi")
                     attr = ['bval','ival','noproof','color','defaultcolor','size','lang','ascifont','ansifont']
                     attrval = [bval,ival,noproof,color,defaultcolor,size,lang,ascifont,ansifont]
-                    
-                    pastring = '<t>{text:' + pastring + '}'
+                    # Concat text content with attribute tags
+                    contentstring = r"<t><text>" + contentstring + r"<\text>"
                     for t,v in zip(attr, attrval):
-                        pastring+='{'+t+':'+v+'}' 
-                    texts.append(pastring + '<\\t>')
+                        contentstring+=r'{' + t + r':' + v + r'}' 
+                    texts.append(contentstring + r"<\t>")
             
             # Join paragraph texts strings and append to paragraphs
             jointexts = ''.join(texts)
-            paragraphs.append('<p>' + jointexts + '<\\p>')       
-
+            paragraphs.append(r"<p>" + jointexts + r"<\p>")       
+        
         return '\r\n'.join(paragraphs)
