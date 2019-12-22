@@ -9,18 +9,17 @@ DATADIR = os.path.join(os.pardir,'data')
 WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
 
 # Source file
-WORDFILE = 'QAi.docx'
+WORDFILE = 'QbA_m.docx'
 WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
+WORDDOCUMENT = Word(WORDDATADIR, WORDFILE)
+WORDCONTENT = WORDDOCUMENT.parse_paragraphs_texts()
 
 BOLD = r"{bval:"
 ITALIC = r"{ival:"
-
 ATTRIBUTES = [BOLD, ITALIC]
 
 def attribute_on_off_separation(testattr):
-    worddocument = Word(WORDDATADIR, WORDFILE)
-    wordcontent = worddocument.parse_paragraphs_texts()
-    paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', wordcontent)
+    paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', WORDCONTENT)
     sentence_onlist, sentence_offlist = [], []
     attron =  testattr+"1}"
     attroff = testattr+"0}"
@@ -56,11 +55,8 @@ def attribute_on_off_separation(testattr):
         
         absdifflen = abs(len(sentence_onlist) - len(sentence_offlist))
         if absdifflen > 2:
-            print("Sequences dont match up, trying a diffrent attribute.")
+            print("Sequences dont match up, trying a diffrent attribute ...\n")
             assert 1 == 0
-
-    #print(sentence_list)
-    #print(sentence_antilist)
     
     vote = vote/count
     if len(sentence_onlist) == len(sentence_offlist):
@@ -72,13 +68,18 @@ def attribute_on_off_separation(testattr):
             A = pd.Series(sentence_onlist, name='A')
         else:
             print("Could not determine what's the question and what's the answer")
-        print(Q.join(A))
+        if abs(vote) != 1:
+            print("QA pair is not comming in same order ...\n")
+        
+        return Q.join(A)
     else:
         print("Length of sequences dont match.")
         assert 1 == 0
 
 for testattr in ATTRIBUTES:
     try:
-        attribute_on_off_separation(testattr)
+        qadf = attribute_on_off_separation(testattr)
+        print(qadf)
+        break
     except AssertionError:
         pass

@@ -67,7 +67,7 @@ class Word:
         FONTS = NAMESPACE + r'rFonts'
         
         TEXT = NAMESPACE + r't'
-
+        
         tree = self.tree
         paragraphs = []
         for paragraph in tree.iter(PARAGRAPH):
@@ -79,15 +79,16 @@ class Word:
                     node = pacontent.find(TEXT)
                     pastring = node.text
                     # Text Attributes
-                    bval = list(paformat.find(BOLD).attrib.values())[0]
-                    ival = list(paformat.find(ITALIC).attrib.values())[0]
-                    noproof = list(paformat.find(NOPROF).attrib.values())[0]
-                    color = list(paformat.find(COLOR).attrib.values())[0]
-                    size = list(paformat.find(SIZE).attrib.values())[0]
-                    lang = list(paformat.find(LANG).attrib.values())[0]
-                    fontval = list(paformat.find(FONTS).attrib.values())[0]
-                    attr = ['bval','ival','noproof','color','size','lang','fontval']
-                    attrval = [bval,ival,noproof,color,size,lang,fontval]
+                    bval      = paformat.find(BOLD).attrib.get(NAMESPACE+"val")
+                    ival      = paformat.find(ITALIC).attrib.get(NAMESPACE+"val")
+                    noproof   = paformat.find(NOPROF).attrib.get(NAMESPACE+"val")
+                    color     = paformat.find(COLOR).attrib.get(NAMESPACE+"val")
+                    size      = paformat.find(SIZE).attrib.get(NAMESPACE+"val")
+                    lang      = paformat.find(LANG).attrib.get(NAMESPACE+"val")
+                    ascifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"ascii")
+                    ansifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"hAnsi")
+                    attr = ['bval','ival','noproof','color','size','lang','ascifont','ansifont']
+                    attrval = [bval,ival,noproof,color,size,lang,ascifont,ansifont]
                     
                     pastring = '<t>{text:' + pastring + '}'
                     for t,v in zip(attr, attrval):
