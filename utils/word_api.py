@@ -23,9 +23,12 @@ COLOR = NAMESPACE + r'color'             #    |
 SIZE = NAMESPACE + r'sz'                 #    |
 LANG = NAMESPACE + r'lang'               #    |
 FONTS = NAMESPACE + r'rFonts'            #    |
-# Word text tag whithin content          #    |
+# Word text tag within content           #    |
 TEXT = NAMESPACE + r't' # <--------------------
-
+##########################################
+ATTRIBUTES = ['bval','ival','noproof',
+             'color','nondefaultcolor','size',
+             'lang','ascifont','ansifont']
 
 class Word:
     """
@@ -44,9 +47,11 @@ class Word:
         self.find_docname_string()
         self.get_xml_content_tree()
     
+
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
     
+
     def find_docname_string(self):
         documentname = ""
         for name in self.docx_file.namelist():
@@ -55,27 +60,37 @@ class Word:
                 break
         self.documentname = documentname
     
+
     def get_xml_content_tree(self):
         self.xml_content = self.docx_file.read(self.documentname)
         self.docx_file.close()
         self.tree = XML(self.xml_content)
     
+
     def show_xml(self):
         print(parseString(self.xml_content).toprettyxml(indent='    '))
+
 
     def save_as_xml(self,filepath):
         with open(filepath, mode='wt', encoding='utf_8') as f:
             f.write(parseString(self.xml_content).toprettyxml(indent='    '))
-    
+
+
     def extract_paragraphs_content_with_attributes(self):
         """Simple word xml parser, collecting text data with attributes.
-        
+        Tags information:
+            <p><\p>       - Paragraph tag
+            <t><\t>       - Text snippet tag with attributes
+            {attr:val}    - Text attribute name and its value
+            <text><\text> - Actual text inside the texts snippets tag
+
         Returns:
             [str] -- Paragraphs texts with tagged attributes
         """
 
         tree = self.tree
         paragraphs = []
+        attributes_dict = {}
         for paragraph in tree.iter(PARAGRAPH):
             texts = []
             for content in paragraph.iter(CONTENT):
@@ -90,23 +105,28 @@ class Word:
                     noproof   = paformat.find(NOPROF).attrib.get(NAMESPACE+"val")
                     color     = paformat.find(COLOR).attrib.get(NAMESPACE+"val")
                     if color == "000000":
-                        defaultcolor = '1'
+                        nondefaultcolor = '0'
                     else:
-                        defaultcolor = '0'
+                        nondefaultcolor = '1'
                     size      = paformat.find(SIZE).attrib.get(NAMESPACE+"val")
                     lang      = paformat.find(LANG).attrib.get(NAMESPACE+"val")
                     ascifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"ascii")
                     ansifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"hAnsi")
-                    attr = ['bval','ival','noproof','color','defaultcolor','size','lang','ascifont','ansifont']
-                    attrval = [bval,ival,noproof,color,defaultcolor,size,lang,ascifont,ansifont]
+                    attributevalues = [bval,ival,noproof,
+                                       color,nondefaultcolor,size,
+                                       lang,ascifont,ansifont]
+                    if not attributes_dict:
+                        for a in ATTRIBUTES:
+                            attributes_dict[a] = []
                     # Concat text content with attribute tags
                     contentstring = r"<t><text>" + contentstring + r"<\text>"
-                    for t,v in zip(attr, attrval):
-                        contentstring+=r'{' + t + r':' + v + r'}' 
+                    for a, av in zip(ATTRIBUTES, attributevalues):
+                        contentstring+=r'{' + a + r':' + av + r'}'
+                        attributes_dict[a].append(av)
                     texts.append(contentstring + r"<\t>")
             
             # Join paragraph texts strings and append to paragraphs
             jointexts = ''.join(texts)
-            paragraphs.append(r"<p>" + jointexts + r"<\p>")       
+            paragraphs.append(r"<p>" + jointexts + r"<\p>")
         
-        return '\r\n'.join(paragraphs)
+        return '\r\n'.join(paragraphs), attributes_dict
