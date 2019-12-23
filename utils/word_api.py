@@ -6,34 +6,36 @@ from zipfile import ZipFile
 from xml.dom.minidom import parseString
 import os, re
 
-# Word namespace tag
-NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
-# Word paragraph tag
-PARAGRAPH = NAMESPACE + r'p'
-# Word content tag within paragraph
-CONTENT = NAMESPACE + r'r' # ----------------
-#           |                            #    |
-#           v                            #    |
-# Word text attributes tags within content    |
-PAFORMAT = NAMESPACE + r'rPr'            #    |
-BOLD = NAMESPACE + r'b'                  #    |
-ITALIC = NAMESPACE + r'i'                #    |
-NOPROF = NAMESPACE + r'noProof'          #    |
-COLOR = NAMESPACE + r'color'             #    |
-SIZE = NAMESPACE + r'sz'                 #    |
-LANG = NAMESPACE + r'lang'               #    |
-FONTS = NAMESPACE + r'rFonts'            #    |
-# Word text tag within content           #    |
-TEXT = NAMESPACE + r't' # <--------------------
-##########################################
-ATTRIBUTES = ['bval','ival','noproof',
-             'color','nondefaultcolor','size',
-             'lang','ascifont','ansifont']
 
 class Word:
     """
     Parsing word file API.
     """
+    # Word namespace tag
+    NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+    # Word paragraph tag
+    PARAGRAPH = NAMESPACE + r'p'
+    # Word content tag within paragraph
+    CONTENT = NAMESPACE + r'r' # ----------------
+    #           |                            #    |
+    #           v                            #    |
+    # Word text attributes tags within content    |
+    PAFORMAT = NAMESPACE + r'rPr'            #    |
+    BOLD = NAMESPACE + r'b'                  #    |
+    ITALIC = NAMESPACE + r'i'                #    |
+    NOPROF = NAMESPACE + r'noProof'          #    |
+    COLOR = NAMESPACE + r'color'             #    |
+    SIZE = NAMESPACE + r'sz'                 #    |
+    LANG = NAMESPACE + r'lang'               #    |
+    FONTS = NAMESPACE + r'rFonts'            #    |
+    # Word text tag within content           #    |
+    TEXT = NAMESPACE + r't' # <--------------------
+    ##########################################
+    ATTRIBUTES = ['bval','ival','noproof',
+                'color','nondefaultcolor','size',
+                'lang','ascifont','ansifont']
+
+
     def __init__(self, datadir, filename):
         self.datadir = datadir
         self.filename = filename
@@ -87,6 +89,22 @@ class Word:
         Returns:
             [str] -- Paragraphs texts with tagged attributes
         """
+        NAMESPACE    = Word.NAMESPACE
+        PARAGRAPH    = Word.PARAGRAPH
+        CONTENT      = Word.CONTENT
+        PAFORMAT     = Word.PAFORMAT
+        TEXT         = Word.TEXT
+        BOLD         = Word.BOLD
+        ITALIC       = Word.ITALIC
+        NOPROF       = Word.NOPROF
+        COLOR        = Word.COLOR
+        SIZE         = Word.SIZE
+        LANG         = Word.LANG
+        FONTS        = Word.FONTS
+        ATTRIBUTES   = Word.ATTRIBUTES
+        NAMESPACEVAL = NAMESPACE+"val"
+        ASCIIFONT = NAMESPACE+"ascii"
+        ANSIFONT = NAMESPACE+"hAnsi"
 
         tree = self.tree
         paragraphs = []
@@ -100,18 +118,18 @@ class Word:
                     node = content.find(TEXT)
                     contentstring = node.text
                     # Text Attributes
-                    bval      = paformat.find(BOLD).attrib.get(NAMESPACE+"val")
-                    ival      = paformat.find(ITALIC).attrib.get(NAMESPACE+"val")
-                    noproof   = paformat.find(NOPROF).attrib.get(NAMESPACE+"val")
-                    color     = paformat.find(COLOR).attrib.get(NAMESPACE+"val")
+                    bval      = paformat.find(BOLD).attrib.get(NAMESPACEVAL)
+                    ival      = paformat.find(ITALIC).attrib.get(NAMESPACEVAL)
+                    noproof   = paformat.find(NOPROF).attrib.get(NAMESPACEVAL)
+                    color     = paformat.find(COLOR).attrib.get(NAMESPACEVAL)
                     if color == "000000":
                         nondefaultcolor = '0'
                     else:
                         nondefaultcolor = '1'
-                    size      = paformat.find(SIZE).attrib.get(NAMESPACE+"val")
-                    lang      = paformat.find(LANG).attrib.get(NAMESPACE+"val")
-                    ascifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"ascii")
-                    ansifont  = paformat.find(FONTS).attrib.get(NAMESPACE+"hAnsi")
+                    size      = paformat.find(SIZE).attrib.get(NAMESPACEVAL)
+                    lang      = paformat.find(LANG).attrib.get(NAMESPACEVAL)
+                    ascifont  = paformat.find(FONTS).attrib.get(ASCIIFONT)
+                    ansifont  = paformat.find(FONTS).attrib.get(ANSIFONT)
                     attributevalues = [bval,ival,noproof,
                                        color,nondefaultcolor,size,
                                        lang,ascifont,ansifont]
@@ -130,3 +148,4 @@ class Word:
             paragraphs.append(r"<p>" + jointexts + r"<\p>")
         
         return '\r\n'.join(paragraphs), attributes_dict
+
