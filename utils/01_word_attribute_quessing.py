@@ -58,7 +58,7 @@ def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, c
         assert 1 == 0
 
 
-def parse_paragraph_separation(paragraph, attron, attroff):
+def parse_paragraph_separator(paragraph, attron, attroff):
     """Searching and extracting information from a single paragraph
     
     Tags information:
@@ -122,7 +122,7 @@ def attribute_on_off_separation(testattr, WORDCONTENT):
     paravote, globalvote, count  = 0, 0, 0
     firstalternate = 1
     for paragraph in paragraphs:
-        attrontext, attrofftext, leftorright = parse_paragraph_separation(paragraph,attron,attroff)
+        attrontext, attrofftext, leftorright = parse_paragraph_separator(paragraph,attron,attroff)
         if leftorright:
             count+=1
             paravote+=leftorright
