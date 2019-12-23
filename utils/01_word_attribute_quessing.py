@@ -9,7 +9,6 @@ WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
 
 # Source files
 WORDFILES = os.listdir(WORDDATADIR)
-print(WORDFILES)
 wordcontents = []
 wordattributes = {}
 for WORDFILE in WORDFILES:
@@ -152,7 +151,7 @@ def attribute_on_off_separation(testattr, WORDCONTENT):
 def main():
     dfs = []
     for wordfile, wordcontent in zip(WORDFILES, wordcontents):
-        print("*************************","\nTrying:",wordfile,"...")
+        print("***************************************************","\nTrying:",wordfile,"...")
         check = 0
         for testattr in ATTRIBUTES:
             try:
@@ -164,10 +163,14 @@ def main():
                 pass
 
         if check:
-            print(wordfile, "QA was successfully loaded\n")
+            print(wordfile, "QA was successfully loaded")
         else:
-            print("!!!!Attribute separation did not sucess!!!!")
-            print("QA by " + wordfile + " may not be formatted by attribute, check other options ...\n")
+            print("")
+            print("***********************************************")
+            print("**!!!!Attribute separation did not sucess!!!!**")
+            print("***********************************************")
+            print("")
+            print("QA by " + wordfile + " maybe were not formatted by attribute, check other options ...")
     
     n_dfs = len(dfs)
     for df1, df2 in combinations(range(n_dfs), 2):
