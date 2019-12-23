@@ -1,0 +1,30 @@
+Ett program som listar ut vad som är frågor och vad som är svar från en fil från kunden
+---------------------------------------------------------------------------------------
+Din uppgift:
+
+1. Använd din kreativitet för att författa lite olika upptänkliga filer som en kund kan tänkas
+skicka som innehåller frågor och svar som är formaterade lite hur som helst, lägg gärna in lite
+skräp vad gäller radbrytningar och annat för att du senare ska ha något att rensa bort på ett
+smart sätt i ditt program.
+
+	- Kunden kan skicka en excel fil, text fil, csv fil, word fil
+	- Kunden kan ha lagt upp att frågor och svar är på samma rad och åtskijs med: :, ;, tab,
+	  många space, eller fet stil /kursiv stil på den ena
+	- Kunden kanske har fråga på en rad, svar på nästa och sedan ett avstånd mellan fråga-svar kombinationerna
+	- Kunden kanske har tänkt ut ett annat sätt?
+	- Teckenkodning
+
+import re
+import regex
+
+2. Skriv ett python (> 3.6) program som använder minimalt med externa bibliotek 
+(vissa måste du använda, tex för att läsa in excel filer och vissa andra som tex pandas, pickle, os, json)
+för att programmet ska kunna uppfatta:
+
+	- vad som är fråga och vad som är svar (Q:A kombinationer). Detta kräver en del logiskt och kreativt 
+          tänkande för att få programmet smart nog att klara sin uppgift.
+	- rensa bort skräp. Här kan du testa att rensa mha re/regex eller efter att du lagt in
+          informationen i en DataFrame, eller med andra medel.
+	- lägg in frågor och svar i en pandas DataFrame. Här lär du dig mycket om hur man använder pandas.
+	- Spara DataFrame i en pickle fil, QnA som en dictionary i en json fil,
+          samt FAQ dokumentet i en ; separerad csv fil.
