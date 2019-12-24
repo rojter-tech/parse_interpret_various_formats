@@ -3,26 +3,21 @@ import pandas as pd
 import numpy as np
 from itertools import combinations
 from utils.wapi import Word
-from utils.wapi import try_separate_by_attribute
-from utils.wapi import extract_raw_text
-from utils.wapi import clean_qalistfile
+from utils.attrib_separator import try_separate_by_attribute
+from utils.raw_formats import format_one
 
 DATADIR = os.path.join(os.pardir,'data')
 WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
 
 
 # Source files
-WORDFILE = 'QA_mi.docx'
-WORDDOCUMENT = Word(WORDDATADIR, WORDFILE)
-WORDCONTENT, ATTRIBUTES_DICT = WORDDOCUMENT.extract_paragraphs_content_with_attributes()
+wordfile = 'QA_line.docx'
+wordobject = Word(os.path.join(WORDDATADIR,wordfile))
 
 def main():
-    wordfile = WORDFILE
-    wordcontent = WORDCONTENT
-    qadata = try_separate_by_attribute(wordfile, wordcontent)
+    qadata = try_separate_by_attribute(wordobject)
     if type(qadata) == str:
-        file_lines = extract_raw_text(wordcontent)
-        qadf = clean_qalistfile(file_lines)
+        qadf = format_one(wordobject.raw_text)
         print(qadf)
     else:
         print("File", qadata, " is a attribute separated file")
