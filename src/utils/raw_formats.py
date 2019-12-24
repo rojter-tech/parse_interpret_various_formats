@@ -1,19 +1,24 @@
 import pandas as pd
 import re
-
-class Error(Exception):
-   """Base class for other exceptions"""
-   pass
-
-class rOjterError(Error):
-   """Raised when rOjter is just too smart not to handle this"""
-   pass
+from utils.wapi import Error, rOjterError
 
 def format_one(raw_text):
+    """Raw string parser for QA pairing on same line with mixed separators.
+       This format assumes that every QA pair is one the same line and that
+       questions preceeds answers.
+    
+    Arguments:
+        raw_text {str} -- [description]
+    
+    Raises:
+        rOjterError: [description]
+    
+    Returns:
+        [type] -- [description]
+    """
+
     splitqa, dump = [], []
-    for line in raw_text.split('\n'):
-        if not line[-1:] == '.' and len(line) == 2:
-            line+='.' # Add missing last punctuation
+    for line in re.findall(r"\S.*\n", raw_text):
         regsplit = re.findall(r".*\?|\S.*?\.|\S.*?\n|\ .*?\n", line) # Split by pattern
         if len(regsplit) == 2:
             regsplit[0] = regsplit[0].strip()
@@ -23,11 +28,11 @@ def format_one(raw_text):
             dump.append(line)
             print("Dump!")
             raise rOjterError("No way, you dont want to go there ...")
-
+    
     if len(dump) == 0:
         print('Hurray No lines in dump list.')
         qadf = pd.DataFrame(splitqa, columns=['Q','A'])
         return qadf
     else:
         print('Dump list contains rows that dont match')
-        assert 1 == 0
+        raise rOjterError

@@ -1,8 +1,9 @@
 import os, re
 import pandas as pd
 import numpy as np
+
 from itertools import combinations
-from utils.wapi import Word
+from utils.wapi import Word, Error, rOjterError
 from utils.attrib_separator import try_separate_by_attribute
 from utils.raw_formats import format_one
 
@@ -31,7 +32,7 @@ def main():
                 qadf = format_one(wordobject.raw_text)
                 if len(qadf) != 0:
                     dfs.append(qadf)
-            except AssertionError:
+            except rOjterError:
                 print(wordobject.filename, "have unknown format.")
                 unknown_format.append(wordobject.filename)
                 pass  
@@ -39,7 +40,7 @@ def main():
             dfs.append(qadata)
     
     n_dfs = len(dfs)
-    print(n_dfs)
+    print()
     for df1, df2 in combinations(range(n_dfs), 2):
         check_equal = (dfs[df1] == dfs[df2])
         has_false = False in check_equal.values

@@ -11,7 +11,7 @@ WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
 
 
 # Source files
-wordfile = 'QA_line.docx'
+wordfile = 'QA.docx'
 wordobject = Word(os.path.join(WORDDATADIR,wordfile))
 
 def main():

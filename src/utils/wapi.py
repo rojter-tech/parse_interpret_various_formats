@@ -8,6 +8,16 @@ import pandas as pd
 import os, re
 
 
+class Error(Exception):
+   """Base class for other exceptions"""
+   pass
+
+
+class rOjterError(Error):
+   """Raised when rOjter is just too smart not to handle this"""
+   pass
+
+
 class Word:
     """
     Parsing word file API.
@@ -68,7 +78,7 @@ class Word:
                 break
         self.documentname = documentname
     
-    
+
     def get_xml_content_tree(self):
         self.xml_content = self.docx_file.read(self.documentname)
         self.docx_file.close()
@@ -83,21 +93,10 @@ class Word:
         with open(filepath, mode='wt', encoding='utf_8') as f:
             f.write(parseString(self.xml_content).toprettyxml(indent='    '))
 
-    def extract_raw_text(self):
-        paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', self.content)
-        lines = []
-        for paragraph in paragraphs:
-            texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
-            line = []
-            for text in texts:
-                thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
-                line.append(thistext)
-            lines.append(''.join(line))
-        
-        self.raw_text = '\r\n'.join(lines)
-
     def extract_content(self):
-        """Simple word xml parser, collecting text data with attributes.
+        """Simple word xml parser, collecting text data with corresponding
+           text attributes, and creates a formatted string output with nested
+           tagging
         Tags information:
             <p><\p>       - Paragraph tag
             <t><\t>       - Text snippet tag with attributes
@@ -168,4 +167,16 @@ class Word:
         self.content = '\r\n'.join(paragraphs)
         self.attributes_dict = attributes_dict
 
-
+    def extract_raw_text(self):
+        paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', self.content)
+        lines = []
+        for paragraph in paragraphs:
+            texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
+            line = []
+            for text in texts:
+                thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
+                line.append(thistext)
+            lines.append(''.join(line))
+        
+        # Adding potentially missing last linefeed
+        self.raw_text = '\r\n'.join(lines)+'\r\n'

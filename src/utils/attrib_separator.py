@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-
+from utils.wapi import Error, rOjterError
 
 def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
     """On basis of some hyperparameters the final dataframe 
@@ -43,12 +43,12 @@ def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, c
             qadf = check_vote(globalvote)
         if type(qadf) == str:
             print("Could not determine what's the question and what's the answer by vote")
-            assert 1 == 0
+            raise rOjterError
         else:
             return qadf
     else:
         print("Length of sequences dont match.")
-        assert 1 == 0
+        raise rOjterError
 
 
 def paragraph_attribute_separator(paragraph, attron, attroff):
@@ -147,7 +147,7 @@ def attribute_on_off_separation(testattr, content):
         absdifflen = abs(len(sentence_onlist) - len(sentence_offlist))
         if absdifflen > 2:
             print("Sequences dont match up, trying a diffrent attribute ...")
-            assert 1 == 0
+            raise rOjterError
 
     return modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
 
@@ -165,7 +165,8 @@ def try_separate_by_attribute(wordobject):
             print(wordobject.filename, "QA was successfully loaded")
             check = True
             break
-        except AssertionError:
+        except rOjterError:
+            print("This bullshit attribute is shit ..")
             pass
     
     if check:
