@@ -168,6 +168,9 @@ class Word:
         self.attributes_dict = attributes_dict
 
     def extract_raw_text(self):
+        """Tries to respresent the text content as pure as possible
+           as if it were a plain text document.
+        """
         paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', self.content)
         lines = []
         for paragraph in paragraphs:
