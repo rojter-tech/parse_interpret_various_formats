@@ -2,12 +2,13 @@ import os, re
 import pandas as pd
 import numpy as np
 from itertools import combinations
-from wapi import Word
-from wapi import attribute_on_off_separation
+from utils.wapi import Word
+from utils.wapi import try_separate_by_attribute
+from utils.wapi import extract_raw_text
+from utils.wapi import clean_qalistfile
 
 DATADIR = os.path.join(os.pardir,'data')
 WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
-
 # Source files
 WORDFILES = os.listdir(WORDDATADIR)
 wordcontents = []
@@ -19,36 +20,19 @@ for WORDFILE in WORDFILES:
     wordcontents.append(WORDCONTENT)
     wordattributes[WORDFILE] = ATTRIBUTES_DICT
 
-BOLD = r"{bval:"
-ITALIC = r"{ival:"
-COLOR = r"{nondefaultcolor:"
-ATTRIBUTES = [BOLD, ITALIC, COLOR]
-WHITESPACE = r'\s'
-NON_WHITEPACE = r'\S'
 
 def main():
     dfs = []
+    non_attribute = []
     for wordfile, wordcontent in zip(WORDFILES, wordcontents):
-        print("***************************************************","\nTrying:",wordfile,"...")
-        check = 0
-        for testattr in ATTRIBUTES:
-            try:
-                qadf = attribute_on_off_separation(testattr, wordcontent)
-                dfs.append(qadf)
-                check = 1
-                break
-            except AssertionError:
-                pass
-
-        if check:
-            print(wordfile, "QA was successfully loaded")
+        qadata = try_separate_by_attribute(wordfile, wordcontent)
+        if type(qadata) == str:
+            print("File",qadata,"appended to non attribute separated files list")
+            non_attribute.append(qadata)
+            qadata = clean_qalistfile(extract_raw_text(wordcontent))
+            dfs.append(qadata)
         else:
-            print("")
-            print("***********************************************")
-            print("**!!!!Attribute separation did not sucess!!!!**")
-            print("***********************************************")
-            print("")
-            print("QA by " + wordfile + " maybe were not formatted by attribute, check other options ...")
+            dfs.append(qadata)
     
     n_dfs = len(dfs)
     for df1, df2 in combinations(range(n_dfs), 2):
@@ -58,6 +42,8 @@ def main():
             print('Dataframe',df1,'and',df2,'has no element that differ')
         else:
             print('  Ops! Dataframe',df1,'and',df2,'has element that differ!')
+    
+    print("\nNon attribute separated files:\n",non_attribute)
 
 
 if __name__ == "__main__":

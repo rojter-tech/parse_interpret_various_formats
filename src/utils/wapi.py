@@ -4,6 +4,7 @@ except ImportError:
     from xml.etree.ElementTree import XML
 from zipfile import ZipFile
 from xml.dom.minidom import parseString
+import pandas as pd
 import os, re
 
 
@@ -150,7 +151,7 @@ class Word:
         return '\r\n'.join(paragraphs), attributes_dict
 
 
-def modify_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
+def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
     """On basis of some hyperparameters the final dataframe 
        will be created in a particular order
     
@@ -164,9 +165,8 @@ def modify_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, cou
         count {[type]} -- Total number of block seqences of texts
     
     Returns:
-        [type] -- [description]
+        [pd.DataFrame] -- DataFrame with QA separated columns
     """
-    import pandas as pd
     paravote = paravote/count
     globalvote = globalvote/(count*(1/2))
 
@@ -179,29 +179,29 @@ def modify_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, cou
         if abs(vote) != 1:
             print("QA pair is not comming in same order ...")
         if vote < 0:
-            return [qapair_df(sentence_onlist, sentence_offlist)]
+            return qapair_df(sentence_onlist, sentence_offlist)
         elif vote > 0:
-            return [qapair_df(sentence_offlist, sentence_onlist)]
+            return qapair_df(sentence_offlist, sentence_onlist)
         else:
-            return None
+            return ""
     
-    # Systematic chech if and in what order DataFrames should be initialized
+    # Systematic check if and in what order DataFrames should be initialized
     if len(sentence_onlist) == len(sentence_offlist):
         qadf = check_vote(paravote)
-        if qadf == None:
+        if type(qadf) == str:
             qadf = check_vote(globalvote)
-        if qadf == None:
+        if type(qadf) == str:
             print("Could not determine what's the question and what's the answer by vote")
             assert 1 == 0
         else:
-            return qadf[0]
+            return qadf
     else:
         print("Length of sequences dont match.")
         assert 1 == 0
 
 
-def parse_paragraph_separator(paragraph, attron, attroff):
-    """Searching and extracting information from a single paragraph
+def paragraph_attribute_separator(paragraph, attron, attroff):
+    """Searching and highlighting boolean attributed content from a single paragraph
     
     Tags information:
         <p><\\p>       - Paragraph tag
@@ -276,7 +276,7 @@ def attribute_on_off_separation(testattr, WORDCONTENT):
     paravote, globalvote, count  = 0, 0, 0
     firstalternate = 1
     for paragraph in paragraphs:
-        attrontext, attrofftext, onoroff_first = parse_paragraph_separator(paragraph,attron,attroff)
+        attrontext, attrofftext, onoroff_first = paragraph_attribute_separator(paragraph,attron,attroff)
         if onoroff_first:
             count+=1
             paravote+=onoroff_first
@@ -298,4 +298,66 @@ def attribute_on_off_separation(testattr, WORDCONTENT):
             print("Sequences dont match up, trying a diffrent attribute ...")
             assert 1 == 0
 
-    return modify_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
+    return modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
+
+
+def try_separate_by_attribute(wordfile, wordcontent):
+    BOLD = r"{bval:"
+    ITALIC = r"{ival:"
+    COLOR = r"{nondefaultcolor:"
+    ATTRIBUTES = [BOLD, ITALIC, COLOR]
+    print(60*"*","\nTrying:",wordfile,"...")
+    check = False
+    for testattr in ATTRIBUTES:
+        try:
+            qadf = attribute_on_off_separation(testattr, wordcontent)
+            print(wordfile, "QA was successfully loaded")
+            check = True
+            break
+        except:
+            pass
+    
+    if check:
+        return qadf
+    else:
+        print("")
+        print("***********************************************")
+        print("**!!!!Attribute separation did not sucess!!!!**")
+        print("***********************************************")
+        print("")
+        print("QA by " + wordfile + " maybe were not formatted by attribute, check other options ...")
+        return wordfile
+
+
+def clean_qalistfile(file_lines):
+    splitqa, dump = [], []
+    for line in file_lines:
+        if not line[-1:] == '.' and len(line) == 2:
+            line+='.' # Add missing last punctuation
+        regsplit = re.findall(r".*\?|\S.*?\.|\S.*?\n|\ .*?\n", line) # Split by pattern
+        if len(regsplit) == 2:
+            regsplit[0] = regsplit[0].strip()
+            regsplit[1] = regsplit[1].strip()
+            splitqa.append(regsplit)
+        else:
+            dump.append(line)
+            #print(line)
+    if len(dump) == 0:
+        print('Hurray No lines in dump list.')
+    else:
+        print('Dump list contains rows that dont match')
+    qadf = pd.DataFrame(splitqa, columns=['Q','A'])
+    return qadf
+
+
+def extract_raw_text(wordcontent):
+    paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', wordcontent)
+    lines = []
+    for paragraph in paragraphs:
+        texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
+        line = []
+        for text in texts:
+            thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
+            line.append(thistext)
+        lines.append(''.join(line))
+    return lines

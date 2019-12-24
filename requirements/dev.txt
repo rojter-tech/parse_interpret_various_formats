@@ -2,4 +2,5 @@ wheel
 black
 flake8
 rope
+pylint
 pandas

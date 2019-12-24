@@ -2,13 +2,14 @@ import os, re
 import pandas as pd
 import numpy as np
 from itertools import combinations
-from word_api import Word
+from utils.wapi import Word
 
 DATADIR = os.path.join(os.pardir,'data')
 WORDDATADIR = os.path.join(DATADIR,'formatted_word_data')
 ATTRIBUTES = ['bval','ival','noproof',
              'color','nondefaultcolor','size',
              'lang','ascifont','ansifont']
+
 # Source files
 WORDFILES = os.listdir(WORDDATADIR)
 print(WORDFILES)
