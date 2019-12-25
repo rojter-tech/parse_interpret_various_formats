@@ -82,9 +82,8 @@ def main(arguments):
     if rsync and not git:
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
     if onedrive and not git:
-        gitpush()
-        gitpull()
         od_sync()
+        rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
     else:
         od_upload()
