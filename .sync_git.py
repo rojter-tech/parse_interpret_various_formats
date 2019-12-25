@@ -72,6 +72,10 @@ def main(arguments):
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
         cmd_request('onedrive --synchronize --download-only', logpath)
     
+    def od_sync():
+        logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
+        cmd_request('onedrive --synchronize', logpath)
+    
     if git:
         gitpush()
         gitpull()
@@ -81,7 +85,7 @@ def main(arguments):
     elif onedrive and git:
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
-        od_upload()
+        od_sync()
         
 
 if __name__ == "__main__":
