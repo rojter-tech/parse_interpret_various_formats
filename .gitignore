@@ -133,3 +133,7 @@ dmypy.json
 
 # local files
 .onedrive_sync.sh
+.onedrive_sync.py
+.logs
+.logs/
+.logs/*
