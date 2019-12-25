@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np
 
 from itertools import combinations
-from utils.wapi import Word, Error, rOjterError
+from utils.wapi import Word
+from utils.errors import Error, rOjterError
 from utils.attrib_separator import try_separate_by_attribute
 from utils.raw_formats import format_one
 
@@ -14,10 +15,12 @@ WORDFILES = os.listdir(WORDDATADIR)
 wordcontents = []
 wordattributes = {}
 wordobjects = []
+
 for WORDFILE in WORDFILES:
     WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
     WORDDOCUMENT = Word(WORDFILEPATH)
     wordobjects.append(WORDDOCUMENT)
+
 
 def main():
     dfs = []

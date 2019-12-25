@@ -4,18 +4,9 @@ except ImportError:
     from xml.etree.ElementTree import XML
 from zipfile import ZipFile
 from xml.dom.minidom import parseString
+from utils.errors import Error, rOjterError
 import pandas as pd
 import os, re
-
-
-class Error(Exception):
-   """Base class for other exceptions"""
-   pass
-
-
-class rOjterError(Error):
-   """Raised when rOjter is just too smart not to handle this"""
-   pass
 
 
 class Word:

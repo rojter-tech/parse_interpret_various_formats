@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from utils.wapi import Error, rOjterError
+from utils.errors import Error, rOjterError
 
 def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
     """On basis of some hyperparameters the final dataframe 

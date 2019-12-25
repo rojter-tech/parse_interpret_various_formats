@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from utils.wapi import Error, rOjterError
+from utils.errors import Error, rOjterError
 
 def format_one(raw_text):
     """Raw string parser for QA pairing on same line with mixed separators.

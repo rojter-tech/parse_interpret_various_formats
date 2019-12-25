@@ -10,11 +10,11 @@ PROJECTPATH = os.path.join(HOMEPATH,
 LOGS_DIR = ".logs"
 
 
-def cmd_request(cmd, LOGPATH, bufflen=512):
-    BUFFLEN = bufflen
+def cmd_request(cmd, logpath, bufflen=512):
     from subprocess import Popen, PIPE, STDOUT
-    with Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT, bufsize=BUFFLEN) as process, \
-        open(LOGPATH, 'ab', BUFFLEN) as file:
+    from subprocess import Popen, PIPE, STDOUT
+    with Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT, bufsize=bufflen) as process, \
+        open(logpath, 'ab', bufflen) as file:
             for line in process.stdout:
                 sys.stdout.buffer.write(line)
                 file.flush()
