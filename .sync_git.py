@@ -79,7 +79,7 @@ def main(arguments):
         od_download()
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
-    else:
+    elif onedrive and git:
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         od_upload()
