@@ -43,25 +43,25 @@ def rsync_local(source, target, reference):
 
 
 def main(arguments):
-    gitflag, odflag, rsyncflag = False, False, False
+    git, onedrive, rsync = False, False, False
     for argument in arguments:
         if argument == '--full':
-            gitflag, odflag, rsyncflag = True, True, True
+            git, onedrive, rsync = True, True, True
             break
         elif argument == '--git':
-            gitflag = True
+            git = True
         elif argument == '--od':
-            odflag = True
+            onedrive = True
         elif argument == '--rsync':
-            rsyncflag = True
+            rsync = True
     
     def gitpush():
         msg = input("Commit message: ")
         msg = "'" + msg + "'"
         cmd_git = 'cd ' + PROJECTPATH + ';' + "git add .;"
-        cmd_git+="git commit -m " + msg + ';' + 'git push'
+        cmd_git += "git commit -m " + msg + ';' + 'git push'
         cmd_request(cmd_git, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
-        
+    
     def gitpull():
         cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git pull"
         cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
@@ -74,16 +74,16 @@ def main(arguments):
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
         cmd_request('onedrive --synchronize', logpath)
     
-    if gitflag:
+    if git:
         gitpush()
         gitpull()
-    if rsyncflag and gitflag:
+    if rsync and git:
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
-    if rsyncflag and not gitflag:
+    if rsync and not git:
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
-    if odflag and gitflag:
+    if onedrive and git:
         od_upload()
-    if odflag and not gitflag:
+    if onedrive and not git:
         od_sync()
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
 
