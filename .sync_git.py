@@ -77,11 +77,10 @@ def main(arguments):
         gitpull()
     if onedrive and not git:
         od_download()
-        rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
     elif onedrive and git:
-        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
+        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
         od_upload()
         
 
