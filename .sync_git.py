@@ -30,7 +30,6 @@ def rsync_local(source, target, reference):
     cmdtool = "rsync -av"
     files = [f for f in os.listdir(reference) if os.path.isfile(f)]
     dirs = [f for f in os.listdir(reference) if os.path.isdir(f)]
-    #dirs.remove(".git")
     
     for filename, dirname in zip(files, dirs):
         gitfile = os.path.join(source, filename)
@@ -62,7 +61,7 @@ def main(arguments):
         cmd_request(cmd_git, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
     
     def gitpull():
-        cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git pull"
+        cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git add .;git pull"
         cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
     
     def od_upload():
