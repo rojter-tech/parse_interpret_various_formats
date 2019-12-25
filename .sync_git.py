@@ -42,15 +42,19 @@ def rsync_local(source, target, reference):
         cmd_request(rsync_dir, logpath)
 
 
-def main(argument):
-    onedrive, git = True, True
-    if argument == '--full':
-        pass
-    elif argument == '--git':
-        onedrive = False
-    elif argument == '--od':
-        git = False
-    
+def main(arguments):
+    onedrive, git, rsync = False, False, False
+    for argument in arguments:
+        if argument == '--full':
+            onedrive, git, rsync = True, True, True
+            break
+        elif argument == '--git':
+            git = True
+        elif argument == '--od':
+            onedrive = True
+        elif argument == '--rsync':
+            rsync = True
+
     if git:
         msg = input("Commit message: ")
         msg = "'" + msg + "'"
@@ -58,18 +62,25 @@ def main(argument):
         cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git pull"
         cmd_request(cmd_gitpush, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
         cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
-    if onedrive:
+    if rsync and git:
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
+    if rsync and not git:
+        rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
+    if onedrive and git:
+        logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
+        cmd_request('onedrive --synchronize --upload-only', logpath)
+    if onedrive and not git:
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
         cmd_request('onedrive --synchronize', logpath)
 
-
 if __name__ == "__main__":
     try:
-        main(sys.argv[1])
+        arguments = sys.argv[1:]
+        main(arguments)
     except IndexError:
         print("No argument given!")
         print("Use either:")
         print("--full")
         print("--git")
         print("--od")
+        print("--rsync")
