@@ -43,7 +43,7 @@ def rsync_local(source, target, reference):
 
 
 def main(arguments):
-    git, onedrive = False, False
+    git, onedrive, sync = False, False, False
     for argument in arguments:
         if argument == '--full':
             git, onedrive = True, True
@@ -52,6 +52,8 @@ def main(arguments):
             git = True
         elif argument == '--od':
             onedrive = True
+        elif argument == "--sync":
+            sync = True
     
     def gitpush():
         msg = input("Commit message: ")
@@ -85,8 +87,10 @@ def main(arguments):
     elif onedrive and git:
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
+        od_upload()
+    if sync and not git and not onedrive:
         od_sync()
-        
+    
 
 if __name__ == "__main__":
     try:
@@ -98,4 +102,4 @@ if __name__ == "__main__":
         print("--full")
         print("--git")
         print("--od")
-        print("--rsync")
+        print("--sync")
