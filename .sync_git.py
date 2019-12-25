@@ -43,17 +43,15 @@ def rsync_local(source, target, reference):
 
 
 def main(arguments):
-    git, onedrive, rsync = False, False, False
+    git, onedrive = False, False
     for argument in arguments:
         if argument == '--full':
-            git, onedrive, rsync = True, True, True
+            git, onedrive = True, True
             break
         elif argument == '--git':
             git = True
         elif argument == '--od':
             onedrive = True
-        elif argument == '--rsync':
-            rsync = True
     
     def gitpush():
         msg = input("Commit message: ")
@@ -70,24 +68,21 @@ def main(arguments):
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
         cmd_request('onedrive --synchronize --upload-only', logpath)
     
-    def od_sync():
+    def od_download():
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
-        cmd_request('onedrive --synchronize', logpath)
+        cmd_request('onedrive --synchronize --download-only', logpath)
     
     if git:
         gitpush()
         gitpull()
-    if rsync and git:
-        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
-    if rsync and not git:
-        rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
     if onedrive and not git:
-        od_sync()
+        od_download()
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
     else:
+        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
+        rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         od_upload()
-        
         
 
 if __name__ == "__main__":
