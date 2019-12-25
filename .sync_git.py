@@ -58,8 +58,9 @@ def main(arguments):
     def gitpush():
         msg = input("Commit message: ")
         msg = "'" + msg + "'"
-        cmd_gitpush = 'cd ' + PROJECTPATH + ';' + "git add .;git commit -m " + msg + ';' + 'git push'
-        cmd_request(cmd_gitpush, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
+        cmd_git = 'cd ' + PROJECTPATH + ';' + "git add .;"
+        cmd_git+="git commit -m " + msg + ';' + 'git push'
+        cmd_request(cmd_git, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
         
     def gitpull():
         cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git pull"
