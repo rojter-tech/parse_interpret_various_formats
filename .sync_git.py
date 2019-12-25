@@ -42,17 +42,34 @@ def rsync_local(source, target, reference):
         cmd_request(rsync_dir, logpath)
 
 
-def main():
-    msg = input("Commit message: ")
-    msg = "'" + msg + "'"
-    cmd_gitpush = 'cd ' + PROJECTPATH + ';' + "git add .;git commit -m " + msg + ';' + 'git push'
-    cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git pull"
-    cmd_request(cmd_gitpush, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
-    cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
-    rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
-    logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
-    cmd_request('onedrive --synchronize', logpath)
+def main(argument):
+    onedrive, git = True, True
+    if argument == '--full':
+        pass
+    elif argument == '--git':
+        onedrive = False
+    elif argument == '--od':
+        git = False
+    
+    if git:
+        msg = input("Commit message: ")
+        msg = "'" + msg + "'"
+        cmd_gitpush = 'cd ' + PROJECTPATH + ';' + "git add .;git commit -m " + msg + ';' + 'git push'
+        cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git pull"
+        cmd_request(cmd_gitpush, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
+        cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
+    if onedrive:
+        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
+        logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
+        cmd_request('onedrive --synchronize', logpath)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main(sys.argv[1])
+    except IndexError:
+        print("No argument given!")
+        print("Use either:")
+        print("--full")
+        print("--git")
+        print("--od")
