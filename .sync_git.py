@@ -43,7 +43,7 @@ def rsync_local(source, target, reference):
 
 
 def main(arguments):
-    onedrive, git, rsync = False, False, False
+    git, onedrive, rsync = False, False, False
     for argument in arguments:
         if argument == '--full':
             onedrive, git, rsync = True, True, True
