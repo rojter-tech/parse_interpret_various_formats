@@ -24,21 +24,33 @@ def logspath(logfile):
 print("Using Github path:", ONEDRIVEGIT)
 print("Using Project path:", PROJECTPATH)
 
-def rsync_local(source, target, reference):
+def rsync_local(source_path, target_path, reference_path):
     with open(logspath("rsync"), 'wb') as f: pass
-    cmdtool = "rsync -av"
-    files = [f for f in os.listdir(reference) if os.path.isfile(f)]
-    dirs = [f for f in os.listdir(reference) if os.path.isdir(f)]
+    cmdtool = "rsync -a"
+    entries = os.listdir(reference_path)
+    files, dirs = [], []
+
+    for entry in entries:
+        entry = os.path.join(reference_path, entry)
+        if os.path.isfile(entry):
+            files.append(os.path.basename(entry))
+        else:
+            dirs.append(os.path.basename(entry))
     
-    for filename, dirname in zip(files, dirs):
-        gitfile = os.path.join(source, filename)
-        profile = os.path.join(target, filename)
-        gitdir = os.path.join(source, dirname, '.')
-        prodir = os.path.join(target, dirname)
-        rsync_file = cmdtool + ' ' + gitfile + ' ' + profile
-        cmd_request(rsync_file, logspath("rsync"))
-        rsync_dir = cmdtool + ' ' + gitdir + ' ' + prodir
-        cmd_request(rsync_dir, logspath("rsync"))
+    print(files)
+    for filename in files:
+        source_file = os.path.join(source_path, filename)
+        target_file = os.path.join(target_path, filename)
+        cmd_file = cmdtool + ' ' + source_file + ' ' + target_file
+        print(cmd_file)
+        cmd_request(cmd_file, logspath("rsync"), basedir=ONEDRIVEPATH)
+    
+    for dirname in dirs:
+        source_dir = os.path.join(source_path, dirname, '*')
+        target_dir = os.path.join(target_path, dirname)
+        cmd_dir = cmdtool + ' ' + source_dir + ' ' + target_dir
+        print(cmd_dir)
+        cmd_request(cmd_dir, logspath("rsync"), basedir=ONEDRIVEPATH)
 
 
 def main(arguments):
@@ -101,10 +113,14 @@ def main(arguments):
     if onedrive and git:
         od_upload()
     elif onedrive and not git:
+        print("yes1")
         od_download()
+        rsync_local(PROJECTPATH, ONEDRIVEGIT, ONEDRIVEGIT)
         rsync_local(ONEDRIVEGIT, PROJECTPATH, ONEDRIVEGIT)
+        
 
     if sync and not git and not onedrive:
+        print("yes2")
         od_sync()
 
 
