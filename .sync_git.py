@@ -1,14 +1,18 @@
 import os, sys, re
-HOMEPATH = os.environ["HOME"]
+from os.path import expanduser
+HOMEPATH = expanduser("~")
+
+#HOMEPATH = os.environ["HOME"]
 GITHUBPATH = os.path.join(HOMEPATH,
                           "OneDrive",
                           "misc",
                           "parse_interpret_various_formats")
 PROJECTPATH = os.path.join(HOMEPATH,
                            "Environments",
-                           "parse_various_formats")
+                           "parse_interpret_various_formats")
 LOGS_DIR = ".logs"
-
+print("Using Github path:", GITHUBPATH)
+print("Using Project path:", PROJECTPATH)
 
 def cmd_request(cmd, logpath, bufflen=512):
     from subprocess import Popen, PIPE, STDOUT
@@ -60,10 +64,12 @@ def main(arguments):
         msg = "'" + msg + "'"
         cmd_git = 'cd ' + PROJECTPATH + ';' + "git add .;"
         cmd_git += "git commit -m " + msg + ';' + 'git push'
+        print(cmd_git)
         cmd_request(cmd_git, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
     
     def gitpull():
         cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git add .;git pull"
+        print(cmd_gitpull)
         cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
     
     def od_upload():
