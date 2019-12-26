@@ -1,6 +1,10 @@
 import os, sys
 
 def cmd_request(cmd, logpath, basedir=None, bufflen=512):
+    from os.path import expanduser
+    HOMEPATH = expanduser("~")
+    if not basedir:
+        basedir=HOMEPATH
     """Create and OS command line request
     
     Arguments:

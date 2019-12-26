@@ -1,17 +1,14 @@
 import os, sys, re
 from os.path import expanduser
 from utils.cmdtools import cmd_request
-HOMEPATH = expanduser("~")
-GITHUBPATH = os.path.join(HOMEPATH,
-                          "OneDrive",
-                          "misc",
-                          "parse_interpret_various_formats")
-if not os.path.isdir(GITHUBPATH):
-    GITHUBPATH = os.path.join(HOMEPATH,
-                          "OneDrive - Atea",
-                          "misc",
-                          "parse_interpret_various_formats")
 
+HOMEPATH = expanduser("~")
+
+ONEDRIVEPATH = os.path.join(HOMEPATH, "OneDrive")
+if not os.path.isdir(ONEDRIVEPATH):
+    ONEDRIVEPATH = os.path.join(HOMEPATH, "OneDrive - Atea")
+
+ONEDRIVEGIT = os.path.join(ONEDRIVEPATH,"misc","parse_interpret_various_formats")
 PROJECTPATH = os.path.join(HOMEPATH,
                            "Environments",
                            "parse_interpret_various_formats")
@@ -20,7 +17,7 @@ LOGS_DIR = os.path.join(HOMEPATH,".logs")
 if not os.path.isdir(LOGS_DIR):
     os.mkdir(LOGS_DIR)
 
-print("Using Github path:", GITHUBPATH)
+print("Using Github path:", ONEDRIVEGIT)
 print("Using Project path:", PROJECTPATH)
 
 def rsync_local(source, target, reference):
@@ -39,6 +36,7 @@ def rsync_local(source, target, reference):
         cmd_request(rsync_file, logspath)
         rsync_dir = cmdtool + ' ' + gitdir + ' ' + prodir
         cmd_request(rsync_dir, logspath)
+
 
 def main(arguments):
     git, onedrive, sync = False, False, False
@@ -71,27 +69,30 @@ def main(arguments):
         logspath = os.path.join(LOGS_DIR, "gitpull.log")
         with open(logspath, 'wb') as f: f.close()
         cmd_git = "git add ."
-        cmd_request(cmd_git, logspath, basedir=GITHUBPATH)
+        cmd_request(cmd_git, logspath, basedir=ONEDRIVEGIT)
         cmd_git = "git pull"
-        cmd_request(cmd_git, logspath, basedir=GITHUBPATH)
+        cmd_request(cmd_git, logspath, basedir=ONEDRIVEGIT)
 
 
     def od_upload():
         logspath = os.path.join(LOGS_DIR, "odsync.log")
         with open(logspath, 'wb') as f: f.close()
-        cmd_request('onedrive --synchronize --upload-only', logspath)
+        cmd = "onedrive --synchronize --upload-only"
+        cmd_request(cmd, logspath, basedir=ONEDRIVEPATH)
 
 
     def od_download():
         logspath = os.path.join(LOGS_DIR, "odsync.log")
         with open(logspath, 'wb') as f: f.close()
-        cmd_request('onedrive --synchronize --download-only', logspath)
+        cmd = "onedrive --synchronize --download-only"
+        cmd_request(cmd, logspath, basedir=ONEDRIVEPATH)
 
 
     def od_sync():
         logspath = os.path.join(LOGS_DIR, "odsync.log")
         with open(logspath, 'wb') as f: f.close()
-        cmd_request('onedrive --synchronize', logspath)
+        cmd = "onedrive --synchronize"
+        cmd_request(cmd, logspath, basedir=ONEDRIVEPATH)
 
 
     if git:
@@ -99,12 +100,12 @@ def main(arguments):
         gitpull()
 
     if onedrive and git:
-        rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
-        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
+        rsync_local(PROJECTPATH, ONEDRIVEGIT, ONEDRIVEGIT)
+        rsync_local(ONEDRIVEGIT, PROJECTPATH, ONEDRIVEGIT)
         od_upload()
     elif onedrive and not git:
         od_download()
-        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
+        rsync_local(ONEDRIVEGIT, PROJECTPATH, ONEDRIVEGIT)
 
     if sync and not git and not onedrive:
         od_sync()
