@@ -68,7 +68,7 @@ def main(arguments):
         cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
     
     def gitpull():
-        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
+        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log')
         with open(logpath, 'wb') as f: pass
         cmd_git = "git add ."
         cmd_request(cmd_git, logpath, basedir=GITHUBPATH)
