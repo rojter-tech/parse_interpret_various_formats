@@ -1,30 +1,29 @@
 import os, sys, re
 from os.path import expanduser
+from utils.cmdtools import cmd_request
 HOMEPATH = expanduser("~")
 
-#HOMEPATH = os.environ["HOME"]
+
+
 GITHUBPATH = os.path.join(HOMEPATH,
                           "OneDrive",
                           "misc",
                           "parse_interpret_various_formats")
+
+if not os.path.isdir(GITHUBPATH):
+    GITHUBPATH = os.path.join(HOMEPATH,
+                          "OneDrive - Atea",
+                          "misc",
+                          "parse_interpret_various_formats")
+
+print(os.path.isdir(GITHUBPATH))
+
 PROJECTPATH = os.path.join(HOMEPATH,
                            "Environments",
                            "parse_interpret_various_formats")
-LOGS_DIR = ".logs"
+LOGS_DIR = "logs"
 print("Using Github path:", GITHUBPATH)
 print("Using Project path:", PROJECTPATH)
-
-def cmd_request(cmd, logpath, bufflen=512):
-    from subprocess import Popen, PIPE, STDOUT
-    from subprocess import Popen, PIPE, STDOUT
-    with Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT, bufsize=bufflen) as process, \
-        open(logpath, 'ab', bufflen) as file:
-            for line in process.stdout:
-                sys.stdout.buffer.write(line)
-                file.flush()
-                file.write(line)
-                file.flush()
-
 
 def rsync_local(source, target, reference):
     logs_dir = LOGS_DIR
@@ -45,7 +44,6 @@ def rsync_local(source, target, reference):
         rsync_dir = cmdtool + ' ' + gitdir + ' ' + prodir
         cmd_request(rsync_dir, logpath)
 
-
 def main(arguments):
     git, onedrive, sync = False, False, False
     for argument in arguments:
@@ -64,8 +62,11 @@ def main(arguments):
         msg = "'" + msg + "'"
         cmd_git = 'cd ' + PROJECTPATH + ';' + "git add .;"
         cmd_git += "git commit -m " + msg + ';' + 'git push'
+
+        cmd_git = "git add ."
         print(cmd_git)
-        cmd_request(cmd_git, os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log'))
+        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
+        cmd_request(cmd_git, logpath)
     
     def gitpull():
         cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git add .;git pull"
@@ -101,6 +102,7 @@ def main(arguments):
 if __name__ == "__main__":
     try:
         arguments = sys.argv[1:]
+        arguments = ['--git']
         main(arguments)
     except IndexError:
         print("No argument given!")
