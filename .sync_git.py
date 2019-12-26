@@ -2,34 +2,30 @@ import os, sys, re
 from os.path import expanduser
 from utils.cmdtools import cmd_request
 HOMEPATH = expanduser("~")
-
 GITHUBPATH = os.path.join(HOMEPATH,
                           "OneDrive",
                           "misc",
                           "parse_interpret_various_formats")
-
 if not os.path.isdir(GITHUBPATH):
     GITHUBPATH = os.path.join(HOMEPATH,
                           "OneDrive - Atea",
                           "misc",
                           "parse_interpret_various_formats")
 
-print(os.path.isdir(GITHUBPATH))
-
 PROJECTPATH = os.path.join(HOMEPATH,
                            "Environments",
                            "parse_interpret_various_formats")
 
 LOGS_DIR = ".logs"
+
 print("Using Github path:", GITHUBPATH)
 print("Using Project path:", PROJECTPATH)
 
-
 def rsync_local(source, target, reference):
     logs_dir = LOGS_DIR
-    logfile = "rsync" + ".log"
+    logfile = "rsync.log"
     logpath = os.path.join(reference,logs_dir,logfile)
-    f = open(logpath,'wb'); f.close()
+    with open(logpath, 'wb') as f: pass
     cmdtool = "rsync -av"
     files = [f for f in os.listdir(reference) if os.path.isfile(f)]
     dirs = [f for f in os.listdir(reference) if os.path.isdir(f)]
@@ -82,11 +78,13 @@ def main(arguments):
 
     def od_upload():
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
+        with open(logpath, 'wb') as f: pass
         cmd_request('onedrive --synchronize --upload-only', logpath)
 
 
     def od_download():
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
+        with open(logpath, 'wb') as f: pass
         cmd_request('onedrive --synchronize --download-only', logpath)
 
 
