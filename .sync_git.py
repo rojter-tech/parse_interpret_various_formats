@@ -56,22 +56,24 @@ def main(arguments):
             onedrive = True
         elif argument == "--sync":
             sync = True
-    
+
     def gitpush():
+        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
         msg = input("Commit message: ")
         msg = "'" + msg + "'"
-        cmd_git = 'cd ' + PROJECTPATH + ';' + "git add .;"
-        cmd_git += "git commit -m " + msg + ';' + 'git push'
-
         cmd_git = "git add ."
-        print(cmd_git)
-        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
-        cmd_request(cmd_git, logpath)
+        cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
+        cmd_git = "git commit -m " + msg
+        cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
+        cmd_git = "git push"
+        cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
     
     def gitpull():
-        cmd_gitpull = 'cd ' + GITHUBPATH + ';' + "git add .;git pull"
-        print(cmd_gitpull)
-        cmd_request(cmd_gitpull, os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log'))
+        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
+        cmd_git = "git add ."
+        cmd_request(cmd_git, logpath, basedir=GITHUBPATH)
+        cmd_git = "git pull"
+        cmd_request(cmd_git, logpath, basedir=GITHUBPATH)
     
     def od_upload():
         logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")

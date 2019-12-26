@@ -1,6 +1,6 @@
 import os, sys
 
-def cmd_request(cmd, logpath, bufflen=512):
+def cmd_request(cmd, logpath, basedir=None, bufflen=512):
     """Create and OS command line request
     
     Arguments:
@@ -10,6 +10,7 @@ def cmd_request(cmd, logpath, bufflen=512):
     Keyword Arguments:
         bufflen {int} -- [description] (default: {512})
     """
+    os.chdir(basedir)
     from subprocess import Popen, PIPE, STDOUT
     with Popen(cmd, shell=True, stdout=PIPE, stderr=STDOUT, bufsize=bufflen) as process, \
         open(logpath, 'ab', bufflen) as file:
