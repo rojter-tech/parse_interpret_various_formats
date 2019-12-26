@@ -114,30 +114,39 @@ class Word:
         ASCIIFONT = NAMESPACE+"ascii"
         ANSIFONT = NAMESPACE+"hAnsi"
 
+        def get_attr_val(tree_element, attribute, namespace):
+            find_attribute = tree_element.find(attribute)
+            if find_attribute != None:
+                value = find_attribute.attrib.get(namespace)
+            else:
+                value = "0"
+            return value
+
         tree = self.tree
         paragraphs = []
         attributes_dict = {}
         for paragraph in tree.iter(PARAGRAPH):
             texts = []
             for content in paragraph.iter(CONTENT):
+                # Text node
+                node = content.find(TEXT)
+                contentstring = node.text
+                # Formatting attributes
                 paformat = content.find(PAFORMAT)
                 if paformat:
-                    # Text node
-                    node = content.find(TEXT)
-                    contentstring = node.text
                     # Text Attributes
-                    bval      = paformat.find(BOLD).attrib.get(NAMESPACEVAL)
-                    ival      = paformat.find(ITALIC).attrib.get(NAMESPACEVAL)
-                    noproof   = paformat.find(NOPROF).attrib.get(NAMESPACEVAL)
-                    color     = paformat.find(COLOR).attrib.get(NAMESPACEVAL)
+                    bval     = get_attr_val(paformat, BOLD, NAMESPACEVAL)
+                    ival     = get_attr_val(paformat, ITALIC, NAMESPACEVAL)
+                    noproof  = get_attr_val(paformat, NOPROF, NAMESPACEVAL)
+                    color    = get_attr_val(paformat, COLOR, NAMESPACEVAL)
                     if color == "000000":
                         nondefaultcolor = '0'
                     else:
                         nondefaultcolor = '1'
-                    size      = paformat.find(SIZE).attrib.get(NAMESPACEVAL)
-                    lang      = paformat.find(LANG).attrib.get(NAMESPACEVAL)
-                    ascifont  = paformat.find(FONTS).attrib.get(ASCIIFONT)
-                    ansifont  = paformat.find(FONTS).attrib.get(ANSIFONT)
+                    size     = get_attr_val(paformat, SIZE, NAMESPACEVAL)
+                    lang     = get_attr_val(paformat, LANG, NAMESPACEVAL)
+                    ascifont = get_attr_val(paformat, FONTS, ASCIIFONT)
+                    ansifont = get_attr_val(paformat, FONTS, ANSIFONT)
                     attributevalues = [bval,ival,noproof,
                                        color,nondefaultcolor,size,
                                        lang,ascifont,ansifont]
