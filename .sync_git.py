@@ -3,8 +3,6 @@ from os.path import expanduser
 from utils.cmdtools import cmd_request
 HOMEPATH = expanduser("~")
 
-
-
 GITHUBPATH = os.path.join(HOMEPATH,
                           "OneDrive",
                           "misc",
@@ -59,6 +57,7 @@ def main(arguments):
 
     def gitpush():
         logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
+        with open(logpath, 'wb') as f: pass
         msg = input("Commit message: ")
         msg = "'" + msg + "'"
         cmd_git = "git add ."
@@ -70,6 +69,7 @@ def main(arguments):
     
     def gitpull():
         logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
+        with open(logpath, 'wb') as f: pass
         cmd_git = "git add ."
         cmd_request(cmd_git, logpath, basedir=GITHUBPATH)
         cmd_git = "git pull"
