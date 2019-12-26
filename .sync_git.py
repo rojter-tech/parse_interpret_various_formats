@@ -117,8 +117,7 @@ def main(arguments):
         od_download()
         rsync_local(PROJECTPATH, ONEDRIVEGIT, ONEDRIVEGIT)
         rsync_local(ONEDRIVEGIT, PROJECTPATH, ONEDRIVEGIT)
-        
-
+    
     if sync and not git and not onedrive:
         print("yes2")
         od_sync()
