@@ -16,16 +16,16 @@ PROJECTPATH = os.path.join(HOMEPATH,
                            "Environments",
                            "parse_interpret_various_formats")
 
-LOGS_DIR = ".logs"
+LOGS_DIR = os.path.join(HOMEPATH,".logs")
+if not os.path.isdir(LOGS_DIR):
+    os.mkdir(LOGS_DIR)
 
 print("Using Github path:", GITHUBPATH)
 print("Using Project path:", PROJECTPATH)
 
 def rsync_local(source, target, reference):
-    logs_dir = LOGS_DIR
-    logfile = "rsync.log"
-    logpath = os.path.join(reference,logs_dir,logfile)
-    with open(logpath, 'wb') as f: pass
+    logspath = os.path.join(LOGS_DIR, "rsync.log")
+    with open(logspath, 'wb') as f: pass
     cmdtool = "rsync -av"
     files = [f for f in os.listdir(reference) if os.path.isfile(f)]
     dirs = [f for f in os.listdir(reference) if os.path.isdir(f)]
@@ -36,9 +36,9 @@ def rsync_local(source, target, reference):
         gitdir = os.path.join(source, dirname, '.')
         prodir = os.path.join(target, dirname)
         rsync_file = cmdtool + ' ' + gitfile + ' ' + profile
-        cmd_request(rsync_file, logpath)
+        cmd_request(rsync_file, logspath)
         rsync_dir = cmdtool + ' ' + gitdir + ' ' + prodir
-        cmd_request(rsync_dir, logpath)
+        cmd_request(rsync_dir, logspath)
 
 def main(arguments):
     git, onedrive, sync = False, False, False
@@ -55,56 +55,56 @@ def main(arguments):
 
 
     def gitpush():
-        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpush.log')
-        with open(logpath, 'wb') as f: pass
+        logspath = os.path.join(LOGS_DIR, "gitpush.log")
+        with open(logspath, 'wb') as f: f.close()
         msg = input("Commit message: ")
         msg = '"' + msg + '"'
         cmd_git = "git add ."
-        cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath, basedir=PROJECTPATH)
         cmd_git = "git commit -m " + msg
-        cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath, basedir=PROJECTPATH)
         cmd_git = "git push"
-        cmd_request(cmd_git, logpath, basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath, basedir=PROJECTPATH)
 
 
     def gitpull():
-        logpath = os.path.join(PROJECTPATH,LOGS_DIR,'gitpull.log')
-        with open(logpath, 'wb') as f: pass
+        logspath = os.path.join(LOGS_DIR, "gitpull.log")
+        with open(logspath, 'wb') as f: f.close()
         cmd_git = "git add ."
-        cmd_request(cmd_git, logpath, basedir=GITHUBPATH)
+        cmd_request(cmd_git, logspath, basedir=GITHUBPATH)
         cmd_git = "git pull"
-        cmd_request(cmd_git, logpath, basedir=GITHUBPATH)
+        cmd_request(cmd_git, logspath, basedir=GITHUBPATH)
 
 
     def od_upload():
-        logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
-        with open(logpath, 'wb') as f: pass
-        cmd_request('onedrive --synchronize --upload-only', logpath)
+        logspath = os.path.join(LOGS_DIR, "odsync.log")
+        with open(logspath, 'wb') as f: f.close()
+        cmd_request('onedrive --synchronize --upload-only', logspath)
 
 
     def od_download():
-        logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
-        with open(logpath, 'wb') as f: pass
-        cmd_request('onedrive --synchronize --download-only', logpath)
+        logspath = os.path.join(LOGS_DIR, "odsync.log")
+        with open(logspath, 'wb') as f: f.close()
+        cmd_request('onedrive --synchronize --download-only', logspath)
 
 
     def od_sync():
-        logpath = os.path.join(HOMEPATH, LOGS_DIR, "odsync.log")
-        cmd_request('onedrive --synchronize', logpath)
+        logspath = os.path.join(LOGS_DIR, "odsync.log")
+        with open(logspath, 'wb') as f: f.close()
+        cmd_request('onedrive --synchronize', logspath)
 
 
     if git:
         gitpush()
         gitpull()
 
-    if onedrive and not git:
-        od_download()
-        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
-
-    elif onedrive and git:
+    if onedrive and git:
         rsync_local(PROJECTPATH, GITHUBPATH, GITHUBPATH)
         rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
         od_upload()
+    elif onedrive and not git:
+        od_download()
+        rsync_local(GITHUBPATH, PROJECTPATH, GITHUBPATH)
 
     if sync and not git and not onedrive:
         od_sync()
