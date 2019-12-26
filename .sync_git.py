@@ -17,12 +17,15 @@ LOGS_DIR = os.path.join(HOMEPATH,".logs")
 if not os.path.isdir(LOGS_DIR):
     os.mkdir(LOGS_DIR)
 
+def logspath(logfile):
+    logfile+=".log"
+    return os.path.join(LOGS_DIR, logfile)
+
 print("Using Github path:", ONEDRIVEGIT)
 print("Using Project path:", PROJECTPATH)
 
 def rsync_local(source, target, reference):
-    logspath = os.path.join(LOGS_DIR, "rsync.log")
-    with open(logspath, 'wb') as f: pass
+    with open(logspath("rsync"), 'wb') as f: pass
     cmdtool = "rsync -av"
     files = [f for f in os.listdir(reference) if os.path.isfile(f)]
     dirs = [f for f in os.listdir(reference) if os.path.isdir(f)]
@@ -33,9 +36,9 @@ def rsync_local(source, target, reference):
         gitdir = os.path.join(source, dirname, '.')
         prodir = os.path.join(target, dirname)
         rsync_file = cmdtool + ' ' + gitfile + ' ' + profile
-        cmd_request(rsync_file, logspath)
+        cmd_request(rsync_file, logspath("rsync"))
         rsync_dir = cmdtool + ' ' + gitdir + ' ' + prodir
-        cmd_request(rsync_dir, logspath)
+        cmd_request(rsync_dir, logspath("rsync"))
 
 
 def main(arguments):
@@ -53,46 +56,41 @@ def main(arguments):
 
 
     def gitpush():
-        logspath = os.path.join(LOGS_DIR, "gitpush.log")
-        with open(logspath, 'wb') as f: f.close()
+        with open(logspath("gitpush"), 'wb') as f: f.close()
         msg = input("Commit message: ")
         msg = '"' + msg + '"'
         cmd_git = "git add ."
-        cmd_request(cmd_git, logspath, basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath("gitpush"), basedir=PROJECTPATH)
         cmd_git = "git commit -m " + msg
-        cmd_request(cmd_git, logspath, basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath("gitpush"), basedir=PROJECTPATH)
         cmd_git = "git push"
-        cmd_request(cmd_git, logspath, basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath("gitpush"), basedir=PROJECTPATH)
 
 
     def gitpull():
-        logspath = os.path.join(LOGS_DIR, "gitpull.log")
-        with open(logspath, 'wb') as f: f.close()
+        with open(logspath("gitpull"), 'wb') as f: f.close()
         cmd_git = "git add ."
-        cmd_request(cmd_git, logspath, basedir=ONEDRIVEGIT)
+        cmd_request(cmd_git, logspath("gitpull"), basedir=ONEDRIVEGIT)
         cmd_git = "git pull"
-        cmd_request(cmd_git, logspath, basedir=ONEDRIVEGIT)
+        cmd_request(cmd_git, logspath("gitpull"), basedir=ONEDRIVEGIT)
 
 
     def od_upload():
-        logspath = os.path.join(LOGS_DIR, "odsync.log")
-        with open(logspath, 'wb') as f: f.close()
+        with open(logspath("odsync"), 'wb') as f: f.close()
         cmd = "onedrive --synchronize --upload-only"
-        cmd_request(cmd, logspath, basedir=ONEDRIVEPATH)
+        cmd_request(cmd, logspath("odsync"), basedir=ONEDRIVEPATH)
 
 
     def od_download():
-        logspath = os.path.join(LOGS_DIR, "odsync.log")
-        with open(logspath, 'wb') as f: f.close()
+        with open(logspath("odsync"), 'wb') as f: f.close()
         cmd = "onedrive --synchronize --download-only"
-        cmd_request(cmd, logspath, basedir=ONEDRIVEPATH)
+        cmd_request(cmd, logspath("odsync"), basedir=ONEDRIVEPATH)
 
 
     def od_sync():
-        logspath = os.path.join(LOGS_DIR, "odsync.log")
-        with open(logspath, 'wb') as f: f.close()
+        with open(logspath("odsync"), 'wb') as f: f.close()
         cmd = "onedrive --synchronize"
-        cmd_request(cmd, logspath, basedir=ONEDRIVEPATH)
+        cmd_request(cmd, logspath("odsync"), basedir=ONEDRIVEPATH)
 
 
     if git:
