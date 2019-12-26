@@ -55,24 +55,24 @@ def main(arguments):
             sync = True
 
 
-    def gitpush():
+    def gitpush(basedir):
         with open(logspath("gitpush"), 'wb') as f: f.close()
         msg = input("Commit message: ")
         msg = '"' + msg + '"'
         cmd_git = "git add ."
-        cmd_request(cmd_git, logspath("gitpush"), basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath("gitpush"), basedir=basedir)
         cmd_git = "git commit -m " + msg
-        cmd_request(cmd_git, logspath("gitpush"), basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath("gitpush"), basedir=basedir)
         cmd_git = "git push"
-        cmd_request(cmd_git, logspath("gitpush"), basedir=PROJECTPATH)
+        cmd_request(cmd_git, logspath("gitpush"), basedir=basedir)
 
 
-    def gitpull():
+    def gitpull(basedir):
         with open(logspath("gitpull"), 'wb') as f: f.close()
         cmd_git = "git add ."
-        cmd_request(cmd_git, logspath("gitpull"), basedir=ONEDRIVEGIT)
+        cmd_request(cmd_git, logspath("gitpull"), basedir=basedir)
         cmd_git = "git pull"
-        cmd_request(cmd_git, logspath("gitpull"), basedir=ONEDRIVEGIT)
+        cmd_request(cmd_git, logspath("gitpull"), basedir=basedir)
 
 
     def od_upload():
@@ -94,8 +94,9 @@ def main(arguments):
 
 
     if git:
-        gitpush()
-        gitpull()
+        gitpull(PROJECTPATH)
+        gitpush(PROJECTPATH)
+        gitpull(ONEDRIVEGIT)
 
     if onedrive and git:
         od_upload()
