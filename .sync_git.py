@@ -100,8 +100,6 @@ def main(arguments):
         gitpull()
 
     if onedrive and git:
-        rsync_local(PROJECTPATH, ONEDRIVEGIT, ONEDRIVEGIT)
-        rsync_local(ONEDRIVEGIT, PROJECTPATH, ONEDRIVEGIT)
         od_upload()
     elif onedrive and not git:
         od_download()
