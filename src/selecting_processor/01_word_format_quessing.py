@@ -69,7 +69,7 @@ def main():
     
     print_summary(attribute_files, non_attribute_files, unknown_format)
     if checkcompare:
-        print("\nAll processed dataframes is euqal! Yey!")
+        print("\nAll processed dataframes is equal! Yey!")
     else:
         print("  Watch out! There is dataframes that are inequal")
     print("Number of files checked:",len(dfs_files))

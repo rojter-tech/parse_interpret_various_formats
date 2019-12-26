@@ -28,12 +28,10 @@ def format_one(raw_text):
 def format_two(raw_text):
     """Two line QA combination.
     """
-    print(raw_text)
     def process_combinations(combinations):
         qalist = []
 
         for combo in combinations:
-            print(len(combo))
             Q = combo[0].strip()
             A = combo[1].strip()
             qalist.append([Q,A])
@@ -41,14 +39,13 @@ def format_two(raw_text):
         return qalist
     
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
-    print(combinations)
     if combinations:
         if type(combinations[0]) == tuple:
-            
             qalist = process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
             return qadf
         else:
+            print("There is no two line combination in this file")
             raise rOjterError("No way, you dont want to go there ...")
     else:
         raise rOjterError("No way, you dont want to go there ...")

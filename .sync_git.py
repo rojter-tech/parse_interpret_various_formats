@@ -37,7 +37,6 @@ def rsync_local(source_path, target_path, reference_path):
         else:
             dirs.append(os.path.basename(entry))
     
-    print(files)
     for filename in files:
         source_file = os.path.join(source_path, filename)
         target_file = os.path.join(target_path, filename)
