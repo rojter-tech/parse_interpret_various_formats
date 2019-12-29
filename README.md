@@ -1,4 +1,4 @@
-# parse_interpret_various_formats - Python package
+# parse_interpret_various_formats
 Alpha: 0.0.1
 
 Primary feature : Parse, read and separate questions and answers from QA documents in Microsofts Word docx format.
