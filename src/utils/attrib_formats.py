@@ -165,7 +165,6 @@ def try_separate_by_attribute(wordobject):
     ITALIC = r"{ival:"
     COLOR = r"{nondefaultcolor:"
     ATTRIBUTES = [BOLD, ITALIC, COLOR]
-    print(60*"*","\nTrying:",wordobject.filename,"...")
     check = False
     for testattr in ATTRIBUTES:
         try:

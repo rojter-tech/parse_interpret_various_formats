@@ -23,6 +23,7 @@ def format_one(raw_text):
         qalist.append([Q.strip(),A.strip()])
 
     qadf = pd.DataFrame(qalist, columns=["Q","A"])
+    print("QA tag separation suceeded.")
     return qadf
 
 def format_two(raw_text):
@@ -43,6 +44,7 @@ def format_two(raw_text):
         if type(combinations[0]) == tuple:
             qalist = process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
+            print("QA two line separation suceeded.")
             return qadf
         else:
             print("There is no two line combination in this file")
@@ -71,6 +73,7 @@ def format_ten(raw_text):
     if len(dump) == 0:
         print('Hurray No lines in dump list.')
         qadf = pd.DataFrame(splitqa, columns=['Q','A'])
+        print("QA general text separation suceeded.")
         return qadf
     else:
         print('Dump list contains rows that dont match')

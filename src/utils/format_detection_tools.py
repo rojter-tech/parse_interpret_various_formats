@@ -6,39 +6,45 @@ from utils.raw_formats import try_separate_by_rawtext, format_functions
 from utils.errors import Error, rOjterError
 from utils.wapi import Word
 
+def load_word_object(wordfilepath):
+    wordobject = Word(wordfilepath)
+    return wordobject
 
-def load_word_objects(WORDDATADIR):
+def load_word_objects(worddatadir):
     wordobjects = []
-    WORDFILES = os.listdir(WORDDATADIR)
-    for WORDFILE in WORDFILES:
-        WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
-        print(WORDFILE)
-        WORDDOCUMENT = Word(WORDFILEPATH)
-        if re.search(r'.*.docx', WORDFILE):
-            wordobjects.append(WORDDOCUMENT)
+    wordfiles = os.listdir(worddatadir)
+    for wordfile in wordfiles:
+        wordfilepath = os.path.join(worddatadir,wordfile)
+        wordobject = Word(wordfilepath)
+        if re.search(r'.*.docx', wordfile):
+            wordobjects.append(wordobject)
+            print("Loading:", wordfile)
 
     if wordobjects == []:
-        print("No docx files found in:", WORDDATADIR)
+        print("No docx files found in:", worddatadir)
         raise rOjterError
     else:
         return wordobjects
 
 
 def process_wordobject(wordobject, format_type = None):
-    print("Processing", wordobject.filename)
+    print("\n\nProcessing", wordobject.filename)
+    print(80*"*","\nTrying:",wordobject.filename,"...")
     qadata = try_separate_by_attribute(wordobject)
 
     if type(qadata) == str:
         qadata = try_separate_by_rawtext(wordobject, format_functions)
     else:
+        print("\nQA separation by attribute was executed for", wordobject.filename)
         format_type = "Attribute"
         return qadata, format_type
 
     if type(qadata) == str:
-        print("No separation process attempt did succeeded for",qadata)
+        print("\nNo separation process attempt did succeeded for", wordobject.filename, "!!")
         format_type = "UnknownFormat"
         return qadata, format_type
     else:
+        print("\nQA separation by raw text format was executed for", wordobject.filename)
         format_type = "RawTextFormat"
         return qadata, format_type
 
@@ -83,3 +89,10 @@ def multiple_object_diagnostics(wordobjects):
             unknown_format.append(wordobject.filename)
     
     test_summary(dfs, attribute_files, raw_text_files, unknown_format)
+
+
+def load_qa_df(wordfilepath):
+    wordobject = load_word_object(wordfilepath)
+    qadf = process_wordobject(wordobject)
+    return qadf
+

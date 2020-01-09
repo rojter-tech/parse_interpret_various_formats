@@ -3,7 +3,6 @@ try:
 except ImportError:
     from xml.etree.ElementTree import XML
 from zipfile import ZipFile
-from xml.dom.minidom import parseString
 import pandas as pd
 import os, re
 
@@ -88,10 +87,6 @@ class Word:
     def show_xml(self):
         print(parseString(self.xml_content).toprettyxml(indent='    '))
 
-
-    def save_as_xml(self,filepath):
-        with open(filepath, mode='wt', encoding='utf_8') as f:
-            f.write(parseString(self.xml_content).toprettyxml(indent='    '))
 
     def extract_content(self):
         """Simple word xml parser, collecting text data with corresponding
@@ -192,6 +187,11 @@ class Word:
         
         # Adding potentially missing last linefeed
         self.raw_text = '\r\n'.join(lines)+'\r\n'
+
+
+####################################################################
+################### ATTRIBUTE SELECTION TOOLS ######################
+####################################################################
 
 
 def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
@@ -381,8 +381,13 @@ def try_separate_by_attribute(wordobject):
         return wordobject.filename
 
 
+######################################################################
+####################### RAW FORMAT SELECTION TOOLS ###################
+######################################################################
+
+
 def format_one(raw_text):
-    """Tag separation
+    """QA separation by tag
     """
     questions = re.findall(r'(?<=Q: ).*?(?=A:)|(?<=Q: ).*?(?=\n)', raw_text)
     if len(questions) == 0:
@@ -402,11 +407,12 @@ def format_one(raw_text):
         qalist.append([Q.strip(),A.strip()])
 
     qadf = pd.DataFrame(qalist, columns=["Q","A"])
+    print("QA tag separation suceeded.")
     return qadf
 
 
 def format_two(raw_text):
-    """Two line QA combination.
+    """QA separation by two line QA combination.
     """
     def process_combinations(combinations):
         qalist = []
@@ -423,6 +429,7 @@ def format_two(raw_text):
         if type(combinations[0]) == tuple:
             qalist = process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
+            print("QA two line separation suceeded.")
             return qadf
         else:
             print("There is no two line combination in this file")
@@ -452,6 +459,7 @@ def format_ten(raw_text):
     if len(dump) == 0:
         print('Hurray No lines in dump list.')
         qadf = pd.DataFrame(splitqa, columns=['Q','A'])
+        print("QA general text separation suceeded.")
         return qadf
     else:
         print('Dump list contains rows that dont match')
@@ -459,3 +467,84 @@ def format_ten(raw_text):
 
 
 format_functions = [format_one, format_two, format_ten]
+
+
+def try_separate_by_rawtext(wordobject, format_functions):
+    check = False
+    for format_function in format_functions:
+        try:
+            qadf = format_function(wordobject.raw_text)
+            if len(qadf) != 0:
+                check = True
+            else:
+                print("DataFrame size invalid")
+                raise rOjterError
+            break
+        except rOjterError:
+            print(wordobject.filename, "format excluded.")
+    
+    if check:
+        return qadf
+    else:
+        print("")
+        print("***********************************************")
+        print("**!!!!Format detection did not sucess!!!!**")
+        print("***********************************************")
+        print("")
+        print("QA by " + wordobject.filename + " format could not be determined ...")
+        return wordobject.filename
+
+
+
+###############################################################
+######################### MAIN LOADERS ########################
+###############################################################
+
+
+
+def load_word_object(wordfilepath):
+    wordobject = Word(wordfilepath)
+    return wordobject
+
+
+def process_wordobject(wordobject, format_type = None):
+    print("\n\nProcessing", wordobject.filename)
+    print(80*"*","\nTrying:",wordobject.filename,"...")
+    qadata = try_separate_by_attribute(wordobject)
+
+    if type(qadata) == str:
+        qadata = try_separate_by_rawtext(wordobject, format_functions)
+    else:
+        print("\nQA separation by attribute was executed for", wordobject.filename)
+        format_type = "Attribute"
+        return qadata, format_type
+
+    if type(qadata) == str:
+        print("\nNo separation process attempt did succeeded for", wordobject.filename, "!!")
+        format_type = "UnknownFormat"
+        return qadata, format_type
+    else:
+        print("\nQA separation by raw text format was executed for", wordobject.filename)
+        format_type = "RawTextFormat"
+        return qadata, format_type
+
+
+def load_qa_from_docx(wordfilepath):
+    """Main dataframe loader
+    
+    Arguments:
+        wordfilepath {str} -- Absolute path to word-file
+    
+    Returns:
+        pandas.DataFrame -- Final QA dataframe
+    """
+    wordobject = load_word_object(wordfilepath)
+    qadf = process_wordobject(wordobject)
+    return qadf
+
+def main():
+    wordfilepath = "/home/dreuter/Environments/parse_interpret_various_formats/src/data/formatted_word_data/QAb.docx"
+    print(load_qa_from_docx(wordfilepath))
+
+if __name__ == "__main__":
+    main()
