@@ -153,6 +153,14 @@ def attribute_on_off_separation(testattr, content):
 
 
 def try_separate_by_attribute(wordobject):
+    """Trying separation of Word-document QA content that can be distinguished by attribute.
+    
+    Arguments:
+        wordobject {Word} -- Word object
+    
+    Returns:
+        Pandas.DataFrame -- [description]
+    """
     BOLD = r"{bval:"
     ITALIC = r"{ival:"
     COLOR = r"{nondefaultcolor:"

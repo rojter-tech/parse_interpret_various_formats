@@ -78,3 +78,30 @@ def format_ten(raw_text):
 
 
 format_functions = [format_one, format_two, format_ten]
+
+
+def try_separate_by_rawtext(wordobject, format_functions):
+    check = False
+    for format_function in format_functions:
+        try:
+            qadf = format_function(wordobject.raw_text)
+            if len(qadf) != 0:
+                check = True
+            else:
+                print("DataFrame size invalid")
+                raise rOjterError
+            break
+        except rOjterError:
+            print(wordobject.filename, "format excluded.")
+    
+    if check:
+        return qadf
+    else:
+        print("")
+        print("***********************************************")
+        print("**!!!!Format detection did not sucess!!!!**")
+        print("***********************************************")
+        print("")
+        print("QA by " + wordobject.filename + " format could not be determined ...")
+        return wordobject.filename
+
