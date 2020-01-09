@@ -4,7 +4,7 @@ except ImportError:
     from xml.etree.ElementTree import XML
 from zipfile import ZipFile
 import pandas as pd
-import os, re
+import sys, os, re
 
 
 class Error(Exception):
@@ -469,7 +469,15 @@ def format_ten(raw_text):
 format_functions = [format_one, format_two, format_ten]
 
 
-def try_separate_by_rawtext(wordobject, format_functions):
+def try_separate_by_rawtext(wordobject):
+    """Trying separation of Word-document QA content that can be distinguished by various formats.
+    
+    Arguments:
+        wordobject {Word} -- Word object
+    
+    Returns:
+        Pandas.DataFrame -- A QA separated dataframe
+    """
     check = False
     for format_function in format_functions:
         try:
@@ -503,17 +511,35 @@ def try_separate_by_rawtext(wordobject, format_functions):
 
 
 def load_word_object(wordfilepath):
+    """Does exactly what the name suggests
+    
+    Arguments:
+        wordfilepath {str} -- full or relative path to docx-file
+    
+    Returns:
+        Word -- Word object associated with the docx file
+    """
     wordobject = Word(wordfilepath)
     return wordobject
 
 
-def process_wordobject(wordobject, format_type = None):
+def process_wordobject(wordobject):
+    """Analyzing QA prepared word-document and returns corresponding
+       QA separated dataframe.
+    
+    Arguments:
+        wordobject {Word} -- Word-object to be analyzed
+    
+    Returns:
+        [type] -- [description]
+    """
     print("\n\nProcessing", wordobject.filename)
     print(80*"*","\nTrying:",wordobject.filename,"...")
     qadata = try_separate_by_attribute(wordobject)
 
+    format_type = None
     if type(qadata) == str:
-        qadata = try_separate_by_rawtext(wordobject, format_functions)
+        qadata = try_separate_by_rawtext(wordobject)
     else:
         print("\nQA separation by attribute was executed for", wordobject.filename)
         format_type = "Attribute"
@@ -543,8 +569,15 @@ def load_qa_from_docx(wordfilepath):
     return qadf
 
 def main():
-    wordfilepath = "/home/dreuter/Environments/parse_interpret_various_formats/src/data/formatted_word_data/QAb.docx"
-    print(load_qa_from_docx(wordfilepath))
+    call = sys.argv[0]
+    call_path = os.path.dirname(call)
+    wordfilepath = os.path.join(call_path, "QA.docx")
+    
+    if len(sys.argv) > 1:
+        wordfilepath = os.path.join(call_path, sys.argv[1])
+        print(load_qa_from_docx(wordfilepath))
+    else:
+        print(load_qa_from_docx(wordfilepath))
 
 if __name__ == "__main__":
     main()
