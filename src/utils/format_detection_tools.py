@@ -1,6 +1,28 @@
+from itertools import combinations
+import os, re
+
 from utils.attrib_formats import try_separate_by_attribute
 from utils.raw_formats import try_separate_by_rawtext, format_functions
-from itertools import combinations
+from utils.errors import Error, rOjterError
+from utils.wapi import Word
+
+
+def load_word_objects(WORDDATADIR):
+    wordobjects = []
+    WORDFILES = os.listdir(WORDDATADIR)
+    for WORDFILE in WORDFILES:
+        WORDFILEPATH = os.path.join(WORDDATADIR,WORDFILE)
+        print(WORDFILE)
+        WORDDOCUMENT = Word(WORDFILEPATH)
+        if re.search(r'.*.docx', WORDFILE):
+            wordobjects.append(WORDDOCUMENT)
+
+    if wordobjects == []:
+        print("No docx files found in:", WORDDATADIR)
+        raise rOjterError
+    else:
+        return wordobjects
+
 
 def process_wordobject(wordobject, format_type = None):
     print("Processing", wordobject.filename)
@@ -19,6 +41,7 @@ def process_wordobject(wordobject, format_type = None):
     else:
         format_type = "RawTextFormat"
         return qadata, format_type
+
 
 def test_summary(dfs, attribute_files, raw_text_files, unknown_format):
     dfs_files = list(dfs.keys()); n_dfs = len(dfs)
@@ -39,6 +62,7 @@ def test_summary(dfs, attribute_files, raw_text_files, unknown_format):
     else:
         print("  Watch out! There is dataframes that are inequal")
     print("Number of files checked:",len(dfs_files))
+
 
 def multiple_object_diagnostics(wordobjects):
     dfs = {}
