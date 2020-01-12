@@ -1,0 +1,2070 @@
+<?xml version="1.0" ?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 w16se w16cid wp14">
+    <w:body>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:w="7920" w:type="dxa"/>
+                <w:tblCellMar>
+                    <w:left w:w="70" w:type="dxa"/>
+                    <w:right w:w="70" w:type="dxa"/>
+                </w:tblCellMar>
+                <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="2350"/>
+                <w:gridCol w:w="5570"/>
+            </w:tblGrid>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="312"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:b/>
+                                <w:bCs/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:b/>
+                                <w:bCs/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Fråga</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:b/>
+                                <w:bCs/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:b/>
+                                <w:bCs/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Svar</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="828"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vad är Idéslussen?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">Idéslussen är ett verktyg för att ta tillvara medarbetarnas idéer, goda exempel och utmaningar. </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="2484"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vad kan jag göra hos Idéslussen/här?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Här kan du titta runt på alla utmaningar, idéer och goda exempel som finns. Har du något problem eller en utmaning du vill lösa kan du skicka in den till oss. Och om du hittar en utmaning som du har en lösning på, kan du lägga in en idé, eller bygga på någon annans idé. Tryck gärna på hjärtat vid saker som du gillar, och skicka gärna in kommentarer.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vad är en utmaning?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">En utmaning är ett problem som behöver lösas. </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="828"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vad är en idé?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>En idé kan både vara ett förslag på något som behöver göras och ett förslag på lösning på en utmaning.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="828"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vem kan se vad jag lämnar in hos Idéslussen?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Alla som har ett konto i Stockholms stad kan gå in på Idéslussens plattform, se, gilla, kommentera och lämna förslag.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">Om jag inte förstår hur jag ska </w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>lgga</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellEnd"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve"> in en idé/utmaning. Hur får jag då hjälp?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Kontakta Idéslussens funktionsbrevlåda: idesluss@stockholm.se</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="2484"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vad händer med min utmaning?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>När du skickat in en utmaning blir du kontaktad av Idéslussen. Tillsammans går vi igenom hur vi på bästa sätt tar utmaningen vidare. Därefter publiceras utmaningen så att alla kan ta del av den. När tiden för att lämna idéer på utmaningen löpt ut arbetar ni som delat utmaningen vidare med stöd från Idéslussen för att hitta en bra lösning.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="4416"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vad händer med min idé?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="center"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Har du en idé du vill dela med dig av, ett gott exempel eller en smart lösning, klicka på fliken Idé. Idéer kan kopplas till utmaningar eller vara fristående. Alla är välkomna att lämna idéer, fristående idéer eller idéer som svar på en utmaning. Du kan också välja att bygga på andras idéer. Det går att lägga in idéer på utmaningarna så länge utmaningen är öppen. Du ser på utmaningens tidslinje hur länge den är det. När tiden löpt ut arbetar de som delat utmaningen vidare med stöd av Idéslussen för att hitta den bästa lösningen. Då kan du som idélämnare bli kontaktad.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:lastRenderedPageBreak/>
+                            <w:t>Vem kan jag kontakta för att få hjälp?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="center"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Kontakta Idéslussens funktionsbrevlåda: idesluss@stockholm.se</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Jag vill prata med någon. Vem kan jag ringa?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="center"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Kontakta projektledare Christine Oljelund, 08-508 29 482</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="600"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Har du en utmaning du vill ha hjälp med?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Har du en utmaning du vill ha hjälp med, klicka på fliken Utmaning.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="3312"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vem får lämna idéer?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Alla är välkomna att lämna idéer, fristående idéer eller idéer som svar på en utmaning. Du kan också välja att bygga på andras idéer. Det går att lägga in idéer på utmaningarna så länge utmaningen är öppen. Du ser på utmaningens tidslinje hur länge den är det. När tiden löpt ut arbetar de som delat utmaningen vidare med stöd av Idéslussen för att hitta den bästa lösningen. Då kan du som idélämnare bli kontaktad.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1800"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">Jag kan inte se min </w:t>
+                        </w:r>
+                        <w:proofErr w:type="gramStart"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>utmaning./</w:t>
+                        </w:r>
+                        <w:proofErr w:type="gramEnd"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Varför kan jag inte se min utmaning?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>När du skickat in en utmaning blir du kontaktad av Idéslussen. Tillsammans går vi igenom hur vi på bästa sätt tar utmaningen vidare. Därefter publiceras utmaningen så att alla kan ta del av den.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="600"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Jag vill ha support / kontakt?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:hyperlink r:id="rId4" w:history="1">
+                            <w:r w:rsidRPr="00DF445C">
+                                <w:rPr>
+                                    <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                    <w:color w:val="000000"/>
+                                    <w:sz w:val="24"/>
+                                    <w:szCs w:val="24"/>
+                                    <w:lang w:eastAsia="sv-SE"/>
+                                </w:rPr>
+                                <w:t>Skicka e-post till idesluss@stockholm.se</w:t>
+                            </w:r>
+                        </w:hyperlink>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1500"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Kan jag läsa mer om Idéslussen någonstans?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:hyperlink r:id="rId5" w:history="1">
+                            <w:r w:rsidRPr="00DF445C">
+                                <w:rPr>
+                                    <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                    <w:color w:val="000000"/>
+                                    <w:sz w:val="24"/>
+                                    <w:szCs w:val="24"/>
+                                    <w:lang w:eastAsia="sv-SE"/>
+                                </w:rPr>
+                                <w:t xml:space="preserve">Du kan läsa mer om Stockholms stads innovationsarbete och Idéslussen på intranätet. </w:t>
+                            </w:r>
+                            <w:r w:rsidRPr="00DF445C">
+                                <w:rPr>
+                                    <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                    <w:color w:val="0070C0"/>
+                                    <w:sz w:val="24"/>
+                                    <w:szCs w:val="24"/>
+                                    <w:u w:val="single"/>
+                                    <w:lang w:eastAsia="sv-SE"/>
+                                </w:rPr>
+                                <w:t>https://intranat.stockholm.se/Sidor/2017/5/Idesluss/</w:t>
+                            </w:r>
+                        </w:hyperlink>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1500"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Hur lämnar jag en idé?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Har du en idé du vill dela med dig av, ett gott exempel eller en smart lösning, klicka på fliken Idé. Idéer kan kopplas till utmaningar eller vara fristående.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="2100"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Hur lämnar jag en utmaning?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Har du en utmaning du vill ha hjälp med, klicka på fliken Utmaning, och sedan på knappen + Ny utmaning. Beskriv din utmaning och skicka in den så kommer vi på Idéslussen titta på den och kontakta dig för att se hur vi bäst tar utmaningen vidare.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1800"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:lastRenderedPageBreak/>
+                            <w:t>Varför finns en Idésluss?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">Att släppa loss innovationskraften hos alla medarbetare i den offentliga sektorn är avgörande om vi ska klara de stora samhällsutmaningar vi står inför. Idéslussen handlar om att ta tillvara medarbetarnas idéer. </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1656"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Vilka kategorier finns i Idéslussen?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Anläggningar och fastigheter, Arbetsmarknad, Förskola, Kultur-Idrott-Fritid, Miljö-Trafik-Avfall, Skola, Socialtjänst-Funktionsnedsättning, Stadsutveckling-Stadsbyggnad, Äldreomsorg, Övrigt</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1380"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Hur delar jag min Idé till andra?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">När du lämnat en idé kan du dela länken till idén till dem du önskar. Klicka på symbolen som är en </w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>fyrkan</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellEnd"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve"> med en pil som pekar uppåt. Då kan du välja e-post eller att kopiera länken. </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1380"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Hur delar jag min utmaning till andra?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">När du lämnat en utmaning kan du dela länken till utmaningen till de du önskar. Klicka på symbolen som är en </w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellStart"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>fyrkan</w:t>
+                        </w:r>
+                        <w:proofErr w:type="spellEnd"/>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve"> med en pil som pekar uppåt. Då kan du välja e-post eller att kopiera länken. </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1800"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Varför kan jag inte lämna idéer på en utmaning?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">När en utmaning gått in i prototypfasen så går det inte att lämna in nya förslag på lösningar. Vill du ändå komma med förslag så kontakta Idéslussen via e-post: </w:t>
+                        </w:r>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="0070C0"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:u w:val="single"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>idesluss@stockholm.se</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Kan jag få vara anonym?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">Nej, det är viktigt att se vem som lämnar utmaningar, goda exempel och idéer. </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="3000"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Hur får jag folk att lämna in idéer på min utmaning?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                <w:color w:val="000000"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:hyperlink r:id="rId6" w:history="1">
+                            <w:r w:rsidRPr="00DF445C">
+                                <w:rPr>
+                                    <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                    <w:color w:val="000000"/>
+                                    <w:sz w:val="24"/>
+                                    <w:szCs w:val="24"/>
+                                    <w:lang w:eastAsia="sv-SE"/>
+                                </w:rPr>
+                                <w:t xml:space="preserve">Kommunikation är A och O när du lägger upp en utmaning. Se till att de som du tror är intresserade av din utmaning vet om att den finns. Enklaste sättet att berätta om en utmaning är att maila eller att skicka via intranätet. Om du vill ha tips och råd på hur du ska kommunicera kring din utmaning, maila till </w:t>
+                            </w:r>
+                            <w:r w:rsidRPr="00DF445C">
+                                <w:rPr>
+                                    <w:rFonts w:ascii="Arial" w:eastAsia="Times New Roman" w:hAnsi="Arial" w:cs="Arial"/>
+                                    <w:color w:val="006EBF"/>
+                                    <w:sz w:val="24"/>
+                                    <w:szCs w:val="24"/>
+                                    <w:u w:val="single"/>
+                                    <w:lang w:eastAsia="sv-SE"/>
+                                </w:rPr>
+                                <w:t>idésluss@stockholm.se</w:t>
+                            </w:r>
+                        </w:hyperlink>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="1800"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t xml:space="preserve">Hur får jag min idé att synas mer?  </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Idéer som andra gillar och vill bygga vidare på syns mer. Så det enklaste sättet att få din idé att synas mer är att dela den med så många som möjligt och få andra att göra den ännu bättre.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidTr="00DF445C">
+                <w:trPr>
+                    <w:trHeight w:val="2400"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:lastRenderedPageBreak/>
+                            <w:t>Kan jag skapa en arbetsgrupp?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5460" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                            <w:right w:val="single" w:sz="4" w:space="0" w:color="000000"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="000000" w:fill="FFFFFF"/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidR="00DF445C" w:rsidRPr="00DF445C" w:rsidRDefault="00DF445C" w:rsidP="00DF445C">
+                        <w:pPr>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00DF445C">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Helvetica" w:eastAsia="Times New Roman" w:hAnsi="Helvetica" w:cs="Helvetica"/>
+                                <w:color w:val="000000"/>
+                                <w:sz w:val="24"/>
+                                <w:szCs w:val="24"/>
+                                <w:lang w:eastAsia="sv-SE"/>
+                            </w:rPr>
+                            <w:t>Du kan skapa en arbetsgrupp om administratören för utmaningen har aktiverat den funktionen. För att skapa en grupp så bjuder man in de som man vill jobba med. Du kan skapa idéer, prototyper och utmaningar som har din grupp som avsändare.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p w:rsidR="00BB6350" w:rsidRDefault="00BB6350">
+            <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+            <w:bookmarkEnd w:id="0"/>
+        </w:p>
+        <w:sectPr w:rsidR="00BB6350">
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+            <w:cols w:space="708"/>
+            <w:docGrid w:linePitch="360"/>
+        </w:sectPr>
+    </w:body>
+</w:document>

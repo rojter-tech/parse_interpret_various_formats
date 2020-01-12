@@ -84,6 +84,7 @@ class Word:
         with open(filepath, mode='wt', encoding='utf_8') as f:
             f.write(parseString(self.xml_content).toprettyxml(indent='    '))
 
+
     def extract_content(self):
         """Simple word xml parser, collecting text data with corresponding
            text attributes, and creates a formatted string output with nested
@@ -114,7 +115,7 @@ class Word:
         ASCIIFONT = NAMESPACE+"ascii"
         ANSIFONT = NAMESPACE+"hAnsi"
 
-        def get_attr_val(tree_element, attribute, namespace):
+        def _get_attr_val(tree_element, attribute, namespace):
             find_attribute = tree_element.find(attribute)
             if find_attribute != None:
                 value = find_attribute.attrib.get(namespace)
@@ -135,18 +136,18 @@ class Word:
                 paformat = content.find(PAFORMAT)
                 if paformat:
                     # Text Attributes
-                    bval     = get_attr_val(paformat, BOLD, NAMESPACEVAL)
-                    ival     = get_attr_val(paformat, ITALIC, NAMESPACEVAL)
-                    noproof  = get_attr_val(paformat, NOPROF, NAMESPACEVAL)
-                    color    = get_attr_val(paformat, COLOR, NAMESPACEVAL)
+                    bval     = _get_attr_val(paformat, BOLD, NAMESPACEVAL)
+                    ival     = _get_attr_val(paformat, ITALIC, NAMESPACEVAL)
+                    noproof  = _get_attr_val(paformat, NOPROF, NAMESPACEVAL)
+                    color    = _get_attr_val(paformat, COLOR, NAMESPACEVAL)
                     if color == "000000":
                         nondefaultcolor = '0'
                     else:
                         nondefaultcolor = '1'
-                    size     = get_attr_val(paformat, SIZE, NAMESPACEVAL)
-                    lang     = get_attr_val(paformat, LANG, NAMESPACEVAL)
-                    ascifont = get_attr_val(paformat, FONTS, ASCIIFONT)
-                    ansifont = get_attr_val(paformat, FONTS, ANSIFONT)
+                    size     = _get_attr_val(paformat, SIZE, NAMESPACEVAL)
+                    lang     = _get_attr_val(paformat, LANG, NAMESPACEVAL)
+                    ascifont = _get_attr_val(paformat, FONTS, ASCIIFONT)
+                    ansifont = _get_attr_val(paformat, FONTS, ANSIFONT)
                     attributevalues = [bval,ival,noproof,
                                        color,nondefaultcolor,size,
                                        lang,ascifont,ansifont]
@@ -156,8 +157,9 @@ class Word:
                     # Concat text content with attribute tags
                     contentstring = r"<t><text>" + contentstring + r"<\text>"
                     for a, av in zip(ATTRIBUTES, attributevalues):
-                        contentstring+=r'{' + a + r':' + av + r'}'
-                        attributes_dict[a].append(av)
+                        if av:
+                            contentstring+=r'{' + a + r':' + av + r'}'
+                            attributes_dict[a].append(av)
                     texts.append(contentstring + r"<\t>")
             
             # Join paragraph texts strings and append to paragraphs

@@ -5,7 +5,7 @@ import numpy as np
 from itertools import combinations
 from utils.wapi import Word
 from utils.errors import Error, rOjterError
-from utils.attrib_separator import try_separate_by_attribute
+from utils.attrib_formats import try_separate_by_attribute
 from utils.raw_formats import format_functions
 
 DATADIR = os.path.join(os.pardir,'data')
