@@ -42,12 +42,9 @@ def format_two(wordobject):
     
     raw_text = wordobject.raw_text
     n_lines = wordobject.n_raw_text_lines
-    print("Number of lines:", n_lines)
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
     n_combo = len(combinations)
     n_min_pairs = int( 0.9 * (n_lines/2) )
-    print("Number of combinations:", n_combo)
-    print("Number of minimum number of combos:", n_min_pairs)
     if combinations:
         if type(combinations[0]) == tuple and n_combo > n_min_pairs:
             qalist = _process_combinations(combinations)
@@ -59,6 +56,7 @@ def format_two(wordobject):
             raise rOjterError("No way, you dont want to go there ...")
     else:
         raise rOjterError("No way, you dont want to go there ...")
+
 
 def format_three(wordobject):
     """Every other row combination (table output)
@@ -75,9 +73,23 @@ def format_three(wordobject):
         return qalist
     
     raw_text = wordobject.raw_text
+    n_lines = wordobject.n_raw_text_lines
+
     combinations = re.findall(r'\S.*\r\n\S.*\r\n', raw_text)
-    qalist = _process_combinations(combinations)
-    qadf = pd.DataFrame(qalist, columns=["Q","A"])
+    n_combo = len(combinations)
+    n_min_pairs = int( 0.9 * (n_lines/2) )
+    print("Number of combinations:", n_combo)
+    print("Minimum number of combos:", n_min_pairs)
+    if combinations:
+        if n_combo > n_min_pairs:
+            qalist = _process_combinations(combinations)
+            qadf = pd.DataFrame(qalist, columns=["Q","A"])
+            print("QA every other row line separation suceeded.")
+        else:
+            print("There is no every other row line combination in this file")
+            raise rOjterError("No way, you dont want to go there ...")
+    else:
+        raise rOjterError("No way, you dont want to go there ...")
     return qadf
 
 
@@ -114,6 +126,7 @@ format_functions = [format_one, format_two, format_three, format_ten]
 
 def try_separate_by_rawtext(wordobject, format_functions):
     check = False
+    print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines,"\n")
     for format_function in format_functions:
         try:
             qadf = format_function(wordobject)

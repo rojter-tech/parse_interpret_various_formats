@@ -33,6 +33,7 @@ def process_wordobject(wordobject, format_type = None):
     qadata = try_separate_by_attribute(wordobject)
 
     if type(qadata) == str:
+        print("Trying separaton by raw text ...")
         qadata = try_separate_by_rawtext(wordobject, format_functions)
     else:
         print("\nQA separation by attribute was executed for", wordobject.filename)

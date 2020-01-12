@@ -2,7 +2,7 @@ import pandas as pd
 import re
 from utils.errors import Error, rOjterError
 
-def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
+def _modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
     """On basis of some hyperparameters the final dataframe 
        will be created in a particular order
     
@@ -51,7 +51,7 @@ def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, c
         raise rOjterError
 
 
-def paragraph_attribute_separator(paragraph, attron, attroff):
+def _paragraph_attribute_separator(paragraph, attron, attroff):
     """Searching and highlighting boolean attributed content from a single paragraph
     
     Tags information:
@@ -74,7 +74,7 @@ def paragraph_attribute_separator(paragraph, attron, attroff):
     attrontext, attrofftext = [], []
     onoroff_first = 0
 
-    def search_thistext(text, onoroff_first):
+    def _search_thistext(text, onoroff_first):
         """Appending text with diffrent attribute state in separate lists
         
         Arguments:
@@ -98,12 +98,12 @@ def paragraph_attribute_separator(paragraph, attron, attroff):
         return onoroff_first
 
     for text in texts:
-        onoroff_first = search_thistext(text, onoroff_first)
+        onoroff_first = _search_thistext(text, onoroff_first)
 
     return attrontext, attrofftext, onoroff_first
 
 
-def attribute_on_off_separation(testattr, content):
+def _attribute_on_off_separation(testattr, content):
     """Separation of QA by attribute.
     
     Tags information:
@@ -127,7 +127,7 @@ def attribute_on_off_separation(testattr, content):
     paravote, globalvote, count  = 0, 0, 0
     firstalternate = 1
     for paragraph in paragraphs:
-        attrontext, attrofftext, onoroff_first = paragraph_attribute_separator(paragraph,attron,attroff)
+        attrontext, attrofftext, onoroff_first = _paragraph_attribute_separator(paragraph,attron,attroff)
         if onoroff_first:
             count+=1
             paravote+=onoroff_first
@@ -149,7 +149,7 @@ def attribute_on_off_separation(testattr, content):
             print("Sequences dont match up, trying a diffrent attribute ...")
             raise rOjterError
 
-    return modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
+    return _modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
 
 
 def try_separate_by_attribute(wordobject):
@@ -168,7 +168,7 @@ def try_separate_by_attribute(wordobject):
     check = False
     for testattr in ATTRIBUTES:
         try:
-            qadf = attribute_on_off_separation(testattr, wordobject.content)
+            qadf = _attribute_on_off_separation(testattr, wordobject.content)
             print(wordobject.filename, "QA was successfully loaded")
             check = True
             break
@@ -186,3 +186,4 @@ def try_separate_by_attribute(wordobject):
         print("")
         print("QA by " + wordobject.filename + " maybe were not formatted by attribute, check other options ...")
         return wordobject.filename
+
