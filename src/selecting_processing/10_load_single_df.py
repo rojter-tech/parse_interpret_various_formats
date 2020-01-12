@@ -9,7 +9,7 @@ wordfile = 'kundfaq_test1.docx'
 def main():
     wordfilepath = os.path.join(WORDDATADIR,wordfile)
     qadf = load_qa_df(wordfilepath)
-    print(qadf)
+    #print(qadf)
     #wordobject = load_word_object(wordfilepath)
     #print(wordobject.raw_text)
     #wordobject.save_as_xml("kundfaq_test1.xml")

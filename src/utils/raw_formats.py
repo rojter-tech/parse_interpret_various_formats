@@ -78,16 +78,15 @@ def format_three(wordobject):
     combinations = re.findall(r'\S.*\r\n\S.*\r\n', raw_text)
     qalist = _process_combinations(combinations)
     qadf = pd.DataFrame(qalist, columns=["Q","A"])
-    print(qadf)
+    return qadf
 
-        
 
 def format_ten(wordobject):
     """Raw string parser for QA pairing on same line with mixed separators.
        This format assumes that every QA pair is one the same line and that
        questions preceeds answers.
     """
-
+    raw_text = wordobject.raw_text
     splitqa, dump = [], []
     for line in re.findall(r"\S.*\n", raw_text):
         regsplit = re.findall(r".*\?|\S.*?\.|\S.*?\n|\ .*?\n", line) # Split by pattern
