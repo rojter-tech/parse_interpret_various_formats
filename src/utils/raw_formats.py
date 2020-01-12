@@ -77,7 +77,7 @@ def format_three(wordobject):
 
     combinations = re.findall(r'\S.*\r\n\S.*\r\n', raw_text)
     n_combo = len(combinations)
-    n_min_pairs = int( 0.9 * (n_lines/2) )
+    n_min_pairs = int( 0.8 * (n_lines/2) )
     print("Number of combinations:", n_combo)
     print("Minimum number of combos:", n_min_pairs)
     if combinations:
