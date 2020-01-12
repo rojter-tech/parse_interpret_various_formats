@@ -49,6 +49,7 @@ class Word:
         self.content = []
         self.attributes_dict = []
         self.raw_text = []
+        self.n_raw_text_lines = 0
         
 
         # Initialize Word object attributes
@@ -175,6 +176,7 @@ class Word:
         """
         paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', self.content)
         lines = []
+        n_lines = 0
         for paragraph in paragraphs:
             texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
             line = []
@@ -182,6 +184,8 @@ class Word:
                 thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
                 line.append(thistext)
             lines.append(''.join(line))
+            n_lines+=1
         
         # Adding potentially missing last linefeed
         self.raw_text = '\r\n'.join(lines)+'\r\n'
+        self.n_raw_text_lines = n_lines

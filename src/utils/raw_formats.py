@@ -2,9 +2,10 @@ import pandas as pd
 import re
 from utils.errors import Error, rOjterError
 
-def format_one(raw_text):
-    """QA separation
+def format_one(wordobject):
+    """QA separation by tag
     """
+    raw_text = wordobject.raw_text
     questions = re.findall(r'(?<=Q: ).*?(?=A:)|(?<=Q: ).*?(?=\n)', raw_text)
     if len(questions) == 0:
         raise rOjterError("No way, you dont want to go there ...")
@@ -14,7 +15,7 @@ def format_one(raw_text):
         A = pd.Series(answers, name='A')
         qadf = Q.join(A)
     else:
-        print('Number of questions do\'nt match up with the number of answers')
+        print("Number of questions do\'nt match up with the number of answers")
         raise rOjterError("No way, you dont want to go there ...")
 
     # Clean beginning and trailing whitepaces
@@ -26,10 +27,10 @@ def format_one(raw_text):
     print("QA tag separation suceeded.")
     return qadf
 
-def format_two(raw_text):
+def format_two(wordobject):
     """Two line QA combination.
     """
-    def process_combinations(combinations):
+    def _process_combinations(combinations):
         qalist = []
 
         for combo in combinations:
@@ -39,10 +40,17 @@ def format_two(raw_text):
         
         return qalist
     
+    raw_text = wordobject.raw_text
+    n_lines = wordobject.n_raw_text_lines
+    print("Number of lines:", n_lines)
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
+    n_combo = len(combinations)
+    n_min_pairs = int( 0.9 * (n_lines/2) )
+    print("Number of combinations:", n_combo)
+    print("Number of minimum number of combos:", n_min_pairs)
     if combinations:
-        if type(combinations[0]) == tuple:
-            qalist = process_combinations(combinations)
+        if type(combinations[0]) == tuple and n_combo > n_min_pairs:
+            qalist = _process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
             print("QA two line separation suceeded.")
             return qadf
@@ -52,7 +60,29 @@ def format_two(raw_text):
     else:
         raise rOjterError("No way, you dont want to go there ...")
 
-def format_ten(raw_text):
+def format_three(wordobject):
+    """Every other row combination (table output)
+    """
+
+    def _process_combinations(combinations):
+        qalist = []
+        for combo in combinations:
+            combo = combo.split("\r\n")
+            Q = combo[0].strip()
+            A = combo[1].strip()
+            qalist.append([Q,A])
+        
+        return qalist
+    
+    raw_text = wordobject.raw_text
+    combinations = re.findall(r'\S.*\r\n\S.*\r\n', raw_text)
+    qalist = _process_combinations(combinations)
+    qadf = pd.DataFrame(qalist, columns=["Q","A"])
+    print(qadf)
+
+        
+
+def format_ten(wordobject):
     """Raw string parser for QA pairing on same line with mixed separators.
        This format assumes that every QA pair is one the same line and that
        questions preceeds answers.
@@ -80,14 +110,14 @@ def format_ten(raw_text):
         raise rOjterError
 
 
-format_functions = [format_one, format_two, format_ten]
+format_functions = [format_one, format_two, format_three, format_ten]
 
 
 def try_separate_by_rawtext(wordobject, format_functions):
     check = False
     for format_function in format_functions:
         try:
-            qadf = format_function(wordobject.raw_text)
+            qadf = format_function(wordobject)
             if len(qadf) != 0:
                 check = True
             else:
