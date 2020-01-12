@@ -65,7 +65,7 @@ def format_three(wordobject):
     def _process_combinations(combinations):
         qalist = []
         for combo in combinations:
-            combo = combo.split("\r\n")
+            #combo = combo.split("\r\n")
             Q = combo[0].strip()
             A = combo[1].strip()
             qalist.append([Q,A])
@@ -75,7 +75,7 @@ def format_three(wordobject):
     raw_text = wordobject.raw_text
     n_lines = wordobject.n_raw_text_lines
 
-    combinations = re.findall(r'\S.*\r\n\S.*\r\n', raw_text)
+    combinations = re.findall(r'(\S.*?\n)(\S.*?\n)', raw_text)
     n_combo = len(combinations)
     n_min_pairs = int( 0.8 * (n_lines/2) )
     print("Number of combinations:", n_combo)
