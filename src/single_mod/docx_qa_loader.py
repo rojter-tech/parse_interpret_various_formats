@@ -57,6 +57,7 @@ class Word:
         self.content = []
         self.attributes_dict = []
         self.raw_text = []
+        self.n_raw_text_lines = 0
         
 
         # Initialize Word object attributes
@@ -86,6 +87,11 @@ class Word:
 
     def show_xml(self):
         print(parseString(self.xml_content).toprettyxml(indent='    '))
+
+
+    def save_as_xml(self,filepath):
+        with open(filepath, mode='wt', encoding='utf_8') as f:
+            f.write(parseString(self.xml_content).toprettyxml(indent='    '))
 
 
     def extract_content(self):
@@ -118,7 +124,7 @@ class Word:
         ASCIIFONT = NAMESPACE+"ascii"
         ANSIFONT = NAMESPACE+"hAnsi"
 
-        def get_attr_val(tree_element, attribute, namespace):
+        def _get_attr_val(tree_element, attribute, namespace):
             find_attribute = tree_element.find(attribute)
             if find_attribute != None:
                 value = find_attribute.attrib.get(namespace)
@@ -139,18 +145,18 @@ class Word:
                 paformat = content.find(PAFORMAT)
                 if paformat:
                     # Text Attributes
-                    bval     = get_attr_val(paformat, BOLD, NAMESPACEVAL)
-                    ival     = get_attr_val(paformat, ITALIC, NAMESPACEVAL)
-                    noproof  = get_attr_val(paformat, NOPROF, NAMESPACEVAL)
-                    color    = get_attr_val(paformat, COLOR, NAMESPACEVAL)
+                    bval     = _get_attr_val(paformat, BOLD, NAMESPACEVAL)
+                    ival     = _get_attr_val(paformat, ITALIC, NAMESPACEVAL)
+                    noproof  = _get_attr_val(paformat, NOPROF, NAMESPACEVAL)
+                    color    = _get_attr_val(paformat, COLOR, NAMESPACEVAL)
                     if color == "000000":
                         nondefaultcolor = '0'
                     else:
                         nondefaultcolor = '1'
-                    size     = get_attr_val(paformat, SIZE, NAMESPACEVAL)
-                    lang     = get_attr_val(paformat, LANG, NAMESPACEVAL)
-                    ascifont = get_attr_val(paformat, FONTS, ASCIIFONT)
-                    ansifont = get_attr_val(paformat, FONTS, ANSIFONT)
+                    size     = _get_attr_val(paformat, SIZE, NAMESPACEVAL)
+                    lang     = _get_attr_val(paformat, LANG, NAMESPACEVAL)
+                    ascifont = _get_attr_val(paformat, FONTS, ASCIIFONT)
+                    ansifont = _get_attr_val(paformat, FONTS, ANSIFONT)
                     attributevalues = [bval,ival,noproof,
                                        color,nondefaultcolor,size,
                                        lang,ascifont,ansifont]
@@ -160,8 +166,9 @@ class Word:
                     # Concat text content with attribute tags
                     contentstring = r"<t><text>" + contentstring + r"<\text>"
                     for a, av in zip(ATTRIBUTES, attributevalues):
-                        contentstring+=r'{' + a + r':' + av + r'}'
-                        attributes_dict[a].append(av)
+                        if av:
+                            contentstring+=r'{' + a + r':' + av + r'}'
+                            attributes_dict[a].append(av)
                     texts.append(contentstring + r"<\t>")
             
             # Join paragraph texts strings and append to paragraphs
@@ -177,6 +184,7 @@ class Word:
         """
         paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', self.content)
         lines = []
+        n_lines = 0
         for paragraph in paragraphs:
             texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
             line = []
@@ -184,9 +192,11 @@ class Word:
                 thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
                 line.append(thistext)
             lines.append(''.join(line))
+            n_lines+=1
         
         # Adding potentially missing last linefeed
         self.raw_text = '\r\n'.join(lines)+'\r\n'
+        self.n_raw_text_lines = n_lines
 
 
 ####################################################################
@@ -386,9 +396,10 @@ def try_separate_by_attribute(wordobject):
 ######################################################################
 
 
-def format_one(raw_text):
+def format_one(wordobject):
     """QA separation by tag
     """
+    raw_text = wordobject.raw_text
     questions = re.findall(r'(?<=Q: ).*?(?=A:)|(?<=Q: ).*?(?=\n)', raw_text)
     if len(questions) == 0:
         raise rOjterError("No way, you dont want to go there ...")
@@ -398,7 +409,7 @@ def format_one(raw_text):
         A = pd.Series(answers, name='A')
         qadf = Q.join(A)
     else:
-        print('Number of questions do\'nt match up with the number of answers')
+        print("Number of questions do\'nt match up with the number of answers")
         raise rOjterError("No way, you dont want to go there ...")
 
     # Clean beginning and trailing whitepaces
@@ -410,11 +421,10 @@ def format_one(raw_text):
     print("QA tag separation suceeded.")
     return qadf
 
-
-def format_two(raw_text):
-    """QA separation by two line QA combination.
+def format_two(wordobject):
+    """Two line QA combination.
     """
-    def process_combinations(combinations):
+    def _process_combinations(combinations):
         qalist = []
 
         for combo in combinations:
@@ -424,10 +434,14 @@ def format_two(raw_text):
         
         return qalist
     
+    raw_text = wordobject.raw_text
+    n_lines = wordobject.n_raw_text_lines
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
+    n_combo = len(combinations)
+    n_min_pairs = int( 0.9 * (n_lines/2) )
     if combinations:
-        if type(combinations[0]) == tuple:
-            qalist = process_combinations(combinations)
+        if type(combinations[0]) == tuple and n_combo > n_min_pairs:
+            qalist = _process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
             print("QA two line separation suceeded.")
             return qadf
@@ -438,12 +452,47 @@ def format_two(raw_text):
         raise rOjterError("No way, you dont want to go there ...")
 
 
-def format_ten(raw_text):
+def format_three(wordobject):
+    """Every other row combination (table output)
+    """
+
+    def _process_combinations(combinations):
+        qalist = []
+        for combo in combinations:
+            #combo = combo.split("\r\n")
+            Q = combo[0].strip()
+            A = combo[1].strip()
+            qalist.append([Q,A])
+        
+        return qalist
+    
+    raw_text = wordobject.raw_text
+    n_lines = wordobject.n_raw_text_lines
+
+    combinations = re.findall(r'(\S.*?\n)(\S.*?\n)', raw_text)
+    n_combo = len(combinations)
+    n_min_pairs = int( 0.8 * (n_lines/2) )
+    print("Number of combinations:", n_combo)
+    print("Minimum number of combos:", n_min_pairs)
+    if combinations:
+        if n_combo > n_min_pairs:
+            qalist = _process_combinations(combinations)
+            qadf = pd.DataFrame(qalist, columns=["Q","A"])
+            print("QA every other row line separation suceeded.")
+        else:
+            print("There is no every other row line combination in this file")
+            raise rOjterError("No way, you dont want to go there ...")
+    else:
+        raise rOjterError("No way, you dont want to go there ...")
+    return qadf
+
+
+def format_ten(wordobject):
     """Raw string parser for QA pairing on same line with mixed separators.
        This format assumes that every QA pair is one the same line and that
        questions preceeds answers.
     """
-
+    raw_text = wordobject.raw_text
     splitqa, dump = [], []
     for line in re.findall(r"\S.*\n", raw_text):
         regsplit = re.findall(r".*\?|\S.*?\.|\S.*?\n|\ .*?\n", line) # Split by pattern
@@ -466,22 +515,27 @@ def format_ten(raw_text):
         raise rOjterError
 
 
-format_functions = [format_one, format_two, format_ten]
+format_functions = [format_one, format_two, format_ten, format_three]
 
 
-def try_separate_by_rawtext(wordobject):
-    """Trying separation of Word-document QA content that can be distinguished by various formats.
+def try_separate_by_rawtext(wordobject, format_functions):
+    """ Trial and error function for testing raw text formats
     
     Arguments:
         wordobject {Word} -- Word object
+        format_functions {def} -- Diffrent formats as separate functions.
+    
+    Raises:
+        rOjterError: [description]
     
     Returns:
-        Pandas.DataFrame -- A QA separated dataframe
+        pd.DataFrame -- Pandas dataframe with QA separated data
     """
     check = False
+    print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines,"\n")
     for format_function in format_functions:
         try:
-            qadf = format_function(wordobject.raw_text)
+            qadf = format_function(wordobject)
             if len(qadf) != 0:
                 check = True
             else:
@@ -523,7 +577,7 @@ def load_word_object(wordfilepath):
     return wordobject
 
 
-def process_wordobject(wordobject):
+def process_wordobject(wordobject, format_type = None):
     """Analyzing QA prepared word-document and returns corresponding
        QA separated dataframe.
     
@@ -531,15 +585,16 @@ def process_wordobject(wordobject):
         wordobject {Word} -- Word-object to be analyzed
     
     Returns:
-        [type] -- [description]
+        pd.DatFrame, str -- Returns QA separated dataframe and a string by which
+        format type it has been processed
     """
     print("\n\nProcessing", wordobject.filename)
     print(80*"*","\nTrying:",wordobject.filename,"...")
     qadata = try_separate_by_attribute(wordobject)
 
-    format_type = None
     if type(qadata) == str:
-        qadata = try_separate_by_rawtext(wordobject)
+        print("Trying separaton by raw text ...")
+        qadata = try_separate_by_rawtext(wordobject, format_functions)
     else:
         print("\nQA separation by attribute was executed for", wordobject.filename)
         format_type = "Attribute"

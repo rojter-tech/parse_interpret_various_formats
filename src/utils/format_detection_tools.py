@@ -7,6 +7,14 @@ from utils.errors import Error, rOjterError
 from utils.wapi import Word
 
 def load_word_object(wordfilepath):
+    """Does exactly what the name suggests
+    
+    Arguments:
+        wordfilepath {str} -- full or relative path to docx-file
+    
+    Returns:
+        Word -- Word object associated with the docx file
+    """
     wordobject = Word(wordfilepath)
     return wordobject
 
@@ -28,6 +36,16 @@ def load_word_objects(worddatadir):
 
 
 def process_wordobject(wordobject, format_type = None):
+    """Analyzing QA prepared word-document and returns corresponding
+       QA separated dataframe.
+    
+    Arguments:
+        wordobject {Word} -- Word-object to be analyzed
+    
+    Returns:
+        pd.DatFrame, str -- Returns QA separated dataframe and a string by which
+        format type it has been processed
+    """
     print("\n\nProcessing", wordobject.filename)
     print(80*"*","\nTrying:",wordobject.filename,"...")
     qadata = try_separate_by_attribute(wordobject)

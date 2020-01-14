@@ -2,6 +2,19 @@ import pandas as pd
 import re
 from utils.errors import Error, rOjterError
 
+
+def _process_combinations(combinations):
+    qalist = []
+    for combo in combinations:
+        Q = combo[0].strip()
+        A = combo[1].strip()
+
+        if re.search(r'\S', Q) or re.search(r'\S', A):
+            qalist.append([Q,A])
+        
+    return qalist
+
+
 def format_one(wordobject):
     """QA separation by tag
     """
@@ -30,21 +43,12 @@ def format_one(wordobject):
 def format_two(wordobject):
     """Two line QA combination.
     """
-    def _process_combinations(combinations):
-        qalist = []
-
-        for combo in combinations:
-            Q = combo[0].strip()
-            A = combo[1].strip()
-            qalist.append([Q,A])
-        
-        return qalist
-    
     raw_text = wordobject.raw_text
     n_lines = wordobject.n_raw_text_lines
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
     n_combo = len(combinations)
     n_min_pairs = int( 0.9 * (n_lines/2) )
+
     if combinations:
         if type(combinations[0]) == tuple and n_combo > n_min_pairs:
             qalist = _process_combinations(combinations)
@@ -61,16 +65,6 @@ def format_two(wordobject):
 def format_three(wordobject):
     """Every other row combination (table output)
     """
-
-    def _process_combinations(combinations):
-        qalist = []
-        for combo in combinations:
-            #combo = combo.split("\r\n")
-            Q = combo[0].strip()
-            A = combo[1].strip()
-            qalist.append([Q,A])
-        
-        return qalist
     
     raw_text = wordobject.raw_text
     n_lines = wordobject.n_raw_text_lines
@@ -125,6 +119,18 @@ format_functions = [format_one, format_two, format_three, format_ten]
 
 
 def try_separate_by_rawtext(wordobject, format_functions):
+    """ Trial and error function for testing raw text formats
+    
+    Arguments:
+        wordobject {Word} -- Word object
+        format_functions {def} -- Diffrent formats as separate functions.
+    
+    Raises:
+        rOjterError: [description]
+    
+    Returns:
+        pd.DataFrame -- Pandas dataframe with QA separated data
+    """
     check = False
     print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines,"\n")
     for format_function in format_functions:
@@ -144,7 +150,7 @@ def try_separate_by_rawtext(wordobject, format_functions):
     else:
         print("")
         print("***********************************************")
-        print("**!!!!Format detection did not sucess!!!!**")
+        print("**!!!!Raw format detection did not sucess!!!!**")
         print("***********************************************")
         print("")
         print("QA by " + wordobject.filename + " format could not be determined ...")

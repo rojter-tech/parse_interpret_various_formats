@@ -1,0 +1,872 @@
+<?xml version="1.0" ?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 w16se w16cid wp14">
+    <w:body>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:w="9060" w:type="dxa"/>
+                <w:tblCellMar>
+                    <w:left w:w="70" w:type="dxa"/>
+                    <w:right w:w="70" w:type="dxa"/>
+                </w:tblCellMar>
+                <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="3540"/>
+                <w:gridCol w:w="5520"/>
+            </w:tblGrid>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="4AAB0799" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="828"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="58E2B557" wp14:textId="335E0143">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>What is the official nickname of Texas?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="430C6560" wp14:textId="76BD7C8B">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>The Lone Star State.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="50CE76F8" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="2484"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="6463AEA8" wp14:textId="704275C6">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Name the biggest Island of the world.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="12D77C19" wp14:textId="07864FD1">
+                        <w:pPr>
+                            <w:spacing w:after="140" w:line="276" w:lineRule="auto"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:b w:val="0"/>
+                                <w:bCs w:val="0"/>
+                                <w:i w:val="0"/>
+                                <w:iCs w:val="0"/>
+                                <w:noProof w:val="0"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="sv-SE"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:b w:val="0"/>
+                                <w:bCs w:val="0"/>
+                                <w:i w:val="0"/>
+                                <w:iCs w:val="0"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Greenland with an area of 2,131,000 square kilometers.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="6259575B" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="29C929DB" wp14:textId="4820354D">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Name three novels of Shakespeare.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="7724F296" wp14:textId="7B33B505">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Hamlet, the Merchant of Venice, and Taming of the Shrew.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="289AC3F8" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="828"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="76692D61" wp14:textId="64B352A7">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>What was the relation between Sebastian and viola in The Twelfth Night?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="0E45BD6C" wp14:textId="7204E4BB">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Sebastian was Viola’s brother and Viola was his sister.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="1EAAE47C" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="828"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="284FBE4C" wp14:textId="275C0042">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>What is the diameter of our Earth? </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="4F8D8108" wp14:textId="26812654">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>12, 742 Kilometers.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="65DAEDEB" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="4E7F659A" wp14:textId="51B6A433">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Who is the wife of Barack Obama? </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="3D7A9748" wp14:textId="027EB602">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Michelle Obama.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="59983938" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="2484"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="463529DE" wp14:textId="0018D4B5">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>When did William Wordsworth die? </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="2F01619C" wp14:textId="033ABF99">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>23rd April 1850.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="573776E6" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="4416"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="577EE59A" wp14:textId="1C8D6579">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Name the largest continent of the world?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="center"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="2EC761FC" wp14:textId="22BC9A33">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t> Asia.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="38442E17" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="57AD558C" wp14:textId="5CF5A7F6">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>How many states are there in the United States of America? </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="center"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="6E361622" wp14:textId="2B648093">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>50 States.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="4467D968" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="552"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="1AADCCF6" wp14:textId="0504A64E">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Name the kids of Prince William.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="center"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="0244C688" wp14:textId="2151B8FD">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Price George of Cambridge and Princess Charlotte of Cambridge.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="70601509" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="600"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="693903F9" wp14:textId="4ADF223C">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>Which state is known as the Empire State? </w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="1EEFAA47" wp14:textId="05EB56EE">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>New York State.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidTr="7D41382E" w14:paraId="53353894" wp14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="3312"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="3540" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="2A97A5CA" wp14:textId="38ECB059">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>It is a beauteous evening, calm and free, the holy time is quiet as a Nun Breathless with adoration: the broad sun is sinking down in its tranquility. Who is the poet of the excerpt?</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5520" w:type="dxa"/>
+                        <w:tcBorders>
+                            <w:top w:val="nil"/>
+                            <w:left w:val="nil"/>
+                            <w:bottom w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                            <w:right w:val="single" w:color="000000" w:themeColor="text1" w:sz="4" w:space="0"/>
+                        </w:tcBorders>
+                        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF" w:themeFill="background1"/>
+                        <w:tcMar/>
+                        <w:vAlign w:val="bottom"/>
+                        <w:hideMark/>
+                    </w:tcPr>
+                    <w:p w:rsidRPr="00DF445C" w:rsidR="00DF445C" w:rsidP="7D41382E" w:rsidRDefault="00DF445C" w14:paraId="0149DE31" wp14:textId="51297A36">
+                        <w:pPr>
+                            <w:pStyle w:val="Normal"/>
+                            <w:spacing w:after="0" w:line="240" w:lineRule="auto"/>
+                        </w:pPr>
+                        <w:r w:rsidRPr="7D41382E" w:rsidR="6AD0AF6D">
+                            <w:rPr>
+                                <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Calibri"/>
+                                <w:noProof w:val="0"/>
+                                <w:color w:val="000000" w:themeColor="text1" w:themeTint="FF" w:themeShade="FF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                                <w:lang w:val="en-US"/>
+                            </w:rPr>
+                            <w:t>William Wordsworth.</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p w:rsidR="7D41382E" w:rsidRDefault="7D41382E" w14:paraId="1F59E617" w14:textId="7BEA5B20"/>
+        <w:p xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordml" w:rsidR="00BB6350" w:rsidRDefault="00BB6350" w14:paraId="672A6659" wp14:textId="77777777">
+            <w:bookmarkStart w:name="_GoBack" w:id="0"/>
+            <w:bookmarkEnd w:id="0"/>
+        </w:p>
+        <w:sectPr w:rsidR="00BB6350">
+            <w:pgSz w:w="11906" w:h="16838" w:orient="portrait"/>
+            <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+            <w:cols w:space="708"/>
+            <w:docGrid w:linePitch="360"/>
+        </w:sectPr>
+    </w:body>
+</w:document>
