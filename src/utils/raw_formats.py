@@ -40,6 +40,7 @@ def format_one(wordobject):
     print("QA tag separation suceeded.")
     return qadf
 
+
 def format_two(wordobject):
     """Two line QA combination.
     """
@@ -63,15 +64,21 @@ def format_two(wordobject):
 def format_three(wordobject):
     """Every other row combination (table output)
     """
+    sentence_per_paragraph = wordobject.sentence_per_paragraph
+    if sentence_per_paragraph < 0.5 or sentence_per_paragraph > 1.5:
+        print("There is no every other row line combination in this file")
+        raise rOjterError("No way, you dont want to go there ...")
     
     raw_text = wordobject.raw_text
-    n_lines = wordobject.n_raw_text_lines
+    n_non_empty_lines = wordobject.n_non_empty_lines
+    
 
-    combinations = re.findall(r'(\S.*?\n)(\S.*?\n)', raw_text)
+    combinations = re.findall(r'(\S.*?\r\n)(\S.*?\r\n)', raw_text)
     n_combo = len(combinations)
-    n_min_pairs = int( 0.8 * (n_lines/2) )
+    n_min_pairs = int( 0.8 * (n_non_empty_lines/2) )
     print("Number of combinations:", n_combo)
     print("Minimum number of combos:", n_min_pairs)
+    print("Sentence per paragraph: ", sentence_per_paragraph)
     if combinations:
         if n_combo > n_min_pairs:
             qalist = _process_combinations(combinations)

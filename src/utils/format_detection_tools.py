@@ -6,6 +6,7 @@ from utils.raw_formats import try_separate_by_rawtext, format_functions
 from utils.errors import Error, rOjterError
 from utils.wapi import Word
 
+
 def load_word_object(wordfilepath):
     """Does exactly what the name suggests
     
@@ -17,6 +18,7 @@ def load_word_object(wordfilepath):
     """
     wordobject = Word(wordfilepath)
     return wordobject
+
 
 def load_word_objects(worddatadir):
     wordobjects = []
@@ -72,12 +74,18 @@ def test_summary(dfs, attribute_files, raw_text_files, unknown_format):
     dfs_files = list(dfs.keys()); n_dfs = len(dfs)
     checkcompare = True
     for df1, df2 in combinations(range(n_dfs), 2):
-        check_equal = (dfs[dfs_files[df1]] == dfs[dfs_files[df2]])
-        has_false = False in check_equal.values
-        if has_false:
-            checkcompare = False
-            print('  Ops! Dataframe',dfs_files[df1],'and',dfs_files[df2],'has element that differ!')
+        try:
+            print("Sucess")
+            check_equal = (dfs[dfs_files[df1]] == dfs[dfs_files[df2]])
+            has_false = False in check_equal.values
+            if has_false:
+                checkcompare = False
+                print('  Ops! Dataframe',dfs_files[df1],'and',dfs_files[df2],'has element that differ!')
     
+        except ValueError:
+            checkcompare = False
+            print(dfs_files[df1],"and" , dfs_files[df2], "has diffrent structure, check format selection")
+
 
     print("\nAttribute separated files:\n",attribute_files)
     print("\nRaw separated files:\n",raw_text_files)
