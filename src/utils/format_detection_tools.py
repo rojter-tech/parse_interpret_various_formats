@@ -25,8 +25,8 @@ def load_word_objects(worddatadir):
     wordfiles = os.listdir(worddatadir)
     for wordfile in wordfiles:
         wordfilepath = os.path.join(worddatadir,wordfile)
-        wordobject = Word(wordfilepath)
-        if re.search(r'.*.docx', wordfile):
+        if re.search(r'.*.docx', wordfile) and wordfile[0] != '~':
+            wordobject = Word(wordfilepath)
             wordobjects.append(wordobject)
             print("Loading:", wordfile)
 

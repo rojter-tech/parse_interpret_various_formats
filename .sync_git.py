@@ -25,7 +25,7 @@ print("Using Github path:", ONEDRIVEGIT)
 print("Using Project path:", PROJECTPATH)
 
 def rsync_local(source_path, target_path, reference_path):
-    with open(logspath("rsync"), 'wb') as f: pass
+    with open(logspath("rsync"), 'wb') as f: f.close()
     cmdtool = "rsync -a"
     entries = os.listdir(reference_path)
     files, dirs = [], []

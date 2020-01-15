@@ -2,7 +2,7 @@ try:
     from xml.etree.cElementTree import XML
 except ImportError:
     from xml.etree.ElementTree import XML
-from zipfile import ZipFile
+from zipfile import ZipFile, BadZipFile
 from utils.errors import Error, rOjterError
 import pandas as pd
 import os, re
@@ -51,7 +51,11 @@ class Word:
     def __init__(self, filepath):
         self.datadir = os.path.basename(os.path.dirname(filepath))
         self.filename = os.path.basename(filepath)
-        self.docx_file = ZipFile(filepath)
+        try:
+            self.docx_file = ZipFile(filepath)
+        except BadZipFile:
+            print(self.filename, "is not a docx file")
+            raise rOjterError("Bad docx document: " + self.filename)
         
         # Main structure
         self.tree = []
