@@ -426,7 +426,6 @@ def try_separate_by_attribute(wordobject):
         print("***********************************************")
         print("")
         print("QA by " + wordobject.filename + " maybe were not formatted by attribute, check other options ...")
-        print("")
         return wordobject.filename
 
 
@@ -505,7 +504,7 @@ def format_three(wordobject):
     """Every other row combination (table output)
     """
     sentence_per_paragraph = wordobject.sentence_per_paragraph
-    if sentence_per_paragraph < 0.5 or sentence_per_paragraph > 2.0:
+    if sentence_per_paragraph < 0.5 or sentence_per_paragraph > 2:
         print("There is no every other row line combination in this file")
         raise rOjterError("No way, you dont want to go there ...")
     
