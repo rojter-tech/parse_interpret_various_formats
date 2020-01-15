@@ -45,7 +45,6 @@ def format_two(wordobject):
     """Two line QA combination.
     """
     raw_text = wordobject.raw_text
-    n_lines = wordobject.n_raw_text_lines
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
 
     if combinations:
@@ -73,7 +72,7 @@ def format_three(wordobject):
     n_non_empty_lines = wordobject.n_non_empty_lines
     
 
-    combinations = re.findall(r'(\S.*?\r\n)(\S.*?\r\n)', raw_text)
+    combinations = re.findall(r'(\S.*?\r\n)(.*?\r\n)', raw_text)
     n_combo = len(combinations)
     n_min_pairs = int( 0.8 * (n_non_empty_lines/2) )
     print("Number of combinations:", n_combo)
