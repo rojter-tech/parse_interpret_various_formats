@@ -173,7 +173,7 @@ def try_separate_by_attribute(wordobject):
             check = True
             break
         except rOjterError:
-            print("This bullshit attribute is shit ..")
+            print("Attribute failed ..")
             pass
     
     if check:

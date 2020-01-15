@@ -21,6 +21,7 @@ def format_one(wordobject):
     raw_text = wordobject.raw_text
     questions = re.findall(r'(?<=Q: ).*?(?=A:)|(?<=Q: ).*?(?=\n)', raw_text)
     if len(questions) == 0:
+        print("QA tag separation did not sucess.")
         raise rOjterError("No way, you dont want to go there ...")
     answers =   re.findall(r'(?<=A: ).*?(?=Q:)|(?<=A: ).*?(?=\n)', raw_text)
     if (len(questions) == len(answers))and questions != []:
@@ -29,6 +30,7 @@ def format_one(wordobject):
         qadf = Q.join(A)
     else:
         print("Number of questions do\'nt match up with the number of answers")
+        print("QA tag separatio did not sucess.")
         raise rOjterError("No way, you dont want to go there ...")
 
     # Clean beginning and trailing whitepaces
@@ -44,6 +46,11 @@ def format_one(wordobject):
 def format_two(wordobject):
     """Two line QA combination.
     """
+    sentence_per_paragraph = wordobject.sentence_per_paragraph
+    if sentence_per_paragraph < 2:
+        print("There is no two line QA combination in this file")
+        raise rOjterError("No way, you dont want to go there ...")
+
     raw_text = wordobject.raw_text
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
 
@@ -54,9 +61,10 @@ def format_two(wordobject):
             print("QA two line separation suceeded.")
             return qadf
         else:
-            print("There is no two line combination in this file")
+            print("Two line QA combination separation did not sucess.")
             raise rOjterError("No way, you dont want to go there ...")
     else:
+        print("Two line QA combination separation did not sucess.")
         raise rOjterError("No way, you dont want to go there ...")
 
 
@@ -64,20 +72,16 @@ def format_three(wordobject):
     """Every other row combination (table output)
     """
     sentence_per_paragraph = wordobject.sentence_per_paragraph
-    if sentence_per_paragraph < 0.5 or sentence_per_paragraph > 1.5:
+    if sentence_per_paragraph < 0.5 or sentence_per_paragraph > 2:
         print("There is no every other row line combination in this file")
         raise rOjterError("No way, you dont want to go there ...")
     
     raw_text = wordobject.raw_text
     n_non_empty_lines = wordobject.n_non_empty_lines
-    
 
     combinations = re.findall(r'(\S.*?\r\n)(.*?\r\n)', raw_text)
     n_combo = len(combinations)
     n_min_pairs = int( 0.8 * (n_non_empty_lines/2) )
-    print("Number of combinations:", n_combo)
-    print("Minimum number of combos:", n_min_pairs)
-    print("Sentence per paragraph: ", sentence_per_paragraph)
     if combinations:
         if n_combo > n_min_pairs:
             qalist = _process_combinations(combinations)
@@ -119,7 +123,7 @@ def format_ten(wordobject):
         raise rOjterError
 
 
-format_functions = [format_one, format_three, format_two, format_ten]
+format_functions = [format_one, format_two, format_three, format_ten]
 
 
 def try_separate_by_rawtext(wordobject, format_functions):
@@ -135,8 +139,12 @@ def try_separate_by_rawtext(wordobject, format_functions):
     Returns:
         pd.DataFrame -- Pandas dataframe with QA separated data
     """
+    
+    print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines)
+    print("Number of non empty lines:", wordobject.n_non_empty_lines)
+    print("Sentence per paragraph: ", wordobject.sentence_per_paragraph,'\n')
+
     check = False
-    print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines,"\n")
     for format_function in format_functions:
         try:
             qadf = format_function(wordobject)
@@ -147,7 +155,7 @@ def try_separate_by_rawtext(wordobject, format_functions):
                 raise rOjterError
             break
         except rOjterError:
-            print(wordobject.filename, "format excluded.")
+            print(wordobject.filename, "format did not match this format.\n")
     
     if check:
         return qadf

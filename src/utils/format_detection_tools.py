@@ -37,7 +37,7 @@ def load_word_objects(worddatadir):
         return wordobjects
 
 
-def process_wordobject(wordobject, format_type = None):
+def process_wordobject(wordobject, format_type=None):
     """Analyzing QA prepared word-document and returns corresponding
        QA separated dataframe.
     

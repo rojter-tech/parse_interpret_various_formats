@@ -14,8 +14,8 @@ def main():
     wordfilepath = os.path.join(WORDDATADIR,wordfile)
     qadf = load_qa_df(wordfilepath)
     print(qadf)
-    wordobject = load_word_object(wordfilepath)
-    print(wordobject.raw_text)
+    #wordobject = load_word_object(wordfilepath)
+    #print(wordobject.raw_text)
     #wordobject.save_as_xml("QATable.xml")
 
 

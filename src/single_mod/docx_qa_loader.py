@@ -6,6 +6,13 @@ from zipfile import ZipFile
 import pandas as pd
 import sys, os, re
 
+from xml.dom.minidom import parseString # Dev
+
+
+####################################################################
+######################## CLASS DEPENDENCIES ########################
+####################################################################
+
 
 class Error(Exception):
    """Base class for non-rOjter exceptions >D"""
@@ -22,7 +29,7 @@ class Word:
     Parsing word file API.
     """
     # Word namespace tag
-    NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+    NAMESPACE = r'{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
     # Word paragraph tag
     PARAGRAPH = NAMESPACE + r'p'
     # Word content tag within paragraph
@@ -45,22 +52,40 @@ class Word:
                 'color','nondefaultcolor','size',
                 'lang','ascifont','ansifont']
 
+    ################################### Dev #####################################
+    def show_xml(self):                                                         #
+        print(parseString(self.xml_content).toprettyxml(indent='    '))         #
+    ################################### Dev #####################################                                                                    #
+    def save_as_xml(self,filepath):                                             #
+        with open(filepath, mode='wt', encoding='utf_8') as f:                  #
+            f.write(parseString(self.xml_content).toprettyxml(indent='    '))   #
+    ################################### Dev #####################################
 
     def __init__(self, filepath):
         self.datadir = os.path.basename(os.path.dirname(filepath))
         self.filename = os.path.basename(filepath)
-        self.docx_file = ZipFile(filepath)
+        try:
+            self.docx_file = ZipFile(filepath)
+        except BadZipFile:
+            print(self.filename, "is not a docx file")
+            raise rOjterError("Bad docx document: " + self.filename)
         
+        # Main structure
+        self.tree = []
+
+        # Main attributes
         self.documentname = []
         self.xml_content = []
-        self.tree = []
         self.content = []
-        self.attributes_dict = []
         self.raw_text = []
-        self.n_raw_text_lines = 0
-        
 
-        # Initialize Word object attributes
+        # Statistics attributes
+        self.n_raw_text_lines = 0
+        self.n_non_empty_lines = 0
+        self.attributes_dict = []
+        self.sentence_per_paragraph = 0
+
+        # Initialize Word object
         self.find_docname_string()
         self.get_xml_content_tree()
         self.extract_content()
@@ -69,6 +94,7 @@ class Word:
 
     def __str__(self):
         return str(self.__class__) + ": " + str(self.__dict__)
+
 
     def find_docname_string(self):
         documentname = ""
@@ -83,15 +109,6 @@ class Word:
         self.xml_content = self.docx_file.read(self.documentname)
         self.docx_file.close()
         self.tree = XML(self.xml_content)
-    
-
-    def show_xml(self):
-        print(parseString(self.xml_content).toprettyxml(indent='    '))
-
-
-    def save_as_xml(self,filepath):
-        with open(filepath, mode='wt', encoding='utf_8') as f:
-            f.write(parseString(self.xml_content).toprettyxml(indent='    '))
 
 
     def extract_content(self):
@@ -178,25 +195,47 @@ class Word:
         self.content = '\r\n'.join(paragraphs)
         self.attributes_dict = attributes_dict
 
+
     def extract_raw_text(self):
         """Tries to respresent the text content as pure as possible
            as if it were a plain text document.
         """
+        def _count_sentences(line):
+            n_questions = line.count('?')
+            n_standards = line.count('.')
+            n_exclamaitions = line.count('!')
+            n_sentence = n_questions + n_standards + n_exclamaitions
+            return n_sentence
+
         paragraphs = re.findall(r'(?<=<p>).*?(?=<\\p>)', self.content)
         lines = []
-        n_lines = 0
+        n_raw_text_lines = 0
+        n_non_empty_lines = 0
+        n_sentences = 0
         for paragraph in paragraphs:
             texts = re.findall(r'(?<=<t>).*?(?=<\\t>)', paragraph)
             line = []
             for text in texts:
                 thistext = re.search(r"(?<=<text>).*?(?=<\\text>)", text).group()
                 line.append(thistext)
-            lines.append(''.join(line))
-            n_lines+=1
+            thisline = ''.join(line)
+
+            lines.append(thisline)
+            n_raw_text_lines+=1
+
+            if re.search(r'\S', thisline):
+                n_non_empty_lines+=1
+                n_sentences+=_count_sentences(thisline)
+
+        if n_non_empty_lines != 0:
+            self.sentence_per_paragraph = n_sentences/n_non_empty_lines
         
-        # Adding potentially missing last linefeed
-        self.raw_text = '\r\n'.join(lines)+'\r\n'
-        self.n_raw_text_lines = n_lines
+        
+        self.raw_text = '\r\n'.join(lines)+'\r\n' # Adding potentially missing last linefeed
+        # Statistics
+        self.n_raw_text_lines = n_raw_text_lines
+        self.n_non_empty_lines = n_non_empty_lines
+
 
 
 ####################################################################
@@ -204,7 +243,7 @@ class Word:
 ####################################################################
 
 
-def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
+def _modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count):
     """On basis of some hyperparameters the final dataframe 
        will be created in a particular order
     
@@ -253,7 +292,7 @@ def modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, c
         raise rOjterError
 
 
-def paragraph_attribute_separator(paragraph, attron, attroff):
+def _paragraph_attribute_separator(paragraph, attron, attroff):
     """Searching and highlighting boolean attributed content from a single paragraph
     
     Tags information:
@@ -276,7 +315,7 @@ def paragraph_attribute_separator(paragraph, attron, attroff):
     attrontext, attrofftext = [], []
     onoroff_first = 0
 
-    def search_thistext(text, onoroff_first):
+    def _search_thistext(text, onoroff_first):
         """Appending text with diffrent attribute state in separate lists
         
         Arguments:
@@ -300,12 +339,12 @@ def paragraph_attribute_separator(paragraph, attron, attroff):
         return onoroff_first
 
     for text in texts:
-        onoroff_first = search_thistext(text, onoroff_first)
+        onoroff_first = _search_thistext(text, onoroff_first)
 
     return attrontext, attrofftext, onoroff_first
 
 
-def attribute_on_off_separation(testattr, content):
+def _attribute_on_off_separation(testattr, content):
     """Separation of QA by attribute.
     
     Tags information:
@@ -329,7 +368,7 @@ def attribute_on_off_separation(testattr, content):
     paravote, globalvote, count  = 0, 0, 0
     firstalternate = 1
     for paragraph in paragraphs:
-        attrontext, attrofftext, onoroff_first = paragraph_attribute_separator(paragraph,attron,attroff)
+        attrontext, attrofftext, onoroff_first = _paragraph_attribute_separator(paragraph,attron,attroff)
         if onoroff_first:
             count+=1
             paravote+=onoroff_first
@@ -351,7 +390,7 @@ def attribute_on_off_separation(testattr, content):
             print("Sequences dont match up, trying a diffrent attribute ...")
             raise rOjterError
 
-    return modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
+    return _modified_sequence(sentence_onlist, sentence_offlist, paravote, globalvote, count)
 
 
 def try_separate_by_attribute(wordobject):
@@ -367,16 +406,15 @@ def try_separate_by_attribute(wordobject):
     ITALIC = r"{ival:"
     COLOR = r"{nondefaultcolor:"
     ATTRIBUTES = [BOLD, ITALIC, COLOR]
-    print(60*"*","\nTrying:",wordobject.filename,"...")
     check = False
     for testattr in ATTRIBUTES:
         try:
-            qadf = attribute_on_off_separation(testattr, wordobject.content)
+            qadf = _attribute_on_off_separation(testattr, wordobject.content)
             print(wordobject.filename, "QA was successfully loaded")
             check = True
             break
         except rOjterError:
-            print("This bullshit attribute is shit ..")
+            print("Attribute failed ..")
             pass
     
     if check:
@@ -388,12 +426,26 @@ def try_separate_by_attribute(wordobject):
         print("***********************************************")
         print("")
         print("QA by " + wordobject.filename + " maybe were not formatted by attribute, check other options ...")
+        print("")
         return wordobject.filename
+
 
 
 ######################################################################
 ####################### RAW FORMAT SELECTION TOOLS ###################
 ######################################################################
+
+
+def _process_combinations(combinations):
+    qalist = []
+    for combo in combinations:
+        Q = combo[0].strip()
+        A = combo[1].strip()
+
+        if re.search(r'\S', Q) or re.search(r'\S', A):
+            qalist.append([Q,A])
+        
+    return qalist
 
 
 def format_one(wordobject):
@@ -402,6 +454,7 @@ def format_one(wordobject):
     raw_text = wordobject.raw_text
     questions = re.findall(r'(?<=Q: ).*?(?=A:)|(?<=Q: ).*?(?=\n)', raw_text)
     if len(questions) == 0:
+        print("QA tag separation did not sucess.")
         raise rOjterError("No way, you dont want to go there ...")
     answers =   re.findall(r'(?<=A: ).*?(?=Q:)|(?<=A: ).*?(?=\n)', raw_text)
     if (len(questions) == len(answers))and questions != []:
@@ -410,6 +463,7 @@ def format_one(wordobject):
         qadf = Q.join(A)
     else:
         print("Number of questions do\'nt match up with the number of answers")
+        print("QA tag separatio did not sucess.")
         raise rOjterError("No way, you dont want to go there ...")
 
     # Clean beginning and trailing whitepaces
@@ -421,59 +475,46 @@ def format_one(wordobject):
     print("QA tag separation suceeded.")
     return qadf
 
+
 def format_two(wordobject):
     """Two line QA combination.
     """
-    def _process_combinations(combinations):
-        qalist = []
+    sentence_per_paragraph = wordobject.sentence_per_paragraph
+    if sentence_per_paragraph < 2:
+        print("There is no two line QA combination in this file")
+        raise rOjterError("No way, you dont want to go there ...")
 
-        for combo in combinations:
-            Q = combo[0].strip()
-            A = combo[1].strip()
-            qalist.append([Q,A])
-        
-        return qalist
-    
     raw_text = wordobject.raw_text
-    n_lines = wordobject.n_raw_text_lines
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
-    n_combo = len(combinations)
-    n_min_pairs = int( 0.9 * (n_lines/2) )
+
     if combinations:
-        if type(combinations[0]) == tuple and n_combo > n_min_pairs:
+        if type(combinations[0]) == tuple:
             qalist = _process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
             print("QA two line separation suceeded.")
             return qadf
         else:
-            print("There is no two line combination in this file")
+            print("Two line QA combination separation did not sucess.")
             raise rOjterError("No way, you dont want to go there ...")
     else:
+        print("Two line QA combination separation did not sucess.")
         raise rOjterError("No way, you dont want to go there ...")
 
 
 def format_three(wordobject):
     """Every other row combination (table output)
     """
-
-    def _process_combinations(combinations):
-        qalist = []
-        for combo in combinations:
-            #combo = combo.split("\r\n")
-            Q = combo[0].strip()
-            A = combo[1].strip()
-            qalist.append([Q,A])
-        
-        return qalist
+    sentence_per_paragraph = wordobject.sentence_per_paragraph
+    if sentence_per_paragraph < 0.5 or sentence_per_paragraph > 2.0:
+        print("There is no every other row line combination in this file")
+        raise rOjterError("No way, you dont want to go there ...")
     
     raw_text = wordobject.raw_text
-    n_lines = wordobject.n_raw_text_lines
+    n_non_empty_lines = wordobject.n_non_empty_lines
 
-    combinations = re.findall(r'(\S.*?\n)(\S.*?\n)', raw_text)
+    combinations = re.findall(r'(\S.*?\r\n)(.*?\r\n)', raw_text)
     n_combo = len(combinations)
-    n_min_pairs = int( 0.8 * (n_lines/2) )
-    print("Number of combinations:", n_combo)
-    print("Minimum number of combos:", n_min_pairs)
+    n_min_pairs = int( 0.8 * (n_non_empty_lines/2) )
     if combinations:
         if n_combo > n_min_pairs:
             qalist = _process_combinations(combinations)
@@ -515,7 +556,7 @@ def format_ten(wordobject):
         raise rOjterError
 
 
-format_functions = [format_one, format_two, format_ten, format_three]
+format_functions = [format_one, format_two, format_three, format_ten]
 
 
 def try_separate_by_rawtext(wordobject, format_functions):
@@ -531,8 +572,12 @@ def try_separate_by_rawtext(wordobject, format_functions):
     Returns:
         pd.DataFrame -- Pandas dataframe with QA separated data
     """
+    
+    print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines)
+    print("Number of non empty lines:", wordobject.n_non_empty_lines)
+    print("Sentence per paragraph: ", wordobject.sentence_per_paragraph,'\n')
+
     check = False
-    print("\nNumber of lines in raw text:", wordobject.n_raw_text_lines,"\n")
     for format_function in format_functions:
         try:
             qadf = format_function(wordobject)
@@ -543,25 +588,23 @@ def try_separate_by_rawtext(wordobject, format_functions):
                 raise rOjterError
             break
         except rOjterError:
-            print(wordobject.filename, "format excluded.")
+            print(wordobject.filename, "format did not match this format.\n")
     
     if check:
         return qadf
     else:
         print("")
         print("***********************************************")
-        print("**!!!!Format detection did not sucess!!!!**")
+        print("**!!!!Raw format detection did not sucess!!!!**")
         print("***********************************************")
         print("")
         print("QA by " + wordobject.filename + " format could not be determined ...")
         return wordobject.filename
 
 
-
 ###############################################################
-######################### MAIN LOADERS ########################
+####################### MAIN PROCESSING #######################
 ###############################################################
-
 
 
 def load_word_object(wordfilepath):
@@ -577,7 +620,7 @@ def load_word_object(wordfilepath):
     return wordobject
 
 
-def process_wordobject(wordobject, format_type = None):
+def process_wordobject(wordobject, format_type=None):
     """Analyzing QA prepared word-document and returns corresponding
        QA separated dataframe.
     
@@ -623,16 +666,38 @@ def load_qa_from_docx(wordfilepath):
     qadf = process_wordobject(wordobject)
     return qadf
 
+
+###############################################################
+######################### MAIN EXECUTION ######################
+###############################################################
+
+
+def _get_extension(filepath):
+    file_name = os.path.basename(filepath)
+    file_extension = file_name.split('.')[1]
+    return file_extension
+
+
 def main():
     call = sys.argv[0]
     call_path = os.path.dirname(call)
-    wordfilepath = os.path.join(call_path, "QA.docx")
-    
+
     if len(sys.argv) > 1:
-        wordfilepath = os.path.join(call_path, sys.argv[1])
-        print(load_qa_from_docx(wordfilepath))
+        filepath = os.path.join(call_path, sys.argv[1])
+        if not os.path.isfile(filepath):
+            raise rOjterError("File does not exist. Check path: " + filepath)
+        file_extension = _get_extension(filepath)
+        if file_extension == "docx":
+            print(load_qa_from_docx(filepath))
+        elif file_extension  == 'xlsx':
+            print(pd.read_excel(filepath))
+        else:
+            raise rOjterError("File extension" + file_extension + "not supported")
+
     else:
-        print(load_qa_from_docx(wordfilepath))
+        raise rOjterError("No arguments was given exiting ...")
+
 
 if __name__ == "__main__":
     main()
+
