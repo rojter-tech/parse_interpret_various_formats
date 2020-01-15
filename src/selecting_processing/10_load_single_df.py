@@ -11,7 +11,7 @@ def main():
     qadf = load_qa_df(wordfilepath)
     print(qadf)
     wordobject = load_word_object(wordfilepath)
-    #print(wordobject.raw_text)
+    print(wordobject.raw_text)
     #wordobject.save_as_xml("QATable.xml")
 
 

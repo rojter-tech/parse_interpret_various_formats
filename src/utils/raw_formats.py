@@ -46,11 +46,9 @@ def format_two(wordobject):
     raw_text = wordobject.raw_text
     n_lines = wordobject.n_raw_text_lines
     combinations = re.findall(r'(\S.*?\n)(\S.*?\n)\r\n', raw_text)
-    n_combo = len(combinations)
-    n_min_pairs = int( 0.9 * (n_lines/2) )
 
     if combinations:
-        if type(combinations[0]) == tuple and n_combo > n_min_pairs:
+        if type(combinations[0]) == tuple:
             qalist = _process_combinations(combinations)
             qadf = pd.DataFrame(qalist, columns=["Q","A"])
             print("QA two line separation suceeded.")
@@ -115,7 +113,7 @@ def format_ten(wordobject):
         raise rOjterError
 
 
-format_functions = [format_one, format_two, format_three, format_ten]
+format_functions = [format_one, format_three, format_two, format_ten]
 
 
 def try_separate_by_rawtext(wordobject, format_functions):
