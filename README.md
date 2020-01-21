@@ -47,14 +47,14 @@ git clone https://github.com/rojter-tech/parse_interpret_various_formats.git $HO
 Create a new environment inside the repo and source it
 ```bash
 python -m venv $HOME\parse_interpret_various_formats
-$HOME\parse_interpret_various_formats\Scripts\activate
-$HOME\parse_interpret_various_formats\Scripts\activate.bat
+cd $HOME\parse_interpret_various_formats
+.\Scripts\activate
+.\Scripts\activate.bat
 python -m pip install -U pip
 ```
 
 Install dependencies
 ```bash
-cd $HOME\parse_interpret_various_formats
 pip install -r .\requirements\dev.txt
 python setup.py bdist_wheel
 pip install -e .
