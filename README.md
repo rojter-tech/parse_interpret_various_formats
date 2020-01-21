@@ -8,7 +8,7 @@ Tools including `xml.etree.ElementTree` to effectivley parse internal xml files 
 
 ## Installation of parse_interpret_various_formats
 
-##### For **macOS/UNIX**
+### For **macOS/UNIX**
 
 With [`python3`](https://www.python.org/downloads/release/python-381/) and [`pip`](https://pypi.org/project/pip/):
 
@@ -19,7 +19,6 @@ git clone https://github.com/rojter-tech/parse_interpret_various_formats.git ~/p
 ```
 
 Create a new environment inside the repo and source it
-
 ```bash
 python -m venv ~/parse_interpret_various_formats
 source ~/parse_interpret_various_formats/bin/activate
@@ -27,7 +26,6 @@ python -m pip install -U pip
 ```
 
 Install dependencies
-
 ```bash
 cd ~/parse_interpret_various_formats
 pip install -r requirements/dev.txt
@@ -35,7 +33,7 @@ python setup.py bdist_wheel
 pip install -e .
 ```
 
-##### For Windows
+### For Windows
 
 
 With [`python3`](https://www.python.org/downloads/release/python-381/) and [`pip`](https://pypi.org/project/pip/):
@@ -43,22 +41,20 @@ With [`python3`](https://www.python.org/downloads/release/python-381/) and [`pip
 Powershell
 
 ```bash
-git clone https://github.com/rojter-tech/parse_interpret_various_formats.git ~\parse_interpret_various_formats
+git clone https://github.com/rojter-tech/parse_interpret_various_formats.git $HOME\parse_interpret_various_formats
 ```
 
 Create a new environment inside the repo and source it
-
 ```bash
-python -m venv ~\parse_interpret_various_formats
-~\parse_interpret_various_formats\Scripts\activate
-~\parse_interpret_various_formats\Scripts\activate.bat
+python -m venv $HOME\parse_interpret_various_formats
+$HOME\parse_interpret_various_formats\Scripts\activate
+$HOME\parse_interpret_various_formats\Scripts\activate.bat
 python -m pip install -U pip
 ```
 
 Install dependencies
-
 ```bash
-cd ~\parse_interpret_various_formats
+cd $HOME\parse_interpret_various_formats
 pip install -r .\requirements\dev.txt
 python setup.py bdist_wheel
 pip install -e .
